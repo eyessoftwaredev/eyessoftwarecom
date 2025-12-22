@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "platforms": "Platforms",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Custom Software Solutions & Digital Transformation",
+    "subtitle": "We deliver your digital transformation with custom software solutions tailored to your business needs.",
+    "cta": "Get Started"
+  },
+  "stats": {
+    "projects": "Successful Projects",
+    "clients": "Happy Clients",
+    "solutions": "Custom Software Solutions",
+    "experience": "Years of Experience"
+  },
+  "services": {
+    "title": "Our Services",
+    "items": {
+      "website": {
+        "title": "Web Development",
+        "description": "Modern, scalable, and user-friendly websites and applications."
+      },
+      "mobile": {
+        "title": "Mobile App Development",
+        "description": "Cross-platform mobile apps for iOS and Android."
+      },
+      "software": {
+        "title": "Custom Software Solutions",
+        "description": "Tailored software development for your unique business needs."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "User experience-focused modern and effective design solutions."
+      }
+    }
+  },
+  "platforms": {
+    "title": "Platforms We Work With",
+    "items": {
+      "android": {
+        "title": "Android Development",
+        "description": "Native and cross-platform Android applications"
+      },
+      "ios": {
+        "title": "iOS Development",
+        "description": "iOS applications with Swift and React Native"
+      },
+      "web": {
+        "title": "Web Development",
+        "description": "Responsive websites with modern web technologies"
+      },
+      "database": {
+        "title": "Database Management",
+        "description": "SQL and NoSQL database design and optimization"
+      },
+      "security": {
+        "title": "System Security",
+        "description": "Security testing and penetration analysis"
+      },
+      "cloud": {
+        "title": "Cloud Solutions",
+        "description": "AWS, Azure and Google Cloud infrastructure management"
+      }
+    }
+  },
+  "about": {
+    "title": "About EyesSoftware",
+    "description": "At EyesSoftware, our mission is to contribute to the digital transformation of businesses by providing custom software solutions. We develop the most suitable solutions for our clients' needs using modern technologies and deliver successful projects.",
+    "features": {
+      "quality": "Quality-Focused",
+      "goal": "Goal-Oriented",
+      "client": "Client-Focused",
+      "fast": "Fast Delivery"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechStartup",
+        "comment": "EyesSoftware helped us launch a powerful AI-powered app that exceeded all our expectations. Their expertise in AI integration is unmatched."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "CTO, FinanceApp",
+        "comment": "The team at EyesSoftware delivered our mobile banking app with incredible AI features. The user experience is phenomenal."
+      },
+      "elena": {
+        "name": "Elena Rodriguez",
+        "role": "Founder, HealthTech",
+        "comment": "Professional, innovative, and results-driven. EyesSoftware transformed our healthcare platform with smart AI solutions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "messagePlaceholder": "Tell us about your project...",
+      "successMessage": "Message sent successfully!"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 EyesSoftware. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "legalLinks": "Legal",
+    "description": "Digital transformation partner providing custom software solutions for your business.",
+    "language": "Language",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "email": "Email"
+    }
+  },
+  "common": {
+    "scrollToTop": "Scroll to top",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again"
+  }
+}
