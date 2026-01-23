@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     { icon: Github, href: '#', labelKey: 'github' },
     { icon: Linkedin, href: '#', labelKey: 'linkedin' },
     { icon: Twitter, href: '#', labelKey: 'twitter' },
-    { icon: Mail, href: 'mailto:hello@eyessoftware.com', labelKey: 'email' }
+    { icon: Mail, href: 'mailto:info@eyessoftware.com', labelKey: 'email' }
   ];
 
   const quickLinks = [
@@ -136,8 +136,12 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="text-gray-300 text-sm sm:text-base">
-              <p className="mb-1 sm:mb-2">hello@eyessoftware.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p className="mb-1 sm:mb-2">info@eyessoftware.com</p>
+              <p className="mb-1 sm:mb-2">+971 58 507 6870</p>
+              <p className="text-xs sm:text-sm leading-relaxed opacity-80">
+                Building A1, Dubai Digital Park,<br />
+                Dubai Silicon Oasis, Dubai, UAE
+              </p>
             </div>
           </div>
         </div>

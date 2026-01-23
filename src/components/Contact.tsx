@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-sm sm:text-base">{t('contact.info.email')}</h4>
-                  <p className="text-gray-300 text-sm sm:text-base">hello@eyessoftware.com</p>
+                  <p className="text-gray-300 text-sm sm:text-base">info@eyessoftware.com</p>
                 </div>
               </div>
 
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-sm sm:text-base">{t('contact.info.phone')}</h4>
-                  <p className="text-gray-300 text-sm sm:text-base">+1 (555) 123-4567</p>
+                  <p className="text-gray-300 text-sm sm:text-base">+971 58 507 6870</p>
                 </div>
               </div>
 
@@ -69,7 +69,11 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-sm sm:text-base">{t('contact.info.location')}</h4>
-                  <p className="text-gray-300 text-sm sm:text-base">San Francisco, CA</p>
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Building A1, Dubai Digital Park, Dubai Silicon Oasis,<br />
+                    P.O. Box Number: 342001,<br />
+                    Dubai, United Arab Emirates
+                  </p>
                 </div>
               </div>
             </div>
