@@ -2,13 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+      var FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
+
+      function readCookie(name) {
+        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[1]) : null;
+      }
+
+      function getSavedLang() {
+        try {
+          var stored = localStorage.getItem('lang');
+          if (stored && LANGS.indexOf(stored) !== -1) return stored;
+        } catch (e) {}
+        var cookieLang = readCookie('lang');
+        if (cookieLang && LANGS.indexOf(cookieLang) !== -1) return cookieLang;
+        return 'en';
+      }
+
+      var saved = getSavedLang();
+      var root = document.documentElement;
+      root.lang = saved;
+      root.dir = saved === 'ar' ? 'rtl' : 'ltr';
+      root.dataset.lang = saved;
+      root.dataset.flag = FLAGS[saved];
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EyesSoftware — AI-Native Software Engineering</title>
   <meta name="description" content="EyesSoftware builds AI-powered web, mobile, and enterprise software from Dubai. Intelligent systems for the next era." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/vendor/flag-icons/css/flag-icons.min.css" />
+  <script src="/locales/bundle.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
   <style>
+    html:not(.i18n-ready) body { visibility: hidden; }
     :root {
       --bg: #030712;
       --bg-elevated: #0a0f1e;
@@ -100,6 +131,7 @@
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
       width: min(1200px, 92vw); margin: 0 auto;
+      gap: 12px;
     }
     .logo {
       font-family: var(--font-display);
@@ -130,48 +162,38 @@
       background: var(--surface);
       border: 1px solid var(--border);
       color: var(--text);
-      padding: 8px 14px;
+      padding: 8px 12px;
       border-radius: 8px;
       font-family: var(--font-body);
-      font-size: 0.85rem;
       cursor: pointer;
       transition: border-color 0.2s;
     }
     .lang-btn:hover { border-color: var(--border-hover); }
-    .lang-btn svg { width: 14px; height: 14px; opacity: 0.6; }
+    .lang-btn svg { width: 14px; height: 14px; opacity: 0.6; flex-shrink: 0; }
+    .lang-btn .fi { width: 1.25rem; line-height: 1; border-radius: 2px; }
     .lang-dropdown {
       display: none;
       position: absolute; top: calc(100% + 8px); right: 0;
-      min-width: 160px;
       background: var(--bg-elevated);
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
       box-shadow: var(--glow);
+      padding: 6px;
+      gap: 4px;
     }
-    .lang-dropdown.open { display: block; }
+    .lang-dropdown.open { display: flex; }
     .lang-option {
-      display: flex; align-items: center; gap: 10px;
-      width: 100%; padding: 10px 16px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 8px 10px;
       background: none; border: none;
-      color: var(--text-muted);
-      font-family: var(--font-body);
-      font-size: 0.85rem;
+      border-radius: 8px;
       cursor: pointer;
-      text-align: left;
-      transition: background 0.15s, color 0.15s;
+      transition: background 0.15s;
     }
-    .lang-option:hover { background: rgba(0, 240, 255, 0.06); color: var(--text); }
-    .lang-option.active { color: var(--cyan); }
-    .lang-option .flag { font-size: 1.1rem; }
-    .lang-option .soon {
-      margin-left: auto;
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      opacity: 0.6;
-    }
+    .lang-option:hover { background: rgba(0, 240, 255, 0.06); }
+    .lang-option.active { background: rgba(0, 240, 255, 0.1); outline: 1px solid var(--border-hover); }
+    .lang-option .fi { width: 1.35rem; line-height: 1; border-radius: 2px; }
 
     .nav-cta {
       background: linear-gradient(135deg, var(--cyan), var(--violet));
@@ -185,6 +207,8 @@
       cursor: pointer;
       text-decoration: none;
       transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
@@ -192,6 +216,7 @@
       display: none;
       background: none; border: none; color: var(--text);
       cursor: pointer; padding: 4px;
+      flex-shrink: 0;
     }
     .menu-toggle svg { width: 24px; height: 24px; }
 
@@ -622,6 +647,8 @@
       opacity: 1;
     }
 
+    body.menu-open { overflow: hidden; }
+
     /* ── Reveal animation ── */
     .reveal {
       opacity: 0;
@@ -635,33 +662,113 @@
 
     /* ── Mobile ── */
     @media (max-width: 900px) {
-      .hero-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero-visual { order: -1; min-height: 320px; }
-      .hero-canvas { height: 320px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .nav-links { display: none; }
-      .nav-links.open {
-        display: flex; flex-direction: column;
-        position: absolute; top: var(--nav-h); left: 0; right: 0;
-        background: var(--bg-elevated);
-        padding: 24px;
-        border-bottom: 1px solid var(--border);
-        gap: 16px;
+      section { padding: 72px 0; }
+
+      .hero-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      #hero {
+        min-height: auto;
+        padding-bottom: 48px;
       }
+
+      .hero-visual {
+        order: -1;
+        min-height: 260px;
+        animation: none;
+      }
+
+      .hero-canvas { height: 260px; max-width: 100%; }
+
+      .hero-title { font-size: clamp(1.85rem, 7.5vw, 2.5rem); }
+      .hero-sub { font-size: 1rem; max-width: none; }
+      .hero-badge { font-size: 0.72rem; max-width: 100%; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .stat-card { padding: 24px 16px; }
+      .stat-num { font-size: 2.2rem; }
+
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .section-sub { margin-bottom: 32px; font-size: 1rem; }
+
+      .contact-form { padding: 24px; }
+      .contact-info-list { margin-top: 16px; gap: 20px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .nav-cta { display: none; }
+      .nav-actions { gap: 10px; margin-left: auto; }
+      .nav-inner { width: 100%; padding: 0 4vw; }
+      .nav-links { display: none; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background: rgba(10, 15, 30, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 20px 4vw 24px;
+        border-bottom: 1px solid var(--border);
+        gap: 4px;
+        max-height: calc(100dvh - var(--nav-h));
+        overflow-y: auto;
+      }
+
+      .nav-links.open a {
+        display: block;
+        padding: 14px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0, 240, 255, 0.06);
+      }
+
+      .nav-links.open li:last-child a { border-bottom: none; }
+
       .menu-toggle { display: block; }
-    }
-    @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: 1fr; }
-      .about-features { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
-      .hero-actions a, .hero-actions button { text-align: center; }
+
+      .toast {
+        width: min(420px, calc(100vw - 32px));
+        text-align: center;
+      }
     }
 
-    /* RTL support prep */
+    @media (max-width: 480px) {
+      :root { --nav-h: 64px; }
+
+      section { padding: 56px 0; }
+      .container { width: min(1200px, 90vw); }
+
+      .logo { font-size: 0.95rem; letter-spacing: 0.03em; }
+      .lang-btn { padding: 8px 10px; font-size: 0.8rem; }
+
+      .stats-grid { grid-template-columns: 1fr; }
+      .about-features { grid-template-columns: 1fr; }
+
+      .hero-actions { flex-direction: column; }
+      .hero-actions a,
+      .hero-actions button { width: 100%; text-align: center; }
+
+      .card { padding: 24px; }
+      .testimonial { padding: 24px; }
+
+      .form-group input,
+      .form-group textarea { font-size: 16px; }
+
+      .section-label { letter-spacing: 0.18em; }
+    }
+
+    /* RTL support */
     [dir="rtl"] .nav-links { flex-direction: row-reverse; }
     [dir="rtl"] .about-feat::before { content: '◂'; }
+    [dir="rtl"] .lang-dropdown { right: auto; left: 0; }
   </style>
 </head>
 <body>
@@ -684,19 +791,34 @@
       <div class="nav-actions">
         <div class="lang-switch">
           <button class="lang-btn" id="langBtn" aria-label="Select language">
-            <span id="langCurrent">EN</span>
+            <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
+            <script>
+              (function () {
+                var flag = document.documentElement.dataset.flag || 'gb';
+                var el = document.getElementById('langCurrentFlag');
+                if (el) el.classList.add('fi-' + flag);
+              })();
+            </script>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
-            <button class="lang-option active" data-lang="en"><span class="flag">🇬🇧</span> English</button>
-            <button class="lang-option" data-lang="tr"><span class="flag">🇹🇷</span> Türkçe <span class="soon">soon</span></button>
-            <button class="lang-option" data-lang="ar"><span class="flag">🇦🇪</span> العربية <span class="soon">soon</span></button>
-            <button class="lang-option" data-lang="de"><span class="flag">🇩🇪</span> Deutsch <span class="soon">soon</span></button>
-            <button class="lang-option" data-lang="fr"><span class="flag">🇫🇷</span> Français <span class="soon">soon</span></button>
+            <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-gb fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="tr" aria-label="Türkçe"><span class="fi fi-tr fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="ar" aria-label="العربية"><span class="fi fi-ae fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="de" aria-label="Deutsch"><span class="fi fi-de fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
           </div>
+          <script>
+            (function () {
+              var saved = document.documentElement.dataset.lang || 'en';
+              document.querySelectorAll('.lang-option').forEach(function (opt) {
+                opt.classList.toggle('active', opt.dataset.lang === saved);
+              });
+            })();
+          </script>
         </div>
         <a href="#contact" class="nav-cta" data-i18n="hero.cta">Start Your Project</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
@@ -981,6 +1103,52 @@
 
   <div class="toast" id="toast"></div>
 
+  <script>
+    (function () {
+      var ACTIVE_LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+      var LANG_FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
+
+      function getNestedValue(obj, path) {
+        return path.split('.').reduce(function (o, k) {
+          return o && o[k] !== undefined ? o[k] : null;
+        }, obj);
+      }
+
+      function applyTranslations(lang, translations) {
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n');
+          var val = getNestedValue(translations, key);
+          if (val) el.textContent = val;
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n-placeholder');
+          var val = getNestedValue(translations, key);
+          if (val) el.placeholder = val;
+        });
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      }
+
+      var saved = document.documentElement.dataset.lang || 'en';
+      var lang = ACTIVE_LANGS.indexOf(saved) !== -1 ? saved : 'en';
+      var data = (window.__LOCALES__ && window.__LOCALES__[lang]) || (window.__LOCALES__ && window.__LOCALES__.en);
+
+      if (data) {
+        applyTranslations(lang, data);
+        var code = LANG_FLAGS[lang] || 'gb';
+        var flagEl = document.getElementById('langCurrentFlag');
+        if (flagEl) flagEl.className = 'fi fi-' + code + ' fis';
+        document.documentElement.dataset.lang = lang;
+        document.documentElement.dataset.flag = code;
+        document.querySelectorAll('.lang-option').forEach(function (opt) {
+          opt.classList.toggle('active', opt.dataset.lang === lang);
+        });
+      }
+
+      document.documentElement.classList.add('i18n-ready');
+    })();
+  </script>
+
   <script src="/vendor/lucide.min.js"></script>
 
   <script type="importmap">
@@ -1014,7 +1182,8 @@
       const MAGENTA = 0xec4899;
 
       /* Neural node sphere */
-      const NODE_COUNT = 28;
+      const isMobile = window.matchMedia('(max-width: 900px)').matches;
+      const NODE_COUNT = isMobile ? 18 : 28;
       const nodePositions = [];
       const nodes = [];
       for (let i = 0; i < NODE_COUNT; i++) {
@@ -1099,7 +1268,7 @@
       root.add(ringA, ringB);
 
       /* Ambient particles */
-      const ambientCount = 50;
+      const ambientCount = isMobile ? 24 : 50;
       const ambientPos = new Float32Array(ambientCount * 3);
       for (let i = 0; i < ambientCount; i++) {
         const r = 2 + Math.random() * 1.2;
@@ -1176,12 +1345,15 @@
 
   <script>
     /* ── i18n Engine ── */
-    const SUPPORTED_LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
-    const ACTIVE_LANGS = ['en'];
+    const ACTIVE_LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+    const LANG_FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
     let currentLang = 'en';
     let translations = {};
 
     async function loadLocale(lang) {
+      if (window.__LOCALES__ && window.__LOCALES__[lang]) {
+        return window.__LOCALES__[lang];
+      }
       try {
         const res = await fetch(`locales/${lang}.json`);
         if (!res.ok) throw new Error('Failed');
@@ -1210,25 +1382,52 @@
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     }
 
-    async function setLanguage(lang) {
-      if (!ACTIVE_LANGS.includes(lang)) {
-        showToast(getNestedValue(translations, 'lang.comingSoon') || 'This language will be available soon.');
-        return;
-      }
-      const data = await loadLocale(lang);
-      if (!data || Object.keys(data).length === 0) {
-        showToast('Translation file not ready yet.');
-        return;
-      }
-      currentLang = lang;
-      translations = data;
-      applyTranslations(lang);
-      document.getElementById('langCurrent').textContent = lang.toUpperCase();
+    function persistLanguage(lang) {
+      try {
+        localStorage.setItem('lang', lang);
+      } catch (e) {}
+      document.cookie = 'lang=' + encodeURIComponent(lang) + ';path=/;max-age=31536000;SameSite=Lax';
+    }
+
+    function updateLangFlag(lang) {
+      const code = LANG_FLAGS[lang] || 'gb';
+      document.getElementById('langCurrentFlag').className = `fi fi-${code} fis`;
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.dataset.flag = code;
+    }
+
+    function setActiveLangOption(lang) {
       document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
       });
-      localStorage.setItem('lang', lang);
     }
+
+    async function setLanguage(lang) {
+      if (!ACTIVE_LANGS.includes(lang)) return;
+
+      const data = await loadLocale(lang);
+      if (!data || Object.keys(data).length === 0) return;
+
+      currentLang = lang;
+      translations = data;
+      applyTranslations(lang);
+      updateLangFlag(lang);
+      setActiveLangOption(lang);
+      persistLanguage(lang);
+    }
+
+    function initI18n() {
+      const saved = document.documentElement.dataset.lang || 'en';
+      const lang = ACTIVE_LANGS.includes(saved) ? saved : 'en';
+      const data = window.__LOCALES__?.[lang] || window.__LOCALES__?.en;
+
+      if (!data) return;
+
+      currentLang = lang;
+      translations = data;
+    }
+
+    initI18n();
 
     /* ── Toast ── */
     function showToast(msg) {
@@ -1251,7 +1450,10 @@
       resize();
       window.addEventListener('resize', resize);
 
-      for (let i = 0; i < 60; i++) {
+      const isMobileView = window.matchMedia('(max-width: 900px)').matches;
+      const particleTotal = isMobileView ? 28 : 60;
+
+      for (let i = 0; i < particleTotal; i++) {
         dots.push({
           x: Math.random() * w,
           y: Math.random() * h,
@@ -1336,8 +1538,29 @@
     });
 
     /* ── Mobile menu ── */
-    document.getElementById('menuToggle').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('open');
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('menuToggle');
+
+    function setMenuOpen(open) {
+      navLinks.classList.toggle('open', open);
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', open);
+    }
+
+    menuToggle.addEventListener('click', () => {
+      setMenuOpen(!navLinks.classList.contains('open'));
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#navbar')) setMenuOpen(false);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) setMenuOpen(false);
     });
 
     /* ── Contact form ── */
@@ -1381,11 +1604,6 @@
 
     /* ── Init ── */
     lucide.createIcons();
-
-    (async () => {
-      const saved = localStorage.getItem('lang') || 'en';
-      await setLanguage(ACTIVE_LANGS.includes(saved) ? saved : 'en');
-    })();
   </script>
 </body>
 </html>

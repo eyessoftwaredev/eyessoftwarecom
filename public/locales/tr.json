@@ -1,1 +1,115 @@
-{}
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "platforms": "Platformlar",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "badge": "AI-Native Mühendislik Stüdyosu",
+    "title": "Geleceğin Akıllı Yazılımlarını İnşa Ediyoruz",
+    "subtitle": "EyesSoftware; sinir arayüzlerinden küresel ölçekte üretim kalitesinde platformlara kadar AI destekli web, mobil ve kurumsal sistemler geliştirir.",
+    "cta": "Projenizi Başlatın",
+    "ctaSecondary": "Hizmetleri Keşfedin"
+  },
+  "stats": {
+    "projects": "Başarılı Proje",
+    "clients": "Mutlu Müşteri",
+    "solutions": "AI Entegre Çözüm",
+    "experience": "Yıllık Deneyim"
+  },
+  "services": {
+    "title": "Mühendislikle Gelen Zeka",
+    "subtitle": "Uçtan uca AI geliştirme — makine öğrenimi, otomasyon ve akıllı UX'i ürününüzün her katmanına entegre ediyoruz.",
+    "items": {
+      "website": {
+        "title": "AI Web Geliştirme",
+        "description": "Gömülü LLM'ler, gerçek zamanlı analitik ve uyarlanabilir deneyimler sunan yeni nesil web platformları."
+      },
+      "mobile": {
+        "title": "Mobil Uygulama Geliştirme",
+        "description": "Cihaz üstü AI, akıllı bildirimler ve kesintisiz bulut senkronizasyonu ile iOS ve Android uygulamaları."
+      },
+      "software": {
+        "title": "Özel AI Çözümleri",
+        "description": "Ajanlar, RAG pipeline'ları ve iş akışı otomasyonu — işletmenize özel yazılım sistemleri."
+      },
+      "uiux": {
+        "title": "UI/UX Tasarım",
+        "description": "Netlik, dönüşüm ve insan-AI iş birliği için tasarlanmış fütüristik arayüzler."
+      }
+    }
+  },
+  "platforms": {
+    "title": "Teknoloji Yığını",
+    "subtitle": "Modern yığının her katmanında — güvenli, ölçeklenebilir ve AI-ready çözümler sunuyoruz.",
+    "items": {
+      "android": { "title": "Android", "description": "ML Kit entegrasyonlu native ve cross-platform Android" },
+      "ios": { "title": "iOS", "description": "Core ML destekli Swift ve React Native uygulamaları" },
+      "web": { "title": "Web", "description": "React, Next.js ve edge-deployed AI uygulamaları" },
+      "database": { "title": "Veri Sistemleri", "description": "Vector DB, SQL/NoSQL mimarisi ve optimizasyon" },
+      "security": { "title": "Güvenlik", "description": "Penetrasyon testi, AI tehdit algılama ve uyumluluk" },
+      "cloud": { "title": "Cloud & AI", "description": "AWS, Azure, GCP ve LLM altyapı yönetimi" }
+    }
+  },
+  "about": {
+    "title": "EyesSoftware Hakkında",
+    "description": "Dubai merkezli bir AI mühendislik stüdyosuyuz; dijital dönüşümü hızlandırmayı misyon edindik. Derin teknik uzmanlığımızı ileri yapay zeka ile birleştirerek yalnızca çalışan değil — düşünen, uyum sağlayan ve işletmenizle birlikte gelişen yazılımlar üretiyoruz.",
+    "features": {
+      "quality": "Kalite Odaklı",
+      "goal": "Sonuç Odaklı",
+      "client": "Müşteri Merkezli",
+      "fast": "Hızlı Teslimat"
+    }
+  },
+  "testimonials": {
+    "title": "İnovatörlerin Güvendiği Ekip",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechStartup",
+        "comment": "EyesSoftware, tüm beklentilerimizi aşan güçlü bir AI destekli uygulama geliştirmemize yardımcı oldu. AI entegrasyonundaki uzmanlıkları eşsiz."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "CTO, FinanceApp",
+        "comment": "Ekip, mobil bankacılık uygulamamızı inanılmaz AI özellikleriyle teslim etti. Kullanıcı deneyimi olağanüstü."
+      },
+      "elena": {
+        "name": "Elena Rodriguez",
+        "role": "Kurucu, HealthTech",
+        "comment": "Profesyonel, yenilikçi ve sonuç odaklı. EyesSoftware sağlık platformumuzu akıllı AI çözümleriyle dönüştürdü."
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Olağanüstü bir şey inşa etmeye hazır mısınız? Proje brifinginizi iletin, ekibimiz 24 saat içinde dönüş yapsın.",
+    "info": {
+      "email": "E-posta",
+      "phone": "Telefon",
+      "location": "Konum"
+    },
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "message": "Proje Brifingi",
+      "submit": "Mesaj Gönder",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "emailPlaceholder": "ahmet@example.com",
+      "messagePlaceholder": "Vizyonunuzu, zaman çizelgenizi ve hedeflerinizi anlatın...",
+      "successMessage": "Mesaj başarıyla gönderildi!",
+      "errorRequired": "Tüm alanlar zorunludur."
+    }
+  },
+  "footer": {
+    "description": "AI-native yazılım mühendislik stüdyosu — Dubai, BAE.",
+    "copyright": "© 2026 EyesSoftware. Tüm hakları saklıdır.",
+    "quickLinks": "Navigasyon",
+    "legalLinks": "Yasal",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları",
+    "cookiePolicy": "Çerez Politikası"
+  }
+}

@@ -1,1 +1,115 @@
-{}
+{
+  "nav": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "platforms": "المنصات",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  },
+  "hero": {
+    "badge": "استوديو هندسة مدعوم بالذكاء الاصطناعي",
+    "title": "نبني برمجيات ذكية لمستقبل الغد",
+    "subtitle": "تطوّر EyesSoftware أنظمة ويب وموبايل ومؤسسات مدعومة بالذكاء الاصطناعي — من واجهات عصبية إلى منصات إنتاجية قابلة للتوسع عالمياً.",
+    "cta": "ابدأ مشروعك",
+    "ctaSecondary": "استكشف الخدمات"
+  },
+  "stats": {
+    "projects": "مشاريع ناجحة",
+    "clients": "عملاء سعداء",
+    "solutions": "حلول متكاملة بالذكاء الاصطناعي",
+    "experience": "سنوات الخبرة"
+  },
+  "services": {
+    "title": "ذكاء مُهندَس",
+    "subtitle": "تطوير شامل بالذكاء الاصطناعي — ندمج التعلم الآلي والأتمتة وتجربة المستخدم الذكية في كل طبقة من منتجك.",
+    "items": {
+      "website": {
+        "title": "تطوير ويب بالذكاء الاصطناعي",
+        "description": "منصات ويب من الجيل الجديد مع LLM مدمجة وتحليلات فورية وتجارب مستخدم تكيفية."
+      },
+      "mobile": {
+        "title": "تطوير تطبيقات الجوال",
+        "description": "تطبيقات iOS وAndroid متعددة المنصات مع ذكاء اصطناعي على الجهاز وإشعارات ذكية ومزامنة سحابية."
+      },
+      "software": {
+        "title": "حلول AI مخصصة",
+        "description": "أنظمة برمجية مخصصة — وكلاء، خطوط RAG، وأتمتة سير العمل مصممة لعملك."
+      },
+      "uiux": {
+        "title": "تصميم UI/UX",
+        "description": "واجهات مستقبلية مصممة للوضوح والتحويل والتعاون بين الإنسان والذكاء الاصطناعي."
+      }
+    }
+  },
+  "platforms": {
+    "title": "المجموعة التقنية",
+    "subtitle": "ننشر عبر كل طبقة من المكدس الحديث — آمنة وقابلة للتوسع وجاهزة للذكاء الاصطناعي.",
+    "items": {
+      "android": { "title": "Android", "description": "Android أصلي ومتعدد المنصات مع تكامل ML Kit" },
+      "ios": { "title": "iOS", "description": "تطبيقات Swift وReact Native مع Core ML" },
+      "web": { "title": "Web", "description": "تطبيقات React وNext.js وAI على الحافة" },
+      "database": { "title": "أنظمة البيانات", "description": "Vector DB وSQL/NoSQL وهندسة وتحسين" },
+      "security": { "title": "الأمن", "description": "اختبار اختراق وكشف تهديدات AI والامتثال" },
+      "cloud": { "title": "Cloud & AI", "description": "AWS وAzure وGCP وإدارة بنية LLM" }
+    }
+  },
+  "about": {
+    "title": "عن EyesSoftware",
+    "description": "نحن استوديو هندسة ذكاء اصطناعي مقره دبي، مهمتنا تسريع التحول الرقمي. نجمع الخبرة التقنية العميقة مع الذكاء الاصطناعي المتقدم لنقدّم برمجيات لا تعمل فقط — بل تفكّر وتتكيف وتتطور مع عملك.",
+    "features": {
+      "quality": "جودة عالية",
+      "goal": "تركيز على النتائج",
+      "client": "محورية العميل",
+      "fast": "تسليم سريع"
+    }
+  },
+  "testimonials": {
+    "title": "موثوق من المبتكرين",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechStartup",
+        "comment": "ساعدتنا EyesSoftware في إطلاق تطبيق قوي مدعوم بالذكاء الاصطناعي فاق كل توقعاتنا. خبرتهم في تكامل AI لا مثيل لها."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "CTO, FinanceApp",
+        "comment": "قدّم الفريق تطبيقنا المصرفي بميزات AI مذهلة. تجربة المستخدم استثنائية."
+      },
+      "elena": {
+        "name": "Elena Rodriguez",
+        "role": "Founder, HealthTech",
+        "comment": "محترفون ومبتكرون وموجهون نحو النتائج. EyesSoftware حوّلت منصتنا الصحية بحلول AI ذكية."
+      }
+    }
+  },
+  "contact": {
+    "title": "تواصل معنا",
+    "subtitle": "مستعد لبناء شيء استثنائي؟ أرسل ملخص مشروعك وسيرد فريقنا خلال 24 ساعة.",
+    "info": {
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "location": "الموقع"
+    },
+    "form": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "message": "ملخص المشروع",
+      "submit": "إرسال الرسالة",
+      "namePlaceholder": "محمد أحمد",
+      "emailPlaceholder": "mohammed@example.com",
+      "messagePlaceholder": "صف رؤيتك والجدول الزمني والأهداف...",
+      "successMessage": "تم إرسال الرسالة بنجاح!",
+      "errorRequired": "جميع الحقول مطلوبة."
+    }
+  },
+  "footer": {
+    "description": "استوديو هندسة برمجيات AI-native — دبي، الإمارات.",
+    "copyright": "© 2026 EyesSoftware. جميع الحقوق محفوظة.",
+    "quickLinks": "التنقل",
+    "legalLinks": "قانوني",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "cookiePolicy": "سياسة ملفات تعريف الارتباط"
+  }
+}

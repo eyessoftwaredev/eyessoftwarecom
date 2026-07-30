@@ -1,1 +1,115 @@
-{}
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "platforms": "Plateformes",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Studio d'ingénierie AI-native",
+    "title": "Nous construisons des logiciels intelligents pour demain",
+    "subtitle": "EyesSoftware conçoit des systèmes web, mobile et enterprise propulsés par l'IA — des interfaces neuronales aux plateformes de production à l'échelle mondiale.",
+    "cta": "Démarrer votre projet",
+    "ctaSecondary": "Explorer les services"
+  },
+  "stats": {
+    "projects": "Projets réussis",
+    "clients": "Clients satisfaits",
+    "solutions": "Solutions intégrées IA",
+    "experience": "Années d'expérience"
+  },
+  "services": {
+    "title": "Intelligence, ingénierie",
+    "subtitle": "Développement IA full-spectrum — nous intégrons ML, automatisation et UX intelligente à chaque couche de votre produit.",
+    "items": {
+      "website": {
+        "title": "Développement Web IA",
+        "description": "Plateformes web next-gen avec LLM intégrés, analytics temps réel et expériences adaptatives."
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "description": "Apps iOS & Android cross-platform avec IA on-device, notifications intelligentes et sync cloud."
+      },
+      "software": {
+        "title": "Solutions IA sur mesure",
+        "description": "Systèmes sur mesure — agents, pipelines RAG et automatisation de workflows adaptés à votre business."
+      },
+      "uiux": {
+        "title": "Design UI/UX",
+        "description": "Interfaces futuristes conçues pour la clarté, la conversion et la collaboration homme-IA."
+      }
+    }
+  },
+  "platforms": {
+    "title": "Stack technologique",
+    "subtitle": "Nous déployons sur chaque couche du stack moderne — sécurisé, scalable et AI-ready.",
+    "items": {
+      "android": { "title": "Android", "description": "Android natif & cross-platform avec intégration ML Kit" },
+      "ios": { "title": "iOS", "description": "Apps Swift & React Native avec Core ML" },
+      "web": { "title": "Web", "description": "Applications React, Next.js & IA edge-deployed" },
+      "database": { "title": "Systèmes de données", "description": "Vector DBs, architecture SQL/NoSQL & optimisation" },
+      "security": { "title": "Sécurité", "description": "Tests d'intrusion, détection de menaces IA & conformité" },
+      "cloud": { "title": "Cloud & IA", "description": "AWS, Azure, GCP & gestion d'infrastructure LLM" }
+    }
+  },
+  "about": {
+    "title": "À propos d'EyesSoftware",
+    "description": "Nous sommes un studio d'ingénierie IA basé à Dubaï, en mission pour accélérer la transformation digitale. Nous combinons une expertise technique profonde avec l'intelligence artificielle de pointe pour livrer des logiciels qui ne se contentent pas de fonctionner — ils pensent, s'adaptent et évoluent avec votre entreprise.",
+    "features": {
+      "quality": "Orienté qualité",
+      "goal": "Orienté résultats",
+      "client": "Centré client",
+      "fast": "Livraison rapide"
+    }
+  },
+  "testimonials": {
+    "title": "La confiance des innovateurs",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechStartup",
+        "comment": "EyesSoftware nous a aidés à lancer une app IA puissante qui a dépassé toutes nos attentes. Leur expertise en intégration IA est inégalée."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "CTO, FinanceApp",
+        "comment": "L'équipe a livré notre app bancaire mobile avec des fonctionnalités IA incroyables. L'expérience utilisateur est phénoménale."
+      },
+      "elena": {
+        "name": "Elena Rodriguez",
+        "role": "Fondatrice, HealthTech",
+        "comment": "Professionnels, innovants et orientés résultats. EyesSoftware a transformé notre plateforme santé avec des solutions IA intelligentes."
+      }
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Prêt à construire quelque chose d'extraordinaire ? Envoyez votre brief projet et notre équipe répondra sous 24 heures.",
+    "info": {
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "location": "Adresse"
+    },
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "message": "Brief projet",
+      "submit": "Envoyer le message",
+      "namePlaceholder": "Jean Dupont",
+      "emailPlaceholder": "jean@example.com",
+      "messagePlaceholder": "Décrivez votre vision, calendrier et objectifs...",
+      "successMessage": "Message envoyé avec succès !",
+      "errorRequired": "Tous les champs sont requis."
+    }
+  },
+  "footer": {
+    "description": "Studio d'ingénierie logicielle AI-native — Dubaï, EAU.",
+    "copyright": "© 2026 EyesSoftware. Tous droits réservés.",
+    "quickLinks": "Navigation",
+    "legalLinks": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "cookiePolicy": "Politique des cookies"
+  }
+}

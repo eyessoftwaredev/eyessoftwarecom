@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "tsc ; node scripts/build-locales.js",
     "start": "node dist/server.js",
-    "postinstall": "node scripts/copy-vendor.js",
+    "postinstall": "node scripts/copy-vendor.js ; node scripts/build-locales.js",
     "icons:export": "node scripts/export-brands.js"
   },
   "dependencies": {
     "express": "^4.21.2",
+    "flag-icons": "^7.5.0",
     "lucide": "^1.28.0",
     "resend": "^4.5.1",
     "simple-icons": "^16.27.1"
