@@ -25,6 +25,11 @@ function escapeHtml(text: string): string {
 const app = express();
 
 app.use(express.json({ limit: '32kb' }));
+
+app.get('/health', (_req: Request, res: Response) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 app.use(express.static(publicDir));
 
 app.post('/api/contact', async (req: Request, res: Response) => {
