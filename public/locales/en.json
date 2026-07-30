@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "platforms": "Platforms",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AI-Native Engineering Studio",
+    "title": "We Build Intelligent Software for Tomorrow",
+    "subtitle": "EyesSoftware engineers AI-powered web, mobile, and enterprise systems — from neural interfaces to production-grade platforms that scale across the globe.",
+    "cta": "Start Your Project",
+    "ctaSecondary": "Explore Services"
+  },
+  "stats": {
+    "projects": "Successful Projects",
+    "clients": "Happy Clients",
+    "solutions": "AI-Integrated Solutions",
+    "experience": "Years of Experience"
+  },
+  "services": {
+    "title": "Intelligence, Engineered",
+    "subtitle": "Full-spectrum AI development — we embed machine learning, automation, and intelligent UX into every layer of your product.",
+    "items": {
+      "website": {
+        "title": "AI Web Development",
+        "description": "Next-gen web platforms with embedded LLMs, real-time analytics, and adaptive user experiences."
+      },
+      "mobile": {
+        "title": "Mobile App Development",
+        "description": "Cross-platform iOS & Android apps with on-device AI, smart notifications, and seamless cloud sync."
+      },
+      "software": {
+        "title": "Custom AI Solutions",
+        "description": "Bespoke software systems — agents, RAG pipelines, and workflow automation tailored to your business."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Futuristic interfaces designed for clarity, conversion, and human-AI collaboration."
+      }
+    }
+  },
+  "platforms": {
+    "title": "Technology Stack",
+    "subtitle": "We deploy across every layer of the modern stack — secure, scalable, and AI-ready.",
+    "items": {
+      "android": { "title": "Android", "description": "Native & cross-platform Android with ML Kit integration" },
+      "ios": { "title": "iOS", "description": "Swift & React Native apps with Core ML capabilities" },
+      "web": { "title": "Web", "description": "React, Next.js & edge-deployed AI applications" },
+      "database": { "title": "Data Systems", "description": "Vector DBs, SQL/NoSQL architecture & optimization" },
+      "security": { "title": "Security", "description": "Penetration testing, AI threat detection & compliance" },
+      "cloud": { "title": "Cloud & AI", "description": "AWS, Azure, GCP & LLM infrastructure management" }
+    }
+  },
+  "about": {
+    "title": "About EyesSoftware",
+    "description": "We are a Dubai-based AI engineering studio on a mission to accelerate digital transformation. We combine deep technical expertise with cutting-edge artificial intelligence to deliver software that doesn't just work — it thinks, adapts, and evolves with your business.",
+    "features": {
+      "quality": "Quality-Driven",
+      "goal": "Results-Focused",
+      "client": "Client-Centric",
+      "fast": "Rapid Delivery"
+    }
+  },
+  "testimonials": {
+    "title": "Trusted by Innovators",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechStartup",
+        "comment": "EyesSoftware helped us launch a powerful AI-powered app that exceeded all our expectations. Their expertise in AI integration is unmatched."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "CTO, FinanceApp",
+        "comment": "The team delivered our mobile banking app with incredible AI features. The user experience is phenomenal."
+      },
+      "elena": {
+        "name": "Elena Rodriguez",
+        "role": "Founder, HealthTech",
+        "comment": "Professional, innovative, and results-driven. EyesSoftware transformed our healthcare platform with smart AI solutions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Initialize Contact",
+    "subtitle": "Ready to build something extraordinary? Transmit your project brief and our team will respond within 24 hours.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Project Brief",
+      "submit": "Transmit Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "messagePlaceholder": "Describe your vision, timeline, and goals...",
+      "successMessage": "Message sent successfully!",
+      "errorRequired": "All fields are required."
+    }
+  },
+  "footer": {
+    "description": "AI-native software engineering studio — Dubai, UAE.",
+    "copyright": "© 2026 EyesSoftware. All rights reserved.",
+    "quickLinks": "Navigation",
+    "legalLinks": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "lang": {
+    "comingSoon": "This language will be available soon."
+  }
+}
