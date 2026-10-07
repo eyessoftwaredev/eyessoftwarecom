@@ -118,7 +118,7 @@ nav.scrolled { border-bottom-color: var(--line); }
 .page-hero .lead { margin-top: 24px; }
 
 /* ── Products ── */
-.plist { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.plist { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .pcard {
   display: grid; grid-template-columns: 40px 1fr auto; grid-template-areas: "logo name url" "logo tag tag";
   column-gap: 14px; row-gap: 2px; align-items: center; padding: 20px 22px;
