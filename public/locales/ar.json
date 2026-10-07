@@ -82,32 +82,11 @@
       "fast": "تسليم سريع"
     }
   },
-  "testimonials": {
-    "title": "موثوق من المبتكرين",
-    "items": {
-      "sarah": {
-        "name": "Sarah Johnson",
-        "role": "CEO, TechStartup",
-        "comment": "ساعدتنا EyesSoftware في إطلاق تطبيق قوي مدعوم بالذكاء الاصطناعي فاق كل توقعاتنا. خبرتهم في تكامل AI لا مثيل لها."
-      },
-      "michael": {
-        "name": "Michael Chen",
-        "role": "CTO, FinanceApp",
-        "comment": "قدّم الفريق تطبيقنا المصرفي بميزات AI مذهلة. تجربة المستخدم استثنائية."
-      },
-      "elena": {
-        "name": "Elena Rodriguez",
-        "role": "Founder, HealthTech",
-        "comment": "محترفون ومبتكرون وموجهون نحو النتائج. EyesSoftware حوّلت منصتنا الصحية بحلول AI ذكية."
-      }
-    }
-  },
   "contact": {
     "title": "تواصل معنا",
     "subtitle": "مستعد لبناء شيء استثنائي؟ أرسل ملخص مشروعك وسيرد فريقنا خلال 24 ساعة.",
     "info": {
       "email": "البريد الإلكتروني",
-      "phone": "الهاتف",
       "location": "الموقع"
     },
     "form": {

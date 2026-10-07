@@ -82,32 +82,11 @@
       "fast": "Livraison rapide"
     }
   },
-  "testimonials": {
-    "title": "La confiance des innovateurs",
-    "items": {
-      "sarah": {
-        "name": "Sarah Johnson",
-        "role": "CEO, TechStartup",
-        "comment": "EyesSoftware nous a aidés à lancer une app IA puissante qui a dépassé toutes nos attentes. Leur expertise en intégration IA est inégalée."
-      },
-      "michael": {
-        "name": "Michael Chen",
-        "role": "CTO, FinanceApp",
-        "comment": "L'équipe a livré notre app bancaire mobile avec des fonctionnalités IA incroyables. L'expérience utilisateur est phénoménale."
-      },
-      "elena": {
-        "name": "Elena Rodriguez",
-        "role": "Fondatrice, HealthTech",
-        "comment": "Professionnels, innovants et orientés résultats. EyesSoftware a transformé notre plateforme santé avec des solutions IA intelligentes."
-      }
-    }
-  },
   "contact": {
     "title": "Nous contacter",
     "subtitle": "Prêt à construire quelque chose d'extraordinaire ? Envoyez votre brief projet et notre équipe répondra sous 24 heures.",
     "info": {
       "email": "E-mail",
-      "phone": "Téléphone",
       "location": "Adresse"
     },
     "form": {

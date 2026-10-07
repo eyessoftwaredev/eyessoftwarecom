@@ -82,32 +82,11 @@
       "fast": "Hızlı Teslimat"
     }
   },
-  "testimonials": {
-    "title": "İnovatörlerin Güvendiği Ekip",
-    "items": {
-      "sarah": {
-        "name": "Sarah Johnson",
-        "role": "CEO, TechStartup",
-        "comment": "EyesSoftware, tüm beklentilerimizi aşan güçlü bir AI destekli uygulama geliştirmemize yardımcı oldu. AI entegrasyonundaki uzmanlıkları eşsiz."
-      },
-      "michael": {
-        "name": "Michael Chen",
-        "role": "CTO, FinanceApp",
-        "comment": "Ekip, mobil bankacılık uygulamamızı inanılmaz AI özellikleriyle teslim etti. Kullanıcı deneyimi olağanüstü."
-      },
-      "elena": {
-        "name": "Elena Rodriguez",
-        "role": "Kurucu, HealthTech",
-        "comment": "Profesyonel, yenilikçi ve sonuç odaklı. EyesSoftware sağlık platformumuzu akıllı AI çözümleriyle dönüştürdü."
-      }
-    }
-  },
   "contact": {
     "title": "İletişime Geçin",
     "subtitle": "Olağanüstü bir şey inşa etmeye hazır mısınız? Proje brifinginizi iletin, ekibimiz 24 saat içinde dönüş yapsın.",
     "info": {
       "email": "E-posta",
-      "phone": "Telefon",
       "location": "Konum"
     },
     "form": {

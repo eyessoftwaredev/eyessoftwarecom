@@ -82,32 +82,11 @@
       "fast": "Schnelle Lieferung"
     }
   },
-  "testimonials": {
-    "title": "Vertraut von Innovatoren",
-    "items": {
-      "sarah": {
-        "name": "Sarah Johnson",
-        "role": "CEO, TechStartup",
-        "comment": "EyesSoftware half uns, eine leistungsstarke KI-App zu launchen, die alle Erwartungen übertraf. Ihre Expertise in KI-Integration ist unübertroffen."
-      },
-      "michael": {
-        "name": "Michael Chen",
-        "role": "CTO, FinanceApp",
-        "comment": "Das Team lieferte unsere Mobile-Banking-App mit unglaublichen KI-Features. Die User Experience ist phänomenal."
-      },
-      "elena": {
-        "name": "Elena Rodriguez",
-        "role": "Gründerin, HealthTech",
-        "comment": "Professionell, innovativ und ergebnisorientiert. EyesSoftware transformierte unsere Healthcare-Plattform mit smarten KI-Lösungen."
-      }
-    }
-  },
   "contact": {
     "title": "Kontakt aufnehmen",
     "subtitle": "Bereit, etwas Außergewöhnliches zu bauen? Senden Sie Ihr Projektbriefing — unser Team antwortet innerhalb von 24 Stunden.",
     "info": {
       "email": "E-Mail",
-      "phone": "Telefon",
       "location": "Standort"
     },
     "form": {
