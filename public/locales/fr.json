@@ -8,73 +8,67 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Studio d'ingénierie AI-native",
-    "title": "Nous construisons des logiciels intelligents pour demain",
-    "subtitle": "EyesSoftware conçoit des systèmes web, mobile et enterprise propulsés par l'IA — des interfaces neuronales aux plateformes de production à l'échelle mondiale.",
+    "badge": "Studio de développement logiciel",
+    "title": "Nous développons des logiciels qui fonctionnent",
+    "subtitle": "EyesSoftware conçoit et développe des logiciels web, mobiles et sur mesure — de la première idée à un produit stable en production.",
     "cta": "Démarrer votre projet",
     "ctaSecondary": "Explorer les services"
   },
-  "stats": {
-    "projects": "Projets réussis",
-    "clients": "Clients satisfaits",
-    "solutions": "Solutions intégrées IA",
-    "experience": "Années d'expérience"
-  },
   "services": {
-    "title": "Intelligence, ingénierie",
-    "subtitle": "Développement IA full-spectrum — nous intégrons ML, automatisation et UX intelligente à chaque couche de votre produit.",
+    "title": "Ce que nous développons",
+    "subtitle": "Développement logiciel de bout en bout : nous planifions, concevons, développons et maintenons des produits sur lesquels votre équipe et vos clients peuvent compter.",
     "items": {
       "website": {
-        "title": "Développement Web IA",
-        "description": "Plateformes web next-gen avec LLM intégrés, analytics temps réel et expériences adaptatives."
+        "title": "Développement web",
+        "description": "Sites et applications web rapides et sécurisés, construits sur un code moderne et maintenable."
       },
       "mobile": {
-        "title": "Développement Mobile",
-        "description": "Apps iOS & Android cross-platform avec IA on-device, notifications intelligentes et sync cloud."
+        "title": "Applications mobiles",
+        "description": "Applications iOS et Android natives et multiplateformes, au design clair et aux performances fiables."
       },
       "software": {
-        "title": "Solutions IA sur mesure",
-        "description": "Systèmes sur mesure — agents, pipelines RAG et automatisation de workflows adaptés à votre business."
+        "title": "Logiciel sur mesure",
+        "description": "Outils internes, intégrations et logiciels métier construits autour de votre façon réelle de travailler."
       },
       "uiux": {
         "title": "Design UI/UX",
-        "description": "Interfaces futuristes conçues pour la clarté, la conversion et la collaboration homme-IA."
+        "description": "Des interfaces claires et faciles à utiliser, conçues avec les personnes qui les utiliseront."
       }
     }
   },
   "platforms": {
     "title": "Stack technologique",
-    "subtitle": "Nous déployons sur chaque couche du stack moderne — sécurisé, scalable et AI-ready.",
+    "subtitle": "Nous travaillons sur toutes les couches de la stack moderne — sécurisée, évolutive et durable.",
     "items": {
       "android": {
         "title": "Android",
-        "description": "Android natif & cross-platform avec intégration ML Kit"
+        "description": "Applications Android natives et multiplateformes"
       },
       "ios": {
         "title": "iOS",
-        "description": "Apps Swift & React Native avec Core ML"
+        "description": "Applications Swift et React Native pour iPhone et iPad"
       },
       "web": {
         "title": "Web",
-        "description": "Applications React, Next.js & IA edge-deployed"
+        "description": "Applications React, Next.js et Node.js"
       },
       "database": {
         "title": "Systèmes de données",
-        "description": "Vector DBs, architecture SQL/NoSQL & optimisation"
+        "description": "Conception et optimisation de bases SQL et NoSQL"
       },
       "security": {
         "title": "Sécurité",
-        "description": "Tests d'intrusion, détection de menaces IA & conformité"
+        "description": "Architecture sécurisée, revue de code et conformité"
       },
       "cloud": {
-        "title": "Cloud & IA",
-        "description": "AWS, Azure, GCP & gestion d'infrastructure LLM"
+        "title": "Cloud",
+        "description": "Infrastructure et déploiement AWS, Azure et Google Cloud"
       }
     }
   },
   "about": {
     "title": "À propos d'EyesSoftware",
-    "description": "Nous sommes un studio d'ingénierie IA basé à Dubaï, en mission pour accélérer la transformation digitale. Nous combinons une expertise technique profonde avec l'intelligence artificielle de pointe pour livrer des logiciels qui ne se contentent pas de fonctionner — ils pensent, s'adaptent et évoluent avec votre entreprise.",
+    "description": "Nous sommes un studio de développement logiciel basé à Dubaï. Nous travaillons avec les entreprises pour concevoir, développer et maintenir des logiciels qui résolvent de vrais problèmes — avec une communication claire, des délais honnêtes et un code facile à faire évoluer.",
     "features": {
       "quality": "Orienté qualité",
       "goal": "Orienté résultats",
@@ -83,8 +77,8 @@
     }
   },
   "contact": {
-    "title": "Nous contacter",
-    "subtitle": "Prêt à construire quelque chose d'extraordinaire ? Envoyez votre brief projet et notre équipe répondra sous 24 heures.",
+    "title": "Contactez-nous",
+    "subtitle": "Parlez-nous de votre projet, notre équipe vous répondra sous 24 heures.",
     "info": {
       "email": "E-mail",
       "location": "Adresse"
@@ -105,7 +99,7 @@
     }
   },
   "footer": {
-    "description": "Studio d'ingénierie logicielle AI-native — Dubaï, EAU.",
+    "description": "Studio de développement logiciel — Dubaï, EAU.",
     "copyright": "© 2026 EyesSoftware. Tous droits réservés.",
     "quickLinks": "Navigation",
     "legalLinks": "Légal",

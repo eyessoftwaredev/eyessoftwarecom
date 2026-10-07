@@ -71,7 +71,7 @@
     toastTimer = setTimeout(function () { el.classList.remove('show'); }, 3600);
   }
 
-  /* ── Scroll reveal + counters ── */
+  /* ── Scroll reveal ── */
   if ('IntersectionObserver' in window) {
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -79,23 +79,6 @@
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
-
-    // Final values stay in the HTML when JS or motion is off.
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var counterObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var el = e.target, target = parseInt(el.dataset.count, 10), start = performance.now();
-        counterObserver.unobserve(el);
-        if (reduceMotion) return;
-        (function tick(now) {
-          var p = Math.min((now - start) / 1400, 1);
-          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + '+';
-          if (p < 1) requestAnimationFrame(tick);
-        })(start);
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('[data-count]').forEach(function (el) { counterObserver.observe(el); });
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
   }

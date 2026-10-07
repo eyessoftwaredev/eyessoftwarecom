@@ -8,73 +8,67 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "AI-Native Engineering Studio",
-    "title": "We Build Intelligent Software for Tomorrow",
-    "subtitle": "EyesSoftware engineers AI-powered web, mobile, and enterprise systems — from neural interfaces to production-grade platforms that scale across the globe.",
+    "badge": "Software Development Studio",
+    "title": "We build software that works",
+    "subtitle": "EyesSoftware designs and builds web, mobile and custom business software — from the first idea to a stable product in production.",
     "cta": "Start Your Project",
     "ctaSecondary": "Explore Services"
   },
-  "stats": {
-    "projects": "Successful Projects",
-    "clients": "Happy Clients",
-    "solutions": "AI-Integrated Solutions",
-    "experience": "Years of Experience"
-  },
   "services": {
-    "title": "Intelligence, Engineered",
-    "subtitle": "Full-spectrum AI development — we embed machine learning, automation, and intelligent UX into every layer of your product.",
+    "title": "What we build",
+    "subtitle": "End-to-end software development: we plan, design, build and maintain products your team and customers rely on.",
     "items": {
       "website": {
-        "title": "AI Web Development",
-        "description": "Next-gen web platforms with embedded LLMs, real-time analytics, and adaptive user experiences."
+        "title": "Web Development",
+        "description": "Fast, secure websites and web applications built on modern, maintainable code."
       },
       "mobile": {
         "title": "Mobile App Development",
-        "description": "Cross-platform iOS & Android apps with on-device AI, smart notifications, and seamless cloud sync."
+        "description": "Native and cross-platform iOS and Android apps with clean design and reliable performance."
       },
       "software": {
-        "title": "Custom AI Solutions",
-        "description": "Bespoke software systems — agents, RAG pipelines, and workflow automation tailored to your business."
+        "title": "Custom Software",
+        "description": "Internal tools, integrations and business software built around how your company actually works."
       },
       "uiux": {
         "title": "UI/UX Design",
-        "description": "Futuristic interfaces designed for clarity, conversion, and human-AI collaboration."
+        "description": "Clear, usable interfaces designed together with the people who will use them."
       }
     }
   },
   "platforms": {
     "title": "Technology Stack",
-    "subtitle": "We deploy across every layer of the modern stack — secure, scalable, and AI-ready.",
+    "subtitle": "We work across every layer of the modern stack — secure, scalable and built to last.",
     "items": {
       "android": {
         "title": "Android",
-        "description": "Native & cross-platform Android with ML Kit integration"
+        "description": "Native and cross-platform Android apps"
       },
       "ios": {
         "title": "iOS",
-        "description": "Swift & React Native apps with Core ML capabilities"
+        "description": "Swift and React Native apps for iPhone and iPad"
       },
       "web": {
         "title": "Web",
-        "description": "React, Next.js & edge-deployed AI applications"
+        "description": "React, Next.js and Node.js applications"
       },
       "database": {
         "title": "Data Systems",
-        "description": "Vector DBs, SQL/NoSQL architecture & optimization"
+        "description": "SQL and NoSQL database design and optimization"
       },
       "security": {
         "title": "Security",
-        "description": "Penetration testing, AI threat detection & compliance"
+        "description": "Secure architecture, code review and compliance"
       },
       "cloud": {
-        "title": "Cloud & AI",
-        "description": "AWS, Azure, GCP & LLM infrastructure management"
+        "title": "Cloud",
+        "description": "AWS, Azure and Google Cloud infrastructure and deployment"
       }
     }
   },
   "about": {
     "title": "About EyesSoftware",
-    "description": "We are a Dubai-based AI engineering studio on a mission to accelerate digital transformation. We combine deep technical expertise with cutting-edge artificial intelligence to deliver software that doesn't just work — it thinks, adapts, and evolves with your business.",
+    "description": "We are a Dubai-based software development studio. We work with companies to design, build and maintain software that solves real problems — with clear communication, honest timelines and code that stays easy to change.",
     "features": {
       "quality": "Quality-Driven",
       "goal": "Results-Focused",
@@ -83,8 +77,8 @@
     }
   },
   "contact": {
-    "title": "Initialize Contact",
-    "subtitle": "Ready to build something extraordinary? Transmit your project brief and our team will respond within 24 hours.",
+    "title": "Get in touch",
+    "subtitle": "Tell us about your project and our team will get back to you within 24 hours.",
     "info": {
       "email": "Email",
       "location": "Location"
@@ -93,7 +87,7 @@
       "name": "Full Name",
       "email": "Email Address",
       "message": "Project Brief",
-      "submit": "Transmit Message",
+      "submit": "Send Message",
       "namePlaceholder": "John Doe",
       "emailPlaceholder": "john@example.com",
       "messagePlaceholder": "Describe your vision, timeline, and goals...",
@@ -105,7 +99,7 @@
     }
   },
   "footer": {
-    "description": "AI-native software engineering studio — Dubai, UAE.",
+    "description": "Software development studio — Dubai, UAE.",
     "copyright": "© 2026 EyesSoftware. All rights reserved.",
     "quickLinks": "Navigation",
     "legalLinks": "Legal",

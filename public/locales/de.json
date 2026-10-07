@@ -8,73 +8,67 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "badge": "AI-Native Engineering Studio",
-    "title": "Wir entwickeln intelligente Software für morgen",
-    "subtitle": "EyesSoftware entwickelt KI-gestützte Web-, Mobile- und Enterprise-Systeme — von neuronalen Schnittstellen bis zu produktionsreifen Plattformen in globaler Skalierung.",
+    "badge": "Softwareentwicklungs-Studio",
+    "title": "Wir entwickeln Software, die funktioniert",
+    "subtitle": "EyesSoftware konzipiert und entwickelt Web-, Mobile- und individuelle Unternehmenssoftware — von der ersten Idee bis zum stabilen Produkt im Live-Betrieb.",
     "cta": "Projekt starten",
     "ctaSecondary": "Leistungen entdecken"
   },
-  "stats": {
-    "projects": "Erfolgreiche Projekte",
-    "clients": "Zufriedene Kunden",
-    "solutions": "KI-integrierte Lösungen",
-    "experience": "Jahre Erfahrung"
-  },
   "services": {
-    "title": "Intelligenz, konstruiert",
-    "subtitle": "Full-Stack-KI-Entwicklung — wir integrieren Machine Learning, Automatisierung und intelligente UX in jede Schicht Ihres Produkts.",
+    "title": "Was wir entwickeln",
+    "subtitle": "Softwareentwicklung aus einer Hand: Wir planen, gestalten, entwickeln und betreuen Produkte, auf die sich Ihr Team und Ihre Kunden verlassen.",
     "items": {
       "website": {
-        "title": "KI Webentwicklung",
-        "description": "Next-Gen-Webplattformen mit eingebetteten LLMs, Echtzeit-Analysen und adaptiven Nutzererlebnissen."
+        "title": "Webentwicklung",
+        "description": "Schnelle, sichere Websites und Webanwendungen auf modernem, wartbarem Code."
       },
       "mobile": {
-        "title": "Mobile App-Entwicklung",
-        "description": "Cross-Platform-Apps für iOS & Android mit On-Device-KI, smarten Benachrichtigungen und Cloud-Sync."
+        "title": "App-Entwicklung",
+        "description": "Native und plattformübergreifende iOS- und Android-Apps mit klarem Design und zuverlässiger Performance."
       },
       "software": {
-        "title": "Individuelle KI-Lösungen",
-        "description": "Maßgeschneiderte Systeme — Agenten, RAG-Pipelines und Workflow-Automatisierung für Ihr Unternehmen."
+        "title": "Individualsoftware",
+        "description": "Interne Tools, Integrationen und Unternehmenssoftware, die sich an Ihren echten Abläufen orientieren."
       },
       "uiux": {
-        "title": "UI/UX Design",
-        "description": "Futuristische Interfaces für Klarheit, Conversion und Mensch-KI-Zusammenarbeit."
+        "title": "UI/UX-Design",
+        "description": "Klare, gut bedienbare Oberflächen, gemeinsam mit den späteren Nutzern gestaltet."
       }
     }
   },
   "platforms": {
     "title": "Technologie-Stack",
-    "subtitle": "Wir deployen auf jeder Ebene des modernen Stacks — sicher, skalierbar und KI-ready.",
+    "subtitle": "Wir arbeiten auf allen Ebenen des modernen Stacks — sicher, skalierbar und langlebig.",
     "items": {
       "android": {
         "title": "Android",
-        "description": "Native & Cross-Platform Android mit ML Kit Integration"
+        "description": "Native und plattformübergreifende Android-Apps"
       },
       "ios": {
         "title": "iOS",
-        "description": "Swift & React Native Apps mit Core ML"
+        "description": "Swift- und React-Native-Apps für iPhone und iPad"
       },
       "web": {
         "title": "Web",
-        "description": "React, Next.js & Edge-deployed KI-Anwendungen"
+        "description": "React-, Next.js- und Node.js-Anwendungen"
       },
       "database": {
         "title": "Datensysteme",
-        "description": "Vector DBs, SQL/NoSQL-Architektur & Optimierung"
+        "description": "SQL- und NoSQL-Datenbankdesign und -Optimierung"
       },
       "security": {
         "title": "Sicherheit",
-        "description": "Penetrationstests, KI-Bedrohungserkennung & Compliance"
+        "description": "Sichere Architektur, Code-Reviews und Compliance"
       },
       "cloud": {
-        "title": "Cloud & KI",
-        "description": "AWS, Azure, GCP & LLM-Infrastruktur-Management"
+        "title": "Cloud",
+        "description": "AWS-, Azure- und Google-Cloud-Infrastruktur und Deployment"
       }
     }
   },
   "about": {
     "title": "Über EyesSoftware",
-    "description": "Wir sind ein in Dubai ansässiges KI-Engineering-Studio mit der Mission, die digitale Transformation zu beschleunigen. Wir verbinden tiefe technische Expertise mit modernster KI, um Software zu liefern, die nicht nur funktioniert — sondern denkt, sich anpasst und mit Ihrem Unternehmen wächst.",
+    "description": "Wir sind ein Softwareentwicklungs-Studio mit Sitz in Dubai. Gemeinsam mit Unternehmen konzipieren, entwickeln und betreuen wir Software, die echte Probleme löst — mit klarer Kommunikation, ehrlichen Zeitplänen und Code, der leicht anpassbar bleibt.",
     "features": {
       "quality": "Qualitätsorientiert",
       "goal": "Ergebnisorientiert",
@@ -84,7 +78,7 @@
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "subtitle": "Bereit, etwas Außergewöhnliches zu bauen? Senden Sie Ihr Projektbriefing — unser Team antwortet innerhalb von 24 Stunden.",
+    "subtitle": "Erzählen Sie uns von Ihrem Projekt – unser Team meldet sich innerhalb von 24 Stunden.",
     "info": {
       "email": "E-Mail",
       "location": "Standort"
@@ -105,7 +99,7 @@
     }
   },
   "footer": {
-    "description": "AI-native Software-Engineering-Studio — Dubai, VAE.",
+    "description": "Softwareentwicklungs-Studio — Dubai, VAE.",
     "copyright": "© 2026 EyesSoftware. Alle Rechte vorbehalten.",
     "quickLinks": "Navigation",
     "legalLinks": "Rechtliches",

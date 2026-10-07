@@ -8,73 +8,67 @@
     "contact": "İletişim"
   },
   "hero": {
-    "badge": "AI-Native Mühendislik Stüdyosu",
-    "title": "Geleceğin Akıllı Yazılımlarını İnşa Ediyoruz",
-    "subtitle": "EyesSoftware; sinir arayüzlerinden küresel ölçekte üretim kalitesinde platformlara kadar AI destekli web, mobil ve kurumsal sistemler geliştirir.",
+    "badge": "Yazılım Geliştirme Stüdyosu",
+    "title": "Çalışan yazılımlar geliştiriyoruz",
+    "subtitle": "EyesSoftware; web, mobil ve işletmelere özel yazılımlar tasarlar ve geliştirir — ilk fikirden canlıda sorunsuz çalışan bir ürüne kadar.",
     "cta": "Projenizi Başlatın",
     "ctaSecondary": "Hizmetleri Keşfedin"
   },
-  "stats": {
-    "projects": "Başarılı Proje",
-    "clients": "Mutlu Müşteri",
-    "solutions": "AI Entegre Çözüm",
-    "experience": "Yıllık Deneyim"
-  },
   "services": {
-    "title": "Mühendislikle Gelen Zeka",
-    "subtitle": "Uçtan uca AI geliştirme — makine öğrenimi, otomasyon ve akıllı UX'i ürününüzün her katmanına entegre ediyoruz.",
+    "title": "Neler geliştiriyoruz",
+    "subtitle": "Uçtan uca yazılım geliştirme: ekibinizin ve müşterilerinizin güvendiği ürünleri planlıyor, tasarlıyor, geliştiriyor ve bakımını yapıyoruz.",
     "items": {
       "website": {
-        "title": "AI Web Geliştirme",
-        "description": "Gömülü LLM'ler, gerçek zamanlı analitik ve uyarlanabilir deneyimler sunan yeni nesil web platformları."
+        "title": "Web Geliştirme",
+        "description": "Modern ve sürdürülebilir kodla hızlı, güvenli web siteleri ve web uygulamaları."
       },
       "mobile": {
         "title": "Mobil Uygulama Geliştirme",
-        "description": "Cihaz üstü AI, akıllı bildirimler ve kesintisiz bulut senkronizasyonu ile iOS ve Android uygulamaları."
+        "description": "Sade tasarımlı ve güvenilir performanslı native ve cross-platform iOS ve Android uygulamaları."
       },
       "software": {
-        "title": "Özel AI Çözümleri",
-        "description": "Ajanlar, RAG pipeline'ları ve iş akışı otomasyonu — işletmenize özel yazılım sistemleri."
+        "title": "Özel Yazılım",
+        "description": "Şirketinizin gerçek iş akışına göre geliştirilen iç araçlar, entegrasyonlar ve iş yazılımları."
       },
       "uiux": {
         "title": "UI/UX Tasarım",
-        "description": "Netlik, dönüşüm ve insan-AI iş birliği için tasarlanmış fütüristik arayüzler."
+        "description": "Onu kullanacak kişilerle birlikte tasarlanan, anlaşılır ve kullanışlı arayüzler."
       }
     }
   },
   "platforms": {
     "title": "Teknoloji Yığını",
-    "subtitle": "Modern yığının her katmanında — güvenli, ölçeklenebilir ve AI-ready çözümler sunuyoruz.",
+    "subtitle": "Modern teknolojilerin her katmanında çalışıyoruz — güvenli, ölçeklenebilir ve uzun ömürlü.",
     "items": {
       "android": {
         "title": "Android",
-        "description": "ML Kit entegrasyonlu native ve cross-platform Android"
+        "description": "Native ve cross-platform Android uygulamaları"
       },
       "ios": {
         "title": "iOS",
-        "description": "Core ML destekli Swift ve React Native uygulamaları"
+        "description": "iPhone ve iPad için Swift ve React Native uygulamaları"
       },
       "web": {
         "title": "Web",
-        "description": "React, Next.js ve edge-deployed AI uygulamaları"
+        "description": "React, Next.js ve Node.js uygulamaları"
       },
       "database": {
         "title": "Veri Sistemleri",
-        "description": "Vector DB, SQL/NoSQL mimarisi ve optimizasyon"
+        "description": "SQL ve NoSQL veritabanı tasarımı ve optimizasyonu"
       },
       "security": {
         "title": "Güvenlik",
-        "description": "Penetrasyon testi, AI tehdit algılama ve uyumluluk"
+        "description": "Güvenli mimari, kod incelemesi ve uyumluluk"
       },
       "cloud": {
-        "title": "Cloud & AI",
-        "description": "AWS, Azure, GCP ve LLM altyapı yönetimi"
+        "title": "Bulut",
+        "description": "AWS, Azure ve Google Cloud altyapısı ve dağıtımı"
       }
     }
   },
   "about": {
     "title": "EyesSoftware Hakkında",
-    "description": "Dubai merkezli bir AI mühendislik stüdyosuyuz; dijital dönüşümü hızlandırmayı misyon edindik. Derin teknik uzmanlığımızı ileri yapay zeka ile birleştirerek yalnızca çalışan değil — düşünen, uyum sağlayan ve işletmenizle birlikte gelişen yazılımlar üretiyoruz.",
+    "description": "Dubai merkezli bir yazılım geliştirme stüdyosuyuz. Şirketlerle birlikte gerçek sorunları çözen yazılımlar tasarlıyor, geliştiriyor ve bakımını yapıyoruz — açık iletişim, dürüst takvimler ve kolay değiştirilebilen kodla.",
     "features": {
       "quality": "Kalite Odaklı",
       "goal": "Sonuç Odaklı",
@@ -83,8 +77,8 @@
     }
   },
   "contact": {
-    "title": "İletişime Geçin",
-    "subtitle": "Olağanüstü bir şey inşa etmeye hazır mısınız? Proje brifinginizi iletin, ekibimiz 24 saat içinde dönüş yapsın.",
+    "title": "Bize ulaşın",
+    "subtitle": "Projenizi anlatın, ekibimiz 24 saat içinde size dönüş yapsın.",
     "info": {
       "email": "E-posta",
       "location": "Konum"
@@ -105,7 +99,7 @@
     }
   },
   "footer": {
-    "description": "AI-native yazılım mühendislik stüdyosu — Dubai, BAE.",
+    "description": "Yazılım geliştirme stüdyosu — Dubai, BAE.",
     "copyright": "© 2026 EyesSoftware. Tüm hakları saklıdır.",
     "quickLinks": "Navigasyon",
     "legalLinks": "Yasal",
