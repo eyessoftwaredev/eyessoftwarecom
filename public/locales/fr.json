@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Accueil",
+    "products": "Produits",
     "services": "Services",
     "platforms": "Plateformes",
     "about": "À propos",
@@ -45,12 +46,30 @@
     "title": "Stack technologique",
     "subtitle": "Nous déployons sur chaque couche du stack moderne — sécurisé, scalable et AI-ready.",
     "items": {
-      "android": { "title": "Android", "description": "Android natif & cross-platform avec intégration ML Kit" },
-      "ios": { "title": "iOS", "description": "Apps Swift & React Native avec Core ML" },
-      "web": { "title": "Web", "description": "Applications React, Next.js & IA edge-deployed" },
-      "database": { "title": "Systèmes de données", "description": "Vector DBs, architecture SQL/NoSQL & optimisation" },
-      "security": { "title": "Sécurité", "description": "Tests d'intrusion, détection de menaces IA & conformité" },
-      "cloud": { "title": "Cloud & IA", "description": "AWS, Azure, GCP & gestion d'infrastructure LLM" }
+      "android": {
+        "title": "Android",
+        "description": "Android natif & cross-platform avec intégration ML Kit"
+      },
+      "ios": {
+        "title": "iOS",
+        "description": "Apps Swift & React Native avec Core ML"
+      },
+      "web": {
+        "title": "Web",
+        "description": "Applications React, Next.js & IA edge-deployed"
+      },
+      "database": {
+        "title": "Systèmes de données",
+        "description": "Vector DBs, architecture SQL/NoSQL & optimisation"
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Tests d'intrusion, détection de menaces IA & conformité"
+      },
+      "cloud": {
+        "title": "Cloud & IA",
+        "description": "AWS, Azure, GCP & gestion d'infrastructure LLM"
+      }
     }
   },
   "about": {
@@ -100,7 +119,10 @@
       "emailPlaceholder": "jean@example.com",
       "messagePlaceholder": "Décrivez votre vision, calendrier et objectifs...",
       "successMessage": "Message envoyé avec succès !",
-      "errorRequired": "Tous les champs sont requis."
+      "errorRequired": "Tous les champs sont requis.",
+      "errorEmail": "Veuillez saisir une adresse e-mail valide.",
+      "sending": "Envoi…",
+      "errorSend": "Votre message n’a pas pu être envoyé. Écrivez-nous directement par e-mail."
     }
   },
   "footer": {
@@ -111,5 +133,31 @@
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d'utilisation",
     "cookiePolicy": "Politique des cookies"
+  },
+  "products": {
+    "title": "Quelques-uns des produits que nous avons créés",
+    "subtitle": "Des produits en ligne conçus, développés et exploités par notre propre équipe.",
+    "visit": "Visiter le site",
+    "shortky": {
+      "tagline": "Liens courts, QR codes et pages bio",
+      "description": "Raccourcissez, personnalisez et routez vos liens par pays, appareil et langue — puis suivez chaque clic.",
+      "f1": "Routage intelligent par pays, appareil et langue",
+      "f2": "QR codes dynamiques modifiables après impression",
+      "f3": "Pages bio et analyses de clics en temps réel"
+    },
+    "infotube": {
+      "tagline": "Analytique YouTube propulsée par l’IA",
+      "description": "Un seul espace pour les créateurs : analyse vidéo, SEO, suivi des concurrents et outils de croissance par IA.",
+      "f1": "Analyse vidéo et suggestions SEO par IA",
+      "f2": "Suivi des concurrents en temps réel",
+      "f3": "Insights de croissance pour toutes vos chaînes"
+    },
+    "snapia": {
+      "tagline": "Albums photo QR pour vos célébrations",
+      "description": "Les invités scannent un QR code et partagent photos, vidéos et messages vocaux dans un album privé.",
+      "f1": "Sans appli ni inscription pour les invités",
+      "f2": "Photos, vidéos et messages vocaux",
+      "f3": "Qualité originale, privé par défaut"
+    }
   }
 }

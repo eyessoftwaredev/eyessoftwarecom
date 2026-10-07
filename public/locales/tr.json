@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Ana Sayfa",
+    "products": "Ürünler",
     "services": "Hizmetler",
     "platforms": "Platformlar",
     "about": "Hakkımızda",
@@ -45,12 +46,30 @@
     "title": "Teknoloji Yığını",
     "subtitle": "Modern yığının her katmanında — güvenli, ölçeklenebilir ve AI-ready çözümler sunuyoruz.",
     "items": {
-      "android": { "title": "Android", "description": "ML Kit entegrasyonlu native ve cross-platform Android" },
-      "ios": { "title": "iOS", "description": "Core ML destekli Swift ve React Native uygulamaları" },
-      "web": { "title": "Web", "description": "React, Next.js ve edge-deployed AI uygulamaları" },
-      "database": { "title": "Veri Sistemleri", "description": "Vector DB, SQL/NoSQL mimarisi ve optimizasyon" },
-      "security": { "title": "Güvenlik", "description": "Penetrasyon testi, AI tehdit algılama ve uyumluluk" },
-      "cloud": { "title": "Cloud & AI", "description": "AWS, Azure, GCP ve LLM altyapı yönetimi" }
+      "android": {
+        "title": "Android",
+        "description": "ML Kit entegrasyonlu native ve cross-platform Android"
+      },
+      "ios": {
+        "title": "iOS",
+        "description": "Core ML destekli Swift ve React Native uygulamaları"
+      },
+      "web": {
+        "title": "Web",
+        "description": "React, Next.js ve edge-deployed AI uygulamaları"
+      },
+      "database": {
+        "title": "Veri Sistemleri",
+        "description": "Vector DB, SQL/NoSQL mimarisi ve optimizasyon"
+      },
+      "security": {
+        "title": "Güvenlik",
+        "description": "Penetrasyon testi, AI tehdit algılama ve uyumluluk"
+      },
+      "cloud": {
+        "title": "Cloud & AI",
+        "description": "AWS, Azure, GCP ve LLM altyapı yönetimi"
+      }
     }
   },
   "about": {
@@ -100,7 +119,10 @@
       "emailPlaceholder": "ahmet@example.com",
       "messagePlaceholder": "Vizyonunuzu, zaman çizelgenizi ve hedeflerinizi anlatın...",
       "successMessage": "Mesaj başarıyla gönderildi!",
-      "errorRequired": "Tüm alanlar zorunludur."
+      "errorRequired": "Tüm alanlar zorunludur.",
+      "errorEmail": "Lütfen geçerli bir e-posta adresi girin.",
+      "sending": "Gönderiliyor…",
+      "errorSend": "Mesajınız gönderilemedi. Lütfen bize doğrudan e-posta atın."
     }
   },
   "footer": {
@@ -111,5 +133,31 @@
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları",
     "cookiePolicy": "Çerez Politikası"
+  },
+  "products": {
+    "title": "Geliştirdiğimiz ürünlerden birkaçı",
+    "subtitle": "Ekibimizin tasarlayıp geliştirdiği ve işlettiği canlı ürünler.",
+    "visit": "Siteyi ziyaret et",
+    "shortky": {
+      "tagline": "Kısa linkler, QR kodlar ve bio sayfaları",
+      "description": "Linkleri kısaltın, markalayın, ülkeye, cihaza ve dile göre yönlendirin — her tıklamayı görün.",
+      "f1": "Ülke, cihaz ve dile göre akıllı yönlendirme",
+      "f2": "Basıldıktan sonra düzenlenebilen dinamik QR kodlar",
+      "f3": "Bio sayfaları ve anlık tıklama analitiği"
+    },
+    "infotube": {
+      "tagline": "Yapay zekâ destekli YouTube analitiği",
+      "description": "İçerik üreticileri için tek çalışma alanı: video analizi, SEO, rakip takibi ve yapay zekâ destekli büyüme araçları.",
+      "f1": "Yapay zekâ ile video analizi ve SEO önerileri",
+      "f2": "Anlık rakip takibi",
+      "f3": "Tüm kanallarınız için büyüme içgörüleri"
+    },
+    "snapia": {
+      "tagline": "Kutlamalar için QR fotoğraf albümleri",
+      "description": "Misafirler QR kodu okutur; fotoğraf, video ve ses mesajlarını tek bir özel albümde paylaşır.",
+      "f1": "Misafirler için uygulama ve üyelik yok",
+      "f2": "Fotoğraf, video ve ses mesajları",
+      "f3": "Orijinal kalite, varsayılan olarak özel"
+    }
   }
 }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+      var FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
+
+      function readCookie(name) {
+        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[1]) : null;
+      }
+
+      function getSavedLang() {
+        try {
+          var stored = localStorage.getItem('lang');
+          if (stored && LANGS.indexOf(stored) !== -1) return stored;
+        } catch (e) {}
+        var cookieLang = readCookie('lang');
+        if (cookieLang && LANGS.indexOf(cookieLang) !== -1) return cookieLang;
+        return 'en';
+      }
+
+      var saved = getSavedLang();
+      var root = document.documentElement;
+      root.lang = saved;
+      root.dir = saved === 'ar' ? 'rtl' : 'ltr';
+      root.dataset.lang = saved;
+      root.dataset.flag = FLAGS[saved];
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Products — EyesSoftware</title>
+  <meta name="description" content="A few of the products EyesSoftware has built: Short.ky, InfoTube and Snapia." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/brand/eyes-mark-lime.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/vendor/flag-icons/css/flag-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/locales/bundle.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="navbar">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#about" data-i18n="nav.about">About</a></li>
+        <li><a href="/products" aria-current="page" data-i18n="nav.products">Products</a></li>
+        <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+            <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-gb fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="tr" aria-label="Türkçe"><span class="fi fi-tr fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="ar" aria-label="العربية"><span class="fi fi-ae fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="de" aria-label="Deutsch"><span class="fi fi-de fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <section class="hero page-hero">
+    <div class="wrap reveal">
+      <span class="chip" data-i18n="nav.products">Products</span>
+      <h1 class="hero-title" data-i18n="products.title">A few of the products we have built</h1>
+      <p class="lead" data-i18n="products.subtitle">Live products designed, built and run by our own team.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-tight">
+    <div class="wrap">
+      <article class="product p-short reveal" id="short">
+        <div class="product-copy">
+          <div class="product-head"><img src="/assets/products/shortky.png" alt="" /><h2 class="product-name">Short.ky</h2></div>
+          <div class="product-tag" data-i18n="products.shortky.tagline">Short links, QR codes &amp; bio pages</div>
+          <p class="product-desc" data-i18n="products.shortky.description">Shorten, brand and route links by country, device and language — then see every single click.</p>
+          <ul class="product-feats">
+            <li data-i18n="products.shortky.f1">Smart routing by country, device &amp; language</li>
+            <li data-i18n="products.shortky.f2">Dynamic QR codes you can edit after printing</li>
+            <li data-i18n="products.shortky.f3">Bio pages and real-time click analytics</li>
+          </ul>
+          <a class="btn btn-product" href="https://short.ky" target="_blank" rel="noopener"><span data-i18n="products.visit">Visit site</span> <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <a class="shot" href="https://short.ky" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/products/shortky-app.png" alt="Short.ky dashboard showing targeting rules and click analytics" width="990" height="380" /></a>
+      </article>
+
+      <article class="product p-info flip reveal" id="infotube">
+        <div class="product-copy">
+          <div class="product-head"><img src="/assets/products/infotube.svg" alt="" /><h2 class="product-name">InfoTube</h2></div>
+          <div class="product-tag" data-i18n="products.infotube.tagline">AI-powered YouTube analytics</div>
+          <p class="product-desc" data-i18n="products.infotube.description">One workspace for creators: video analysis, SEO, competitor tracking and growth tools powered by AI.</p>
+          <ul class="product-feats">
+            <li data-i18n="products.infotube.f1">AI video analysis and SEO suggestions</li>
+            <li data-i18n="products.infotube.f2">Competitor tracking in real time</li>
+            <li data-i18n="products.infotube.f3">Growth insights across all your channels</li>
+          </ul>
+          <a class="btn btn-product" href="https://infotube.ai" target="_blank" rel="noopener"><span data-i18n="products.visit">Visit site</span> <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <a class="shot" href="https://infotube.ai" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/products/infotube-app.png" alt="InfoTube video report with score, retention curve and to-do list" loading="lazy" width="560" height="520" /></a>
+      </article>
+
+      <article class="product p-snap reveal" id="snapia">
+        <div class="product-copy">
+          <div class="product-head"><img src="/assets/products/snapia.svg" alt="" /><h2 class="product-name">Snapia</h2></div>
+          <div class="product-tag" data-i18n="products.snapia.tagline">QR photo albums for celebrations</div>
+          <p class="product-desc" data-i18n="products.snapia.description">Guests scan a QR code and share photos, videos and voice messages in one private album.</p>
+          <ul class="product-feats">
+            <li data-i18n="products.snapia.f1">No app and no sign-up for guests</li>
+            <li data-i18n="products.snapia.f2">Photos, videos and voice messages</li>
+            <li data-i18n="products.snapia.f3">Original quality, private by default</li>
+          </ul>
+          <a class="btn btn-product" href="https://snapia.co" target="_blank" rel="noopener"><span data-i18n="products.visit">Visit site</span> <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <a class="shot" href="https://snapia.co" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/products/snapia-app.png" alt="Snapia event dashboard and guest upload page on a phone" loading="lazy" width="1105" height="580" /></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec sec-tight">
+    <div class="wrap">
+      <div class="dark-card cta-card reveal">
+        <div>
+          <h2 class="h2" data-i18n="contact.title">Initialize Contact</h2>
+          <p class="lead" data-i18n="contact.subtitle">Ready to build something extraordinary? Transmit your project brief and our team will respond within 24 hours.</p>
+        </div>
+        <a href="/#contact" class="btn"><span data-i18n="hero.cta">Start Your Project</span> <i data-lucide="arrow-right" class="dir"></i></a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="/brand/eyes-logo-inverse.svg" alt="EyesSoftware" width="96" height="40" /></a>
+          <p data-i18n="footer.description">AI-native software engineering studio — Dubai, UAE.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <ul>
+            <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#about" data-i18n="nav.about">About</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="nav.products">Products</h4>
+          <ul>
+            <li><a href="https://short.ky" target="_blank" rel="noopener">Short.ky</a></li>
+            <li><a href="https://infotube.ai" target="_blank" rel="noopener">InfoTube</a></li>
+            <li><a href="https://snapia.co" target="_blank" rel="noopener">Snapia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legalLinks">Legal</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer.termsOfService">Terms of Service</a></li>
+            <li><a href="#" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 EyesSoftware. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="/vendor/lucide.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

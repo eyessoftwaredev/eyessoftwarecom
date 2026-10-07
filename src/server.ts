@@ -3,6 +3,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { Resend } from 'resend';
 
+// Load .env for local development; in production (Coolify) env vars are injected directly.
+try {
+  process.loadEnvFile();
+} catch {
+  // No .env file present.
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(__dirname, '../public');
 const port = Number(process.env.PORT) || 3000;
@@ -12,6 +19,7 @@ interface ContactBody {
   name?: string;
   email?: string;
   message?: string;
+  website?: string; // honeypot: hidden from humans, bots fill it in
 }
 
 function escapeHtml(text: string): string {
@@ -30,7 +38,7 @@ app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({ status: 'ok' });
 });
 
-app.use(express.static(publicDir));
+app.use(express.static(publicDir, { extensions: ['html'] }));
 
 app.post('/api/contact', async (req: Request, res: Response) => {
   try {
@@ -40,7 +48,12 @@ app.post('/api/contact', async (req: Request, res: Response) => {
       return;
     }
 
-    const { name, email, message } = req.body as ContactBody;
+    const { name, email, message, website } = req.body as ContactBody;
+
+    if (website) {
+      res.json({ success: true });
+      return;
+    }
 
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
       res.status(400).json({ error: 'All fields are required.' });
@@ -66,14 +79,23 @@ app.post('/api/contact', async (req: Request, res: Response) => {
 
     const { error } = await resend.emails.send({
       from: 'EyesSoftware <form@eyessoftware.com>',
-      to: ['info@eyessoftware.com', 'dev@eyessoftware.com'],
+      to: ['dev@eyessoftware.com'],
       replyTo: trimmedEmail,
-      subject: `${trimmedName} x Form`,
-      text: `${trimmedMessage}\n\n---\nSender email: ${trimmedEmail}`,
+      subject: `New contact form submission — ${trimmedName}`,
+      text: [
+        'New message from the eyessoftware.com contact form.',
+        '',
+        `Name: ${trimmedName}`,
+        `Email: ${trimmedEmail}`,
+        '',
+        trimmedMessage,
+      ].join('\n'),
       html: [
-        `<p>${escapeHtml(trimmedMessage).replace(/\n/g, '<br>')}</p>`,
+        '<p>New message from the eyessoftware.com contact form.</p>',
+        `<p><strong>Name:</strong> ${escapeHtml(trimmedName)}<br>`,
+        `<strong>Email:</strong> ${escapeHtml(trimmedEmail)}</p>`,
         '<hr>',
-        `<p><strong>Sender email:</strong> ${escapeHtml(trimmedEmail)}</p>`,
+        `<p>${escapeHtml(trimmedMessage).replace(/\n/g, '<br>')}</p>`,
       ].join(''),
     });
 

@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Startseite",
+    "products": "Produkte",
     "services": "Leistungen",
     "platforms": "Plattformen",
     "about": "Über uns",
@@ -45,12 +46,30 @@
     "title": "Technologie-Stack",
     "subtitle": "Wir deployen auf jeder Ebene des modernen Stacks — sicher, skalierbar und KI-ready.",
     "items": {
-      "android": { "title": "Android", "description": "Native & Cross-Platform Android mit ML Kit Integration" },
-      "ios": { "title": "iOS", "description": "Swift & React Native Apps mit Core ML" },
-      "web": { "title": "Web", "description": "React, Next.js & Edge-deployed KI-Anwendungen" },
-      "database": { "title": "Datensysteme", "description": "Vector DBs, SQL/NoSQL-Architektur & Optimierung" },
-      "security": { "title": "Sicherheit", "description": "Penetrationstests, KI-Bedrohungserkennung & Compliance" },
-      "cloud": { "title": "Cloud & KI", "description": "AWS, Azure, GCP & LLM-Infrastruktur-Management" }
+      "android": {
+        "title": "Android",
+        "description": "Native & Cross-Platform Android mit ML Kit Integration"
+      },
+      "ios": {
+        "title": "iOS",
+        "description": "Swift & React Native Apps mit Core ML"
+      },
+      "web": {
+        "title": "Web",
+        "description": "React, Next.js & Edge-deployed KI-Anwendungen"
+      },
+      "database": {
+        "title": "Datensysteme",
+        "description": "Vector DBs, SQL/NoSQL-Architektur & Optimierung"
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Penetrationstests, KI-Bedrohungserkennung & Compliance"
+      },
+      "cloud": {
+        "title": "Cloud & KI",
+        "description": "AWS, Azure, GCP & LLM-Infrastruktur-Management"
+      }
     }
   },
   "about": {
@@ -100,7 +119,10 @@
       "emailPlaceholder": "max@example.com",
       "messagePlaceholder": "Beschreiben Sie Vision, Zeitplan und Ziele...",
       "successMessage": "Nachricht erfolgreich gesendet!",
-      "errorRequired": "Alle Felder sind erforderlich."
+      "errorRequired": "Alle Felder sind erforderlich.",
+      "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "sending": "Wird gesendet…",
+      "errorSend": "Deine Nachricht konnte nicht gesendet werden. Bitte schreib uns direkt eine E-Mail."
     }
   },
   "footer": {
@@ -111,5 +133,31 @@
     "privacyPolicy": "Datenschutz",
     "termsOfService": "Nutzungsbedingungen",
     "cookiePolicy": "Cookie-Richtlinie"
+  },
+  "products": {
+    "title": "Einige der Produkte, die wir gebaut haben",
+    "subtitle": "Live-Produkte, die unser eigenes Team entwirft, entwickelt und betreibt.",
+    "visit": "Website besuchen",
+    "shortky": {
+      "tagline": "Kurzlinks, QR-Codes & Bio-Seiten",
+      "description": "Links kürzen, branden und nach Land, Gerät und Sprache steuern — und jeden einzelnen Klick sehen.",
+      "f1": "Intelligentes Routing nach Land, Gerät & Sprache",
+      "f2": "Dynamische QR-Codes, auch nach dem Druck editierbar",
+      "f3": "Bio-Seiten und Klick-Analysen in Echtzeit"
+    },
+    "infotube": {
+      "tagline": "KI-gestützte YouTube-Analytik",
+      "description": "Ein Arbeitsbereich für Creator: Videoanalyse, SEO, Wettbewerber-Tracking und KI-gestützte Wachstumstools.",
+      "f1": "KI-Videoanalyse und SEO-Vorschläge",
+      "f2": "Wettbewerber-Tracking in Echtzeit",
+      "f3": "Wachstums-Insights für alle Kanäle"
+    },
+    "snapia": {
+      "tagline": "QR-Fotoalben für Feiern",
+      "description": "Gäste scannen einen QR-Code und teilen Fotos, Videos und Sprachnachrichten in einem privaten Album.",
+      "f1": "Keine App und keine Anmeldung für Gäste",
+      "f2": "Fotos, Videos und Sprachnachrichten",
+      "f3": "Originalqualität, standardmäßig privat"
+    }
   }
 }

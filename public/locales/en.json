@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "products": "Products",
     "services": "Services",
     "platforms": "Platforms",
     "about": "About",
@@ -45,12 +46,30 @@
     "title": "Technology Stack",
     "subtitle": "We deploy across every layer of the modern stack — secure, scalable, and AI-ready.",
     "items": {
-      "android": { "title": "Android", "description": "Native & cross-platform Android with ML Kit integration" },
-      "ios": { "title": "iOS", "description": "Swift & React Native apps with Core ML capabilities" },
-      "web": { "title": "Web", "description": "React, Next.js & edge-deployed AI applications" },
-      "database": { "title": "Data Systems", "description": "Vector DBs, SQL/NoSQL architecture & optimization" },
-      "security": { "title": "Security", "description": "Penetration testing, AI threat detection & compliance" },
-      "cloud": { "title": "Cloud & AI", "description": "AWS, Azure, GCP & LLM infrastructure management" }
+      "android": {
+        "title": "Android",
+        "description": "Native & cross-platform Android with ML Kit integration"
+      },
+      "ios": {
+        "title": "iOS",
+        "description": "Swift & React Native apps with Core ML capabilities"
+      },
+      "web": {
+        "title": "Web",
+        "description": "React, Next.js & edge-deployed AI applications"
+      },
+      "database": {
+        "title": "Data Systems",
+        "description": "Vector DBs, SQL/NoSQL architecture & optimization"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Penetration testing, AI threat detection & compliance"
+      },
+      "cloud": {
+        "title": "Cloud & AI",
+        "description": "AWS, Azure, GCP & LLM infrastructure management"
+      }
     }
   },
   "about": {
@@ -100,7 +119,10 @@
       "emailPlaceholder": "john@example.com",
       "messagePlaceholder": "Describe your vision, timeline, and goals...",
       "successMessage": "Message sent successfully!",
-      "errorRequired": "All fields are required."
+      "errorRequired": "All fields are required.",
+      "errorEmail": "Please enter a valid email address.",
+      "sending": "Sending…",
+      "errorSend": "Your message could not be sent. Please email us directly."
     }
   },
   "footer": {
@@ -111,5 +133,31 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "cookiePolicy": "Cookie Policy"
+  },
+  "products": {
+    "title": "A few of the products we have built",
+    "subtitle": "Live products designed, built and run by our own team.",
+    "visit": "Visit site",
+    "shortky": {
+      "tagline": "Short links, QR codes & bio pages",
+      "description": "Shorten, brand and route links by country, device and language — then see every single click.",
+      "f1": "Smart routing by country, device & language",
+      "f2": "Dynamic QR codes you can edit after printing",
+      "f3": "Bio pages and real-time click analytics"
+    },
+    "infotube": {
+      "tagline": "AI-powered YouTube analytics",
+      "description": "One workspace for creators: video analysis, SEO, competitor tracking and growth tools powered by AI.",
+      "f1": "AI video analysis and SEO suggestions",
+      "f2": "Competitor tracking in real time",
+      "f3": "Growth insights across all your channels"
+    },
+    "snapia": {
+      "tagline": "QR photo albums for celebrations",
+      "description": "Guests scan a QR code and share photos, videos and voice messages in one private album.",
+      "f1": "No app and no sign-up for guests",
+      "f2": "Photos, videos and voice messages",
+      "f3": "Original quality, private by default"
+    }
   }
 }
