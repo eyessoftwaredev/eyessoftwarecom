@@ -116,27 +116,14 @@
   "products": {
     "title": "Quelques-uns des produits que nous avons créés",
     "subtitle": "Des produits en ligne conçus, développés et exploités par notre propre équipe.",
-    "visit": "Visiter le site",
     "shortky": {
-      "tagline": "Liens courts, QR codes et pages bio",
-      "description": "Raccourcissez, personnalisez et routez vos liens par pays, appareil et langue — puis suivez chaque clic.",
-      "f1": "Routage intelligent par pays, appareil et langue",
-      "f2": "QR codes dynamiques modifiables après impression",
-      "f3": "Pages bio et analyses de clics en temps réel"
+      "tagline": "Liens courts, QR codes et pages bio"
     },
     "infotube": {
-      "tagline": "Analytique YouTube propulsée par l’IA",
-      "description": "Un seul espace pour les créateurs : analyse vidéo, SEO, suivi des concurrents et outils de croissance par IA.",
-      "f1": "Analyse vidéo et suggestions SEO par IA",
-      "f2": "Suivi des concurrents en temps réel",
-      "f3": "Insights de croissance pour toutes vos chaînes"
+      "tagline": "Analytique YouTube propulsée par l’IA"
     },
     "snapia": {
-      "tagline": "Albums photo QR pour vos célébrations",
-      "description": "Les invités scannent un QR code et partagent photos, vidéos et messages vocaux dans un album privé.",
-      "f1": "Sans appli ni inscription pour les invités",
-      "f2": "Photos, vidéos et messages vocaux",
-      "f3": "Qualité originale, privé par défaut"
+      "tagline": "Albums photo QR pour vos célébrations"
     }
   }
 }

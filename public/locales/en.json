@@ -116,27 +116,14 @@
   "products": {
     "title": "A few of the products we have built",
     "subtitle": "Live products designed, built and run by our own team.",
-    "visit": "Visit site",
     "shortky": {
-      "tagline": "Short links, QR codes & bio pages",
-      "description": "Shorten, brand and route links by country, device and language — then see every single click.",
-      "f1": "Smart routing by country, device & language",
-      "f2": "Dynamic QR codes you can edit after printing",
-      "f3": "Bio pages and real-time click analytics"
+      "tagline": "Short links, QR codes & bio pages"
     },
     "infotube": {
-      "tagline": "AI-powered YouTube analytics",
-      "description": "One workspace for creators: video analysis, SEO, competitor tracking and growth tools powered by AI.",
-      "f1": "AI video analysis and SEO suggestions",
-      "f2": "Competitor tracking in real time",
-      "f3": "Growth insights across all your channels"
+      "tagline": "AI-powered YouTube analytics"
     },
     "snapia": {
-      "tagline": "QR photo albums for celebrations",
-      "description": "Guests scan a QR code and share photos, videos and voice messages in one private album.",
-      "f1": "No app and no sign-up for guests",
-      "f2": "Photos, videos and voice messages",
-      "f3": "Original quality, private by default"
+      "tagline": "QR photo albums for celebrations"
     }
   }
 }

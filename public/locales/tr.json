@@ -116,27 +116,14 @@
   "products": {
     "title": "Geliştirdiğimiz ürünlerden birkaçı",
     "subtitle": "Ekibimizin tasarlayıp geliştirdiği ve işlettiği canlı ürünler.",
-    "visit": "Siteyi ziyaret et",
     "shortky": {
-      "tagline": "Kısa linkler, QR kodlar ve bio sayfaları",
-      "description": "Linkleri kısaltın, markalayın, ülkeye, cihaza ve dile göre yönlendirin — her tıklamayı görün.",
-      "f1": "Ülke, cihaz ve dile göre akıllı yönlendirme",
-      "f2": "Basıldıktan sonra düzenlenebilen dinamik QR kodlar",
-      "f3": "Bio sayfaları ve anlık tıklama analitiği"
+      "tagline": "Kısa linkler, QR kodlar ve bio sayfaları"
     },
     "infotube": {
-      "tagline": "Yapay zekâ destekli YouTube analitiği",
-      "description": "İçerik üreticileri için tek çalışma alanı: video analizi, SEO, rakip takibi ve yapay zekâ destekli büyüme araçları.",
-      "f1": "Yapay zekâ ile video analizi ve SEO önerileri",
-      "f2": "Anlık rakip takibi",
-      "f3": "Tüm kanallarınız için büyüme içgörüleri"
+      "tagline": "Yapay zekâ destekli YouTube analitiği"
     },
     "snapia": {
-      "tagline": "Kutlamalar için QR fotoğraf albümleri",
-      "description": "Misafirler QR kodu okutur; fotoğraf, video ve ses mesajlarını tek bir özel albümde paylaşır.",
-      "f1": "Misafirler için uygulama ve üyelik yok",
-      "f2": "Fotoğraf, video ve ses mesajları",
-      "f3": "Orijinal kalite, varsayılan olarak özel"
+      "tagline": "Kutlamalar için QR fotoğraf albümleri"
     }
   }
 }
