@@ -125,8 +125,10 @@ nav.scrolled { border-bottom-color: var(--line); }
 .page-hero .lead { margin-top: 24px; }
 
 /* ── Products ── */
-.plist { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.plist { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.plist li { display: flex; }
 .pcard {
+  flex: 1;
   display: grid; grid-template-columns: 40px 1fr auto; grid-template-areas: "logo name url" "logo tag tag";
   column-gap: 14px; row-gap: 2px; align-items: center; padding: 20px 22px;
   background: var(--card); border: 1px solid var(--line); border-radius: 18px; text-decoration: none;
@@ -226,6 +228,7 @@ footer { background: var(--ink); color: #fff; margin-top: clamp(72px, 10vw, 140p
 
 /* ── Responsive ── */
 @media (max-width: 1080px) {
+  .plist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-links a { padding: 8px 10px; }
   .nav-cta { display: none; }
 }
