@@ -10,13 +10,13 @@
   "hero": {
     "badge": "Softwareentwicklungs-Studio",
     "title": "Wir entwickeln Software, die funktioniert",
-    "subtitle": "EyesSoftware konzipiert und entwickelt Web-, Mobile- und individuelle Unternehmenssoftware — von der ersten Idee bis zum stabilen Produkt im Live-Betrieb.",
+    "subtitle": "EyesSoftware konzipiert und entwickelt Web-, Mobile- und individuelle Software für Unternehmen und Privatpersonen — von der ersten Idee bis zum stabilen Produkt im Live-Betrieb.",
     "cta": "Projekt starten",
     "ctaSecondary": "Leistungen entdecken"
   },
   "services": {
     "title": "Was wir entwickeln",
-    "subtitle": "Softwareentwicklung aus einer Hand: Wir planen, gestalten, entwickeln und betreuen Produkte, auf die sich Ihr Team und Ihre Kunden verlassen.",
+    "subtitle": "Softwareentwicklung aus einer Hand: Wir planen, gestalten, entwickeln und betreuen Produkte, auf die Sie und Ihre Kunden sich verlassen.",
     "items": {
       "website": {
         "title": "Webentwicklung",
@@ -28,13 +28,35 @@
       },
       "software": {
         "title": "Individualsoftware",
-        "description": "Interne Tools, Integrationen und Unternehmenssoftware, die sich an Ihren echten Abläufen orientieren."
+        "description": "Interne Tools, Integrationen und individuelle Software, die sich an Ihren echten Abläufen orientieren."
       },
       "uiux": {
         "title": "UI/UX-Design",
         "description": "Klare, gut bedienbare Oberflächen, gemeinsam mit den späteren Nutzern gestaltet."
       }
     }
+  },
+  "process": {
+    "title": "So funktioniert es",
+    "steps": {
+      "brief": {
+        "title": "Projektbriefing senden",
+        "description": "Beschreiben Sie Ihr Vorhaben über das Kontaktformular oder per E-Mail."
+      },
+      "quote": {
+        "title": "Umfang und Angebot erhalten",
+        "description": "Sie erhalten von uns einen schriftlichen Leistungsumfang, Zeitplan und Festpreis."
+      },
+      "pay": {
+        "title": "Freigeben und sicher bezahlen",
+        "description": "Nach Ihrer Freigabe senden wir eine Rechnung; Sie zahlen per Karte über einen sicheren Checkout."
+      },
+      "deliver": {
+        "title": "Entwicklung und Übergabe",
+        "description": "Wir entwickeln in Meilensteinen, berichten über den Fortschritt und übergeben das fertige Ergebnis."
+      }
+    },
+    "note": "Jedes Projekt wird individuell angeboten."
   },
   "platforms": {
     "title": "Technologie-Stack",
@@ -68,7 +90,7 @@
   },
   "about": {
     "title": "Über EyesSoftware",
-    "description": "Wir sind ein Softwareentwicklungs-Studio mit Sitz in Dubai. Gemeinsam mit Unternehmen konzipieren, entwickeln und betreuen wir Software, die echte Probleme löst — mit klarer Kommunikation, ehrlichen Zeitplänen und Code, der leicht anpassbar bleibt.",
+    "description": "Wir sind ein Softwareentwicklungs-Studio mit Sitz in Dubai. Gemeinsam mit Unternehmen und Privatpersonen konzipieren, entwickeln und betreuen wir Software, die echte Probleme löst — mit klarer Kommunikation, ehrlichen Zeitplänen und Code, der leicht anpassbar bleibt.",
     "features": {
       "quality": "Qualitätsorientiert",
       "goal": "Ergebnisorientiert",
@@ -100,11 +122,12 @@
   },
   "footer": {
     "description": "Softwareentwicklungs-Studio — Dubai, VAE.",
-    "copyright": "© 2026 EyesSoftware. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 Eyes Software FZCO. Alle Rechte vorbehalten.",
     "quickLinks": "Navigation",
     "legalLinks": "Rechtliches",
     "privacyPolicy": "Datenschutz",
     "termsOfService": "Nutzungsbedingungen",
+    "refundPolicy": "Rückerstattungsrichtlinie",
     "cookiePolicy": "Cookie-Richtlinie"
   },
   "products": {
@@ -125,5 +148,8 @@
     "rejee": {
       "tagline": "Livestreaming-Studio im Browser"
     }
+  },
+  "legal": {
+    "englishOnly": "Dieses Dokument ist nur auf Englisch verfügbar."
   }
 }

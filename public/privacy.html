@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+      var FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
+
+      function readCookie(name) {
+        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[1]) : null;
+      }
+
+      function getSavedLang() {
+        try {
+          var stored = localStorage.getItem('lang');
+          if (stored && LANGS.indexOf(stored) !== -1) return stored;
+        } catch (e) {}
+        var cookieLang = readCookie('lang');
+        if (cookieLang && LANGS.indexOf(cookieLang) !== -1) return cookieLang;
+        return 'en';
+      }
+
+      var saved = getSavedLang();
+      var root = document.documentElement;
+      root.lang = saved;
+      root.dir = saved === 'ar' ? 'rtl' : 'ltr';
+      root.dataset.lang = saved;
+      root.dataset.flag = FLAGS[saved];
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Privacy Policy — EyesSoftware</title>
+  <meta name="description" content="How Eyes Software FZCO collects, uses and protects personal data." />
+  <link rel="canonical" href="https://eyessoftware.com/privacy" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/brand/eyes-mark-lime.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/vendor/flag-icons/css/flag-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/locales/bundle.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="navbar">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#about" data-i18n="nav.about">About</a></li>
+        <li><a href="/products" data-i18n="nav.products">Products</a></li>
+        <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Start Your Project</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+            <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-gb fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="tr" aria-label="Türkçe"><span class="fi fi-tr fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="ar" aria-label="العربية"><span class="fi fi-ae fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="de" aria-label="Deutsch"><span class="fi fi-de fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <section class="hero page-hero">
+    <div class="wrap reveal">
+      <span class="chip" data-i18n="footer.legalLinks">Legal</span>
+      <h1 class="hero-title" data-i18n="footer.privacyPolicy">Privacy Policy</h1>
+      <p class="legal-meta">Last updated: 13 October 2026</p>
+      <p class="legal-note" data-i18n="legal.englishOnly">This document is available in English only.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-tight">
+    <div class="wrap">
+      <article class="legal" lang="en" dir="ltr">
+        <h2>1. Who we are</h2>
+        <p>Eyes Software FZCO (“Eyes Software”, “we”, “us”) operates eyessoftware.com and is responsible for the personal data described in this policy.</p>
+
+        <h2>2. Data we collect</h2>
+        <ul>
+          <li><strong>Contact form:</strong> your name, email address and the message you send us.</li>
+          <li><strong>Projects and invoices:</strong> your name, company name (if any), billing address, email address, phone number, tax registration number where applicable, and the details of your project.</li>
+          <li><strong>Payments:</strong> card payments are processed by Stripe. We never see or store your full card number or security code. We receive only limited information such as the payment status, card type and last four digits.</li>
+          <li><strong>Technical data:</strong> our hosting and security providers log technical information such as your IP address, browser type and the pages requested.</li>
+          <li><strong>Language preference:</strong> the language you select is saved in your browser.</li>
+        </ul>
+
+        <h2>3. How we use your data</h2>
+        <ul>
+          <li>To reply to your enquiry and prepare a quote.</li>
+          <li>To deliver the services you ordered and to issue invoices.</li>
+          <li>To meet our accounting and legal obligations.</li>
+          <li>To keep our website secure and prevent abuse.</li>
+        </ul>
+        <p>We do not sell your personal data and we do not send marketing emails unless you ask us to.</p>
+
+        <h2>4. Who we share data with</h2>
+        <p>We share personal data only with the service providers we need to run our business:</p>
+        <ul>
+          <li>Stripe, for payment processing (see the <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a>).</li>
+          <li>Cloudflare, for content delivery and website security.</li>
+          <li>Our hosting provider, whose servers are located in the European Union.</li>
+          <li>Our email providers, to send and receive email.</li>
+          <li>Google Fonts, which serves the fonts on this website; Google receives your IP address when the fonts load.</li>
+        </ul>
+        <p>We may also disclose data when the law requires it. Some of these providers process data outside the United Arab Emirates, including in the European Union and the United States.</p>
+
+        <h2>5. How long we keep data</h2>
+        <ul>
+          <li>Enquiries that do not lead to a project: up to 24 months.</li>
+          <li>Project, invoice and accounting records: for at least seven years, or longer where UAE law requires it.</li>
+        </ul>
+
+        <h2>6. Your rights</h2>
+        <p>You can ask us for a copy of your personal data, ask us to correct it, or ask us to delete it. To make a request, email <a href="mailto:info@eyessoftware.com">info@eyessoftware.com</a>. We reply within 30 days. We delete your data on request unless we are legally required to keep it, for example in invoices.</p>
+
+        <h2>7. Security</h2>
+        <p>We use encrypted connections (HTTPS), restrict access to personal data to the people who need it, and rely on established providers for payments and hosting.</p>
+
+        <h2>8. Children</h2>
+        <p>Our services are not directed at children, and we do not knowingly collect their personal data.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>We may update this policy. The date at the top of the page shows when it was last changed.</p>
+
+        <h2>10. Contact</h2>
+        <address>
+          <strong>Eyes Software FZCO</strong><br />
+          Building A1, Dubai Digital Park, Dubai Silicon Oasis,<br />
+          P.O. Box 342001, Dubai, United Arab Emirates<br />
+          <a href="mailto:info@eyessoftware.com">info@eyessoftware.com</a>
+        </address>
+      </article>
+    </div>
+  </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="/brand/eyes-logo-inverse.svg" alt="EyesSoftware" width="96" height="40" /></a>
+          <p data-i18n="footer.description">Software development studio — Dubai, UAE.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <ul>
+            <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#about" data-i18n="nav.about">About</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="nav.products">Products</h4>
+          <ul>
+            <li><a href="https://short.ky" target="_blank" rel="noopener">Short.ky</a></li>
+            <li><a href="https://infotube.ai" target="_blank" rel="noopener">InfoTube</a></li>
+            <li><a href="https://snapia.co" target="_blank" rel="noopener">Snapia</a></li>
+            <li><a href="https://billur.ai" target="_blank" rel="noopener">billur.ai</a></li>
+            <li><a href="https://rejee.live" target="_blank" rel="noopener">Rejee</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legalLinks">Legal</h4>
+          <ul>
+            <li><a href="/terms" data-i18n="footer.termsOfService">Terms of Service</a></li>
+            <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
+            <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
+            <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 Eyes Software FZCO. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="/vendor/lucide.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

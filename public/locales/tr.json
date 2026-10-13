@@ -10,13 +10,13 @@
   "hero": {
     "badge": "Yazılım Geliştirme Stüdyosu",
     "title": "Çalışan yazılımlar geliştiriyoruz",
-    "subtitle": "EyesSoftware; web, mobil ve işletmelere özel yazılımlar tasarlar ve geliştirir — ilk fikirden canlıda sorunsuz çalışan bir ürüne kadar.",
+    "subtitle": "EyesSoftware; işletmeler ve bireyler için web, mobil ve özel yazılımlar tasarlar ve geliştirir — ilk fikirden canlıda sorunsuz çalışan bir ürüne kadar.",
     "cta": "Projenizi Başlatın",
     "ctaSecondary": "Hizmetleri Keşfedin"
   },
   "services": {
     "title": "Neler geliştiriyoruz",
-    "subtitle": "Uçtan uca yazılım geliştirme: ekibinizin ve müşterilerinizin güvendiği ürünleri planlıyor, tasarlıyor, geliştiriyor ve bakımını yapıyoruz.",
+    "subtitle": "Uçtan uca yazılım geliştirme: sizin ve müşterilerinizin güvendiği ürünleri planlıyor, tasarlıyor, geliştiriyor ve bakımını yapıyoruz.",
     "items": {
       "website": {
         "title": "Web Geliştirme",
@@ -28,13 +28,35 @@
       },
       "software": {
         "title": "Özel Yazılım",
-        "description": "Şirketinizin gerçek iş akışına göre geliştirilen iç araçlar, entegrasyonlar ve iş yazılımları."
+        "description": "Gerçek iş akışınıza göre geliştirilen iç araçlar, entegrasyonlar ve özel yazılımlar."
       },
       "uiux": {
         "title": "UI/UX Tasarım",
         "description": "Onu kullanacak kişilerle birlikte tasarlanan, anlaşılır ve kullanışlı arayüzler."
       }
     }
+  },
+  "process": {
+    "title": "Nasıl çalışıyoruz",
+    "steps": {
+      "brief": {
+        "title": "Proje özetinizi gönderin",
+        "description": "İletişim formundan ya da e-postayla neye ihtiyacınız olduğunu anlatın."
+      },
+      "quote": {
+        "title": "Kapsam ve fiyat teklifi alın",
+        "description": "Size yazılı bir kapsam, takvim ve sabit fiyat teklifiyle dönüyoruz."
+      },
+      "pay": {
+        "title": "Onaylayın, güvenle ödeyin",
+        "description": "Onayınızın ardından fatura göndeririz; ödemeyi güvenli ödeme sayfasından kartla yaparsınız."
+      },
+      "deliver": {
+        "title": "Geliştirme ve teslim",
+        "description": "Aşama aşama geliştirir, ilerlemeyi paylaşır ve tamamlanan işi teslim ederiz."
+      }
+    },
+    "note": "Her proje için ayrı fiyat teklifi verilir."
   },
   "platforms": {
     "title": "Teknoloji Yığını",
@@ -68,7 +90,7 @@
   },
   "about": {
     "title": "EyesSoftware Hakkında",
-    "description": "Dubai merkezli bir yazılım geliştirme stüdyosuyuz. Şirketlerle birlikte gerçek sorunları çözen yazılımlar tasarlıyor, geliştiriyor ve bakımını yapıyoruz — açık iletişim, dürüst takvimler ve kolay değiştirilebilen kodla.",
+    "description": "Dubai merkezli bir yazılım geliştirme stüdyosuyuz. İşletmeler ve bireylerle birlikte gerçek sorunları çözen yazılımlar tasarlıyor, geliştiriyor ve bakımını yapıyoruz — açık iletişim, dürüst takvimler ve kolay değiştirilebilen kodla.",
     "features": {
       "quality": "Kalite Odaklı",
       "goal": "Sonuç Odaklı",
@@ -100,11 +122,12 @@
   },
   "footer": {
     "description": "Yazılım geliştirme stüdyosu — Dubai, BAE.",
-    "copyright": "© 2026 EyesSoftware. Tüm hakları saklıdır.",
+    "copyright": "© 2026 Eyes Software FZCO. Tüm hakları saklıdır.",
     "quickLinks": "Navigasyon",
     "legalLinks": "Yasal",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları",
+    "refundPolicy": "İade Politikası",
     "cookiePolicy": "Çerez Politikası"
   },
   "products": {
@@ -125,5 +148,8 @@
     "rejee": {
       "tagline": "Tarayıcınızda canlı yayın stüdyosu"
     }
+  },
+  "legal": {
+    "englishOnly": "Bu belge yalnızca İngilizce olarak sunulmaktadır."
   }
 }

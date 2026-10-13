@@ -10,13 +10,13 @@
   "hero": {
     "badge": "Software Development Studio",
     "title": "We build software that works",
-    "subtitle": "EyesSoftware designs and builds web, mobile and custom business software — from the first idea to a stable product in production.",
+    "subtitle": "EyesSoftware designs and builds web, mobile and custom software for businesses and individuals — from the first idea to a stable product in production.",
     "cta": "Start Your Project",
     "ctaSecondary": "Explore Services"
   },
   "services": {
     "title": "What we build",
-    "subtitle": "End-to-end software development: we plan, design, build and maintain products your team and customers rely on.",
+    "subtitle": "End-to-end software development: we plan, design, build and maintain products you and your customers rely on.",
     "items": {
       "website": {
         "title": "Web Development",
@@ -28,13 +28,35 @@
       },
       "software": {
         "title": "Custom Software",
-        "description": "Internal tools, integrations and business software built around how your company actually works."
+        "description": "Internal tools, integrations and custom software built around how you actually work."
       },
       "uiux": {
         "title": "UI/UX Design",
         "description": "Clear, usable interfaces designed together with the people who will use them."
       }
     }
+  },
+  "process": {
+    "title": "How it works",
+    "steps": {
+      "brief": {
+        "title": "Send your brief",
+        "description": "Tell us what you need through the contact form or by email."
+      },
+      "quote": {
+        "title": "Get scope and price",
+        "description": "We reply with a written scope, timeline and fixed quote."
+      },
+      "pay": {
+        "title": "Approve and pay securely",
+        "description": "Once you approve, we send an invoice; you pay by card through a secure checkout."
+      },
+      "deliver": {
+        "title": "Development and delivery",
+        "description": "We build in milestones, share progress and hand over the finished work."
+      }
+    },
+    "note": "Every project is quoted individually."
   },
   "platforms": {
     "title": "Technology Stack",
@@ -68,7 +90,7 @@
   },
   "about": {
     "title": "About EyesSoftware",
-    "description": "We are a Dubai-based software development studio. We work with companies to design, build and maintain software that solves real problems — with clear communication, honest timelines and code that stays easy to change.",
+    "description": "We are a Dubai-based software development studio. We work with businesses and individuals to design, build and maintain software that solves real problems — with clear communication, honest timelines and code that stays easy to change.",
     "features": {
       "quality": "Quality-Driven",
       "goal": "Results-Focused",
@@ -100,11 +122,12 @@
   },
   "footer": {
     "description": "Software development studio — Dubai, UAE.",
-    "copyright": "© 2026 EyesSoftware. All rights reserved.",
+    "copyright": "© 2026 Eyes Software FZCO. All rights reserved.",
     "quickLinks": "Navigation",
     "legalLinks": "Legal",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
+    "refundPolicy": "Refund Policy",
     "cookiePolicy": "Cookie Policy"
   },
   "products": {
@@ -125,5 +148,8 @@
     "rejee": {
       "tagline": "Live streaming studio in your browser"
     }
+  },
+  "legal": {
+    "englishOnly": "This document is available in English only."
   }
 }

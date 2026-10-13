@@ -10,13 +10,13 @@
   "hero": {
     "badge": "Studio de développement logiciel",
     "title": "Nous développons des logiciels qui fonctionnent",
-    "subtitle": "EyesSoftware conçoit et développe des logiciels web, mobiles et sur mesure — de la première idée à un produit stable en production.",
+    "subtitle": "EyesSoftware conçoit et développe des logiciels web, mobiles et sur mesure pour les entreprises et les particuliers — de la première idée à un produit stable en production.",
     "cta": "Démarrer votre projet",
     "ctaSecondary": "Explorer les services"
   },
   "services": {
     "title": "Ce que nous développons",
-    "subtitle": "Développement logiciel de bout en bout : nous planifions, concevons, développons et maintenons des produits sur lesquels votre équipe et vos clients peuvent compter.",
+    "subtitle": "Développement logiciel de bout en bout : nous planifions, concevons, développons et maintenons des produits sur lesquels vous et vos clients pouvez compter.",
     "items": {
       "website": {
         "title": "Développement web",
@@ -28,13 +28,35 @@
       },
       "software": {
         "title": "Logiciel sur mesure",
-        "description": "Outils internes, intégrations et logiciels métier construits autour de votre façon réelle de travailler."
+        "description": "Outils internes, intégrations et logiciels sur mesure construits autour de votre façon réelle de travailler."
       },
       "uiux": {
         "title": "Design UI/UX",
         "description": "Des interfaces claires et faciles à utiliser, conçues avec les personnes qui les utiliseront."
       }
     }
+  },
+  "process": {
+    "title": "Comment ça marche",
+    "steps": {
+      "brief": {
+        "title": "Envoyez votre brief",
+        "description": "Décrivez votre besoin via le formulaire de contact ou par e-mail."
+      },
+      "quote": {
+        "title": "Recevez le périmètre et le devis",
+        "description": "Nous vous répondons avec un périmètre écrit, un calendrier et un prix fixe."
+      },
+      "pay": {
+        "title": "Validez et payez en toute sécurité",
+        "description": "Après votre validation, nous envoyons une facture ; vous payez par carte via une page de paiement sécurisée."
+      },
+      "deliver": {
+        "title": "Développement et livraison",
+        "description": "Nous développons par étapes, partageons l'avancement et livrons le travail terminé."
+      }
+    },
+    "note": "Chaque projet fait l'objet d'un devis individuel."
   },
   "platforms": {
     "title": "Stack technologique",
@@ -68,7 +90,7 @@
   },
   "about": {
     "title": "À propos d'EyesSoftware",
-    "description": "Nous sommes un studio de développement logiciel basé à Dubaï. Nous travaillons avec les entreprises pour concevoir, développer et maintenir des logiciels qui résolvent de vrais problèmes — avec une communication claire, des délais honnêtes et un code facile à faire évoluer.",
+    "description": "Nous sommes un studio de développement logiciel basé à Dubaï. Nous travaillons avec les entreprises et les particuliers pour concevoir, développer et maintenir des logiciels qui résolvent de vrais problèmes — avec une communication claire, des délais honnêtes et un code facile à faire évoluer.",
     "features": {
       "quality": "Orienté qualité",
       "goal": "Orienté résultats",
@@ -100,11 +122,12 @@
   },
   "footer": {
     "description": "Studio de développement logiciel — Dubaï, EAU.",
-    "copyright": "© 2026 EyesSoftware. Tous droits réservés.",
+    "copyright": "© 2026 Eyes Software FZCO. Tous droits réservés.",
     "quickLinks": "Navigation",
     "legalLinks": "Légal",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d'utilisation",
+    "refundPolicy": "Politique de remboursement",
     "cookiePolicy": "Politique des cookies"
   },
   "products": {
@@ -125,5 +148,8 @@
     "rejee": {
       "tagline": "Studio de live streaming dans votre navigateur"
     }
+  },
+  "legal": {
+    "englishOnly": "Ce document est disponible uniquement en anglais."
   }
 }

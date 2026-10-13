@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+      var FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
+
+      function readCookie(name) {
+        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[1]) : null;
+      }
+
+      function getSavedLang() {
+        try {
+          var stored = localStorage.getItem('lang');
+          if (stored && LANGS.indexOf(stored) !== -1) return stored;
+        } catch (e) {}
+        var cookieLang = readCookie('lang');
+        if (cookieLang && LANGS.indexOf(cookieLang) !== -1) return cookieLang;
+        return 'en';
+      }
+
+      var saved = getSavedLang();
+      var root = document.documentElement;
+      root.lang = saved;
+      root.dir = saved === 'ar' ? 'rtl' : 'ltr';
+      root.dataset.lang = saved;
+      root.dataset.flag = FLAGS[saved];
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Terms of Service — EyesSoftware</title>
+  <meta name="description" content="Terms that apply to software development services provided by Eyes Software FZCO." />
+  <link rel="canonical" href="https://eyessoftware.com/terms" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/brand/eyes-mark-lime.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/vendor/flag-icons/css/flag-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/locales/bundle.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="navbar">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#about" data-i18n="nav.about">About</a></li>
+        <li><a href="/products" data-i18n="nav.products">Products</a></li>
+        <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Start Your Project</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+            <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-gb fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="tr" aria-label="Türkçe"><span class="fi fi-tr fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="ar" aria-label="العربية"><span class="fi fi-ae fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="de" aria-label="Deutsch"><span class="fi fi-de fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <section class="hero page-hero">
+    <div class="wrap reveal">
+      <span class="chip" data-i18n="footer.legalLinks">Legal</span>
+      <h1 class="hero-title" data-i18n="footer.termsOfService">Terms of Service</h1>
+      <p class="legal-meta">Last updated: 13 October 2026</p>
+      <p class="legal-note" data-i18n="legal.englishOnly">This document is available in English only.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-tight">
+    <div class="wrap">
+      <article class="legal" lang="en" dir="ltr">
+        <h2>1. About these terms</h2>
+        <p>These Terms of Service govern the services provided by Eyes Software FZCO (“Eyes Software”, “we”, “us”), a company registered in Dubai Silicon Oasis, Dubai, United Arab Emirates. They apply to every project we carry out for a client (“you”), whether you are a business or an individual. By approving a quote or paying an invoice, you agree to these terms.</p>
+
+        <h2>2. Services</h2>
+        <p>We provide web development, mobile app development, custom software development and UI/UX design. The exact scope of each project — deliverables, timeline, price and milestones — is set out in the written quote we send you.</p>
+
+        <h2>3. Quotes and approval</h2>
+        <ul>
+          <li>Every project is quoted individually. A quote is valid for 30 days unless it states otherwise.</li>
+          <li>Work starts after you approve the quote in writing (an email is sufficient) and, where the quote requires it, after the first payment is received.</li>
+          <li>Changes to the agreed scope must be confirmed in writing and may change the price and the timeline.</li>
+        </ul>
+
+        <h2>4. Fees and payment</h2>
+        <ul>
+          <li>We invoice per project or per milestone, as stated in the quote. Invoices are payable by the due date shown on the invoice.</li>
+          <li>Card payments are processed securely by Stripe. We do not receive or store your full card details.</li>
+          <li>Prices exclude VAT and other applicable taxes unless the quote says otherwise.</li>
+          <li>If an invoice is overdue, we may pause work until it is paid.</li>
+        </ul>
+
+        <h2>5. Delivery and revisions</h2>
+        <ul>
+          <li>We deliver the work according to the timeline in the quote. Timelines depend on receiving your content, access and feedback on time.</li>
+          <li>The quote states how many revision rounds are included. Unless it says otherwise, each milestone includes two rounds of revisions within the agreed scope. Further changes are quoted separately.</li>
+          <li>A deliverable is considered accepted if you do not report any issue in writing within 10 business days of delivery.</li>
+        </ul>
+
+        <h2>6. Your responsibilities</h2>
+        <p>You agree to provide the materials, access and decisions we need to carry out the project, and you confirm that you have the right to use any content, data or assets you give us.</p>
+
+        <h2>7. Intellectual property</h2>
+        <ul>
+          <li>Once the project has been paid in full, ownership of the deliverables created specifically for you transfers to you. Until then, they remain our property.</li>
+          <li>We keep ownership of our pre-existing tools, libraries and know-how, and grant you a perpetual, non-exclusive licence to use them as part of the deliverables.</li>
+          <li>Third-party and open-source components remain subject to their own licences.</li>
+          <li>We may mention the project in our portfolio unless you ask us in writing not to.</li>
+        </ul>
+
+        <h2>8. Confidentiality</h2>
+        <p>Each party keeps the other’s non-public business and technical information confidential and uses it only for the project.</p>
+
+        <h2>9. Cancellation and refunds</h2>
+        <p>Cancellations and refunds are handled under our <a href="/refund-policy">Refund &amp; Cancellation Policy</a>, which forms part of these terms.</p>
+
+        <h2>10. Warranty and limitation of liability</h2>
+        <ul>
+          <li>Defects (bugs) in the delivered scope that you report within 30 days of delivery are fixed at no extra cost. New features and requests outside the agreed scope are quoted separately.</li>
+          <li>Apart from this, the services are provided without further warranties, to the extent permitted by law.</li>
+          <li>We are not liable for indirect or consequential losses, or for loss of profit, revenue or data.</li>
+          <li>Our total liability for a project is limited to the fees you paid for that project.</li>
+          <li>Nothing in these terms excludes liability that cannot be excluded by law.</li>
+        </ul>
+
+        <h2>11. Governing law</h2>
+        <p>These terms are governed by the laws of the United Arab Emirates as applied in the Emirate of Dubai. The courts of Dubai have exclusive jurisdiction over any dispute.</p>
+
+        <h2>12. Changes to these terms</h2>
+        <p>We may update these terms from time to time. The version in force when you approve a quote applies to that project.</p>
+
+        <h2>13. Contact</h2>
+        <address>
+          <strong>Eyes Software FZCO</strong><br />
+          Building A1, Dubai Digital Park, Dubai Silicon Oasis,<br />
+          P.O. Box 342001, Dubai, United Arab Emirates<br />
+          <a href="mailto:info@eyessoftware.com">info@eyessoftware.com</a>
+        </address>
+      </article>
+    </div>
+  </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="/brand/eyes-logo-inverse.svg" alt="EyesSoftware" width="96" height="40" /></a>
+          <p data-i18n="footer.description">Software development studio — Dubai, UAE.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <ul>
+            <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#about" data-i18n="nav.about">About</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="nav.products">Products</h4>
+          <ul>
+            <li><a href="https://short.ky" target="_blank" rel="noopener">Short.ky</a></li>
+            <li><a href="https://infotube.ai" target="_blank" rel="noopener">InfoTube</a></li>
+            <li><a href="https://snapia.co" target="_blank" rel="noopener">Snapia</a></li>
+            <li><a href="https://billur.ai" target="_blank" rel="noopener">billur.ai</a></li>
+            <li><a href="https://rejee.live" target="_blank" rel="noopener">Rejee</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legalLinks">Legal</h4>
+          <ul>
+            <li><a href="/terms" data-i18n="footer.termsOfService">Terms of Service</a></li>
+            <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
+            <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
+            <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 Eyes Software FZCO. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="/vendor/lucide.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

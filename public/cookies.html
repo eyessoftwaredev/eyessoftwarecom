@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var LANGS = ['en', 'tr', 'ar', 'de', 'fr'];
+      var FLAGS = { en: 'gb', tr: 'tr', ar: 'ae', de: 'de', fr: 'fr' };
+
+      function readCookie(name) {
+        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[1]) : null;
+      }
+
+      function getSavedLang() {
+        try {
+          var stored = localStorage.getItem('lang');
+          if (stored && LANGS.indexOf(stored) !== -1) return stored;
+        } catch (e) {}
+        var cookieLang = readCookie('lang');
+        if (cookieLang && LANGS.indexOf(cookieLang) !== -1) return cookieLang;
+        return 'en';
+      }
+
+      var saved = getSavedLang();
+      var root = document.documentElement;
+      root.lang = saved;
+      root.dir = saved === 'ar' ? 'rtl' : 'ltr';
+      root.dataset.lang = saved;
+      root.dataset.flag = FLAGS[saved];
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Cookie Policy — EyesSoftware</title>
+  <meta name="description" content="Which cookies eyessoftware.com uses and how to control them." />
+  <link rel="canonical" href="https://eyessoftware.com/cookies" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/brand/eyes-mark-lime.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/vendor/flag-icons/css/flag-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/locales/bundle.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="navbar">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#about" data-i18n="nav.about">About</a></li>
+        <li><a href="/products" data-i18n="nav.products">Products</a></li>
+        <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Start Your Project</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+            <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-gb fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="tr" aria-label="Türkçe"><span class="fi fi-tr fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="ar" aria-label="العربية"><span class="fi fi-ae fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="de" aria-label="Deutsch"><span class="fi fi-de fis" aria-hidden="true"></span></button>
+            <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <section class="hero page-hero">
+    <div class="wrap reveal">
+      <span class="chip" data-i18n="footer.legalLinks">Legal</span>
+      <h1 class="hero-title" data-i18n="footer.cookiePolicy">Cookie Policy</h1>
+      <p class="legal-meta">Last updated: 13 October 2026</p>
+      <p class="legal-note" data-i18n="legal.englishOnly">This document is available in English only.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-tight">
+    <div class="wrap">
+      <article class="legal" lang="en" dir="ltr">
+        <h2>1. What cookies are</h2>
+        <p>Cookies are small text files that a website stores in your browser. This page explains which ones eyessoftware.com, operated by Eyes Software FZCO, uses.</p>
+
+        <h2>2. Cookies we use</h2>
+        <ul>
+          <li><strong>lang</strong> — remembers the language you selected. It is a first-party cookie that lasts one year. The same preference is also saved in your browser’s local storage.</li>
+          <li><strong>Cloudflare security cookies</strong> (for example <code>__cf_bm</code> or <code>cf_clearance</code>) — may be set by Cloudflare, our security provider, to tell real visitors from automated traffic. They are strictly necessary and short-lived.</li>
+        </ul>
+        <p>We do not use analytics or advertising cookies. If that changes, we will update this page first.</p>
+
+        <h2>3. Third parties</h2>
+        <ul>
+          <li>Fonts are served by Google Fonts, which does not set cookies on this website.</li>
+          <li>Card payments are made on pages hosted by Stripe, which sets its own cookies there under the <a href="https://stripe.com/cookie-settings" target="_blank" rel="noopener">Stripe cookie policy</a>.</li>
+        </ul>
+
+        <h2>4. How to disable cookies</h2>
+        <p>You can block or delete cookies in your browser settings. If you block the <strong>lang</strong> cookie, the website still works but may not remember your language.</p>
+
+        <h2>5. More information</h2>
+        <p>See our <a href="/privacy">Privacy Policy</a> for how we handle personal data.</p>
+        <address>
+          <strong>Eyes Software FZCO</strong><br />
+          Building A1, Dubai Digital Park, Dubai Silicon Oasis,<br />
+          P.O. Box 342001, Dubai, United Arab Emirates<br />
+          <a href="mailto:info@eyessoftware.com">info@eyessoftware.com</a>
+        </address>
+      </article>
+    </div>
+  </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="/brand/eyes-logo-inverse.svg" alt="EyesSoftware" width="96" height="40" /></a>
+          <p data-i18n="footer.description">Software development studio — Dubai, UAE.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <ul>
+            <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#about" data-i18n="nav.about">About</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="nav.products">Products</h4>
+          <ul>
+            <li><a href="https://short.ky" target="_blank" rel="noopener">Short.ky</a></li>
+            <li><a href="https://infotube.ai" target="_blank" rel="noopener">InfoTube</a></li>
+            <li><a href="https://snapia.co" target="_blank" rel="noopener">Snapia</a></li>
+            <li><a href="https://billur.ai" target="_blank" rel="noopener">billur.ai</a></li>
+            <li><a href="https://rejee.live" target="_blank" rel="noopener">Rejee</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legalLinks">Legal</h4>
+          <ul>
+            <li><a href="/terms" data-i18n="footer.termsOfService">Terms of Service</a></li>
+            <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
+            <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
+            <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 Eyes Software FZCO. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="/vendor/lucide.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
