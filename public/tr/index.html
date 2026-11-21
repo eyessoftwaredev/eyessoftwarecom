@@ -191,7 +191,7 @@ footer .mono { color: rgba(244,244,241,.55); }
   <nav class="links"><a href="#surec">Süreç</a><a href="#iletisim">İletişim</a></nav>
   <a class="btn" href="#iletisim" data-sektor=""><span class="d"></span>Fiyat al</a>
 </header>
-<div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
 <main>
 <div class="film" id="film">
@@ -233,7 +233,7 @@ footer .mono { color: rgba(244,244,241,.55); }
   </section>
 
   <section class="panel">
-    <div class="copy r">
+    <div class="copy">
       <span class="mono"><b>04</b>Kafe</span>
       <div style="margin-top:14px"><h2>Kafeler<span class="dot">.</span></h2></div>
       <p>Kahve satışı, abonelik ve şube sayfaları.</p>
@@ -257,6 +257,23 @@ footer .mono { color: rgba(244,244,241,.55); }
       <p>Koleksiyon, stok ve ödeme tek yerde.</p>
     
       <a class="qlink" href="#iletisim" data-sektor="Moda / e-ticaret">Bu sektör için fiyat al →</a></div>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono">Hepsi tek ekipte</span>
+      <div style="margin-top:14px"><h2>Sizin sektörünüz<br>hangisi<span class="dot">?</span></h2></div>
+      <p>Restorandan modaya, markanıza özel site ve uygulama.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono">EyesSoftware</span>
+      <div style="margin-top:14px"><h2>Markanızı<br>ekrana taşıyalım<span class="dot">.</span></h2></div>
+      <p>Formu doldurun, 24 saat içinde WhatsApp'tan fiyatla dönelim.</p>
+      <a class="qlink" href="#iletisim" data-sektor="">Fiyat al →</a>
+    </div>
   </section>
 </div>
 
@@ -352,6 +369,11 @@ footer .mono { color: rgba(244,244,241,.55); }
       const [x0, y0, x1, y1] = BOXS[Math.min(BOXS.length - 1, a)], bw = Math.max(40, x1 - x0), bh = Math.max(40, y1 - y0);
       s = Math.min(W * .88 / bw, H * .5 / bh, W / FW * 3.0);
       ox = W / 2 - (x0 + x1) / 2 * s; oy = H * .36 - (y0 + y1) / 2 * s;
+    } else if (BOXS) {           // desktop: the product fills the right/centre of the wide screen, copy stays left
+      const [x0, y0, x1, y1] = BOXS[Math.min(BOXS.length - 1, a)], bw = Math.max(40, x1 - x0), bh = Math.max(40, y1 - y0);
+      const tx0 = W * .34, tx1 = W * .97, ty0 = H * .12, ty1 = H * .9;
+      s = Math.min((tx1 - tx0) / bw, (ty1 - ty0) / bh, W / FW * 1.9);
+      ox = (tx0 + tx1) / 2 - (x0 + x1) / 2 * s; oy = (ty0 + ty1) / 2 - (y0 + y1) / 2 * s;
     } else { s = Math.min(W / FW, H / FH); ox = (W - FW * s) / 2; oy = (H - FH * s) / 2; }
     const r = RECTS ? RECTS[a] : [0, 0, FW, FH];
     cx.imageSmoothingQuality = "high";
