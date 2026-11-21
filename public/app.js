@@ -152,6 +152,11 @@
         });
         var data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || 'Failed to send message.');
+        // Conversion event: no form contents are sent. Skipped when the honeypot is filled (bots).
+        if (!website && typeof window.eyesTrack === 'function') {
+          var eventID = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : undefined;
+          try { window.eyesTrack('Lead', { eventID: eventID }); } catch (trackErr) { /* never block the form */ }
+        }
         showToast(t('contact.form.successMessage', 'Message sent successfully!'));
         form.reset();
       } catch (err) {

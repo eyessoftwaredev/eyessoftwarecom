@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F4F1">
+<title>EyesSoftware — Web sitesi ve uygulama</title>
+<meta name="description" content="Restoran, gıda, döner, kafe, kozmetik ve moda markaları için web sitesi, animasyonlu web sitesi, e-ticaret ve mobil uygulama. Formu doldurun, 24 saat içinde fiyatla dönelim.">
+<link rel="canonical" href="https://eyessoftware.com/tr/">
+<link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/">
+<link rel="alternate" hreflang="en" href="https://eyessoftware.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EyesSoftware — Web sitesi ve uygulama">
+<meta property="og:description" content="Her sektöre web sitesi, animasyonlu web sitesi ve uygulama. Formu doldurun, 24 saat içinde fiyatla dönelim.">
+<meta property="og:url" content="https://eyessoftware.com/tr/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0A0A0A; --lime: #9BD62F; --paper: #F4F4F1; --steel: #6E6E6E; --line: rgba(10,10,10,.12);
+  --sans: "Plus Jakarta Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, monospace;
+  --pad: clamp(18px, 4.4vw, 64px);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); color: var(--ink); }
+body { font-family: var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 26px; border-radius: 999px; background: var(--ink); color: var(--paper); font-weight: 700; font-size: 15px; transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-1px); }
+.btn .d { width: 9px; height: 9px; border-radius: 50%; background: var(--lime); }
+.btn.line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+
+/* nav */
+.nav { position: fixed; inset: 0 0 auto 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 22px var(--pad); transition: background .3s, box-shadow .3s; }
+.nav.solid { background: rgba(244,244,241,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav .logo img { height: 26px; width: auto; }
+.nav .links { display: flex; gap: 34px; font-weight: 600; font-size: 15px; }
+.nav .links a { opacity: .75; } .nav .links a:hover { opacity: 1; }
+.nav .btn { height: 44px; padding: 0 20px; font-size: 14px; }
+
+/* film */
+.film { position: relative; overflow: clip; clip-path: inset(0); }
+.stage { position: sticky; top: 0; height: 100vh; height: 100svh; margin-bottom: -100vh; margin-bottom: -100svh; z-index: 5; pointer-events: none; overflow: hidden; }
+.stage canvas { position: absolute; left: 50%; top: 50%; width: min(86vh, 96vw); aspect-ratio: 1; transform: translate3d(-50%, -50%, 0); }
+.panel { position: relative; height: 100vh; height: 100svh; display: grid; grid-template-rows: 1fr auto 1fr; align-items: center; justify-items: center; padding: 96px var(--pad) 40px; text-align: center; }
+.big { font-weight: 800; letter-spacing: -.055em; line-height: .86; font-size: clamp(60px, 12.6vw, 210px); white-space: nowrap; }
+.big.t { align-self: start; padding-top: 3vh; } .big.b { align-self: end; padding-bottom: 6vh; grid-row: 3; }
+.big .dot { color: var(--lime); }
+.panel .gap { height: 38vh; grid-row: 2; }
+.panel .tag { position: absolute; left: var(--pad); bottom: 34px; display: flex; gap: 14px; align-items: center; }
+.panel .tag b { font-family: var(--mono); font-weight: 500; font-size: 12px; color: var(--ink); }
+.panel .cta { position: absolute; right: var(--pad); bottom: 30px; z-index: 6; }
+.hint { position: absolute; right: var(--pad); bottom: 34px; }
+.dots { position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 15; display: grid; gap: 10px; transition: opacity .3s; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(10,10,10,.22); transition: background .3s, transform .3s; }
+.dots i.on { background: var(--ink); transform: scale(1.25); }
+.dots.off { opacity: 0; }
+
+/* sections */
+.sec { padding: clamp(80px, 12vw, 160px) var(--pad); }
+.sec h2 { font-weight: 800; letter-spacing: -.045em; line-height: .95; font-size: clamp(40px, 6.4vw, 104px); }
+.sec .head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: clamp(36px, 5vw, 64px); }
+.works { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(14px, 2vw, 28px); }
+.work { display: block; }
+.work .shot { aspect-ratio: 16/10; border-radius: 18px; overflow: hidden; background: #e8e8e3; box-shadow: 0 0 0 1px var(--line); }
+.work .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.work:hover .shot img { transform: scale(1.03); }
+.work .meta { display: flex; justify-content: space-between; align-items: baseline; margin-top: 16px; }
+.work .meta h3 { font-weight: 800; font-size: clamp(20px, 1.8vw, 26px); letter-spacing: -.03em; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1.5px solid var(--ink); }
+.steps div { padding: 22px 18px 0 0; }
+.steps b { display: block; font-weight: 800; font-size: clamp(22px, 2.2vw, 32px); letter-spacing: -.035em; margin-top: 10px; }
+.contact { background: var(--ink); color: var(--paper); text-align: center; }
+.contact h2 { font-size: clamp(48px, 9vw, 150px); }
+.contact h2 .dot { color: var(--lime); }
+.contact .btns { display: flex; gap: 12px; justify-content: center; margin-top: 44px; flex-wrap: wrap; }
+.contact .btn { background: var(--lime); color: var(--ink); }
+.contact .btn.line { background: transparent; color: var(--paper); box-shadow: inset 0 0 0 1.5px rgba(244,244,241,.5); }
+footer { background: var(--ink); color: var(--paper); padding: 0 var(--pad) 36px; display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+footer img { height: 22px; width: auto; }
+footer .mono { color: rgba(244,244,241,.55); }
+.rv { opacity: 0; transform: translateY(26px); transition: opacity .8s, transform .8s cubic-bezier(.2,.7,.2,1); }
+.rv.in { opacity: 1; transform: none; }
+
+/* multi-sector hero (light) */
+.stage canvas { left: 0; top: 0; width: 100%; height: 100%; aspect-ratio: auto; transform: none; object-fit: contain; }
+@media (max-width: 900px) { .film .stage canvas { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; transform: none !important; object-fit: fill; } }
+.film .panel { display: block; text-align: left; }
+.film .copy { position: absolute; left: var(--pad); bottom: 10vh; max-width: min(460px, 30vw); z-index: 6; }
+.film .copy.r { left: auto; right: var(--pad); }
+.film .copy h1, .film .copy h2 { font-weight: 800; letter-spacing: -.045em; line-height: .94; font-size: clamp(38px, 4.4vw, 80px); }
+.film .copy .dot { color: var(--lime); }
+.film .copy p { margin-top: 14px; font-size: clamp(16px, 1.15vw, 18px); line-height: 1.5; color: #3d3d3a; }
+.film .copy .mono b { color: var(--ink); font-weight: 500; margin-right: 8px; }
+@media (max-width: 900px) { .film .copy, .film .copy.r { max-width: none; left: var(--pad); right: var(--pad); bottom: 7vh; } }
+
+/* contact: WhatsApp + quote form */
+.contact { text-align: left; }
+.contact .wrap { display: grid; grid-template-columns: 1fr minmax(320px, 560px); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.contact h2 { font-size: clamp(48px, 7vw, 120px); }
+.contact .lead { margin-top: 22px; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.55; color: rgba(244,244,241,.75); max-width: 30ch; }
+.contact .btns { justify-content: flex-start; margin-top: 34px; }
+.contact .btn.wa { background: #25D366; color: #0A0A0A; }
+.btn[hidden] { display: none !important; }
+.contact .btn.wa svg { width: 20px; height: 20px; }
+.qf { background: #141416; border-radius: 22px; padding: clamp(22px, 2.4vw, 34px); box-shadow: inset 0 0 0 1px rgba(244,244,241,.08); }
+.qf h3 { font-weight: 800; font-size: 24px; letter-spacing: -.02em; }
+.qf .sub { margin-top: 6px; font-size: 14px; color: rgba(244,244,241,.6); }
+.qf fieldset { border: 0; margin-top: 22px; }
+.qf legend, .qf label > span { display: block; font-size: 12px; font-family: var(--mono); letter-spacing: .12em; text-transform: uppercase; color: rgba(244,244,241,.55); margin-bottom: 10px; }
+.qf .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.qf .chips input { position: absolute; opacity: 0; pointer-events: none; }
+.qf .chips label { cursor: pointer; }
+.qf .chips label i { display: inline-block; font-style: normal; padding: 10px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; box-shadow: inset 0 0 0 1.5px rgba(244,244,241,.22); transition: background .15s, color .15s, box-shadow .15s; }
+.qf .chips input:checked + i { background: var(--lime); color: var(--ink); box-shadow: none; }
+.qf .chips input:focus-visible + i { outline: 2px solid var(--lime); outline-offset: 2px; }
+.qf .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+.qf label { display: block; margin-top: 18px; }
+.qf .row label { margin-top: 0; }
+.qf input[type=text], .qf input[type=email], .qf input[type=tel], .qf textarea, .qf select { width: 100%; background: #0c0c0d; color: var(--paper); border: 0; border-radius: 12px; padding: 14px 14px; font: inherit; font-size: 15px; box-shadow: inset 0 0 0 1.5px rgba(244,244,241,.12); }
+.qf input:focus, .qf textarea:focus, .qf select:focus { outline: none; box-shadow: inset 0 0 0 1.5px var(--lime); }
+.qf textarea { min-height: 96px; resize: vertical; }
+.qf .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.qf button { margin-top: 22px; width: 100%; justify-content: center; border: 0; cursor: pointer; background: var(--lime); color: var(--ink); font: inherit; font-weight: 800; }
+.qf button[disabled] { opacity: .6; cursor: progress; }
+.qf .msg { margin-top: 14px; font-size: 14px; min-height: 20px; color: rgba(244,244,241,.8); }
+.qf .msg.ok { color: var(--lime); } .qf .msg.err { color: #ff9a8a; }
+@media (max-width: 900px) { .contact .wrap { grid-template-columns: 1fr; } .qf .row { grid-template-columns: 1fr; } }
+
+.film .copy .qlink { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; font-size: 15px; color: var(--ink); border-bottom: 2px solid var(--lime); padding-bottom: 2px; pointer-events: auto; position: relative; z-index: 7; }
+.film .copy .qlink:hover { border-color: var(--ink); }
+
+/* quote wizard */
+.qf .prog { display: flex; gap: 6px; margin-top: 18px; }
+.qf .prog i { flex: 1; height: 4px; border-radius: 4px; background: rgba(244,244,241,.14); transition: background .3s; }
+.qf .prog i.on { background: var(--lime); }
+.qf .stepno { margin-top: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: rgba(244,244,241,.5); }
+.qf .step { display: none; animation: qfIn .35s ease; }
+.qf .step.on { display: block; }
+@keyframes qfIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.qf .q { margin-top: 22px; }
+.qf .q > b { display: block; font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.qf .q > b small { font-weight: 500; color: rgba(244,244,241,.5); margin-left: 6px; }
+.qf .chips label i { padding: 12px 16px; font-size: 15px; }
+.qf .nav2 { display: flex; gap: 10px; margin-top: 26px; }
+.qf .nav2 .btn { flex: 1; justify-content: center; margin-top: 0; }
+.qf .nav2 .btn { width: auto; }
+.qf .consent > span { display: inline; margin: 0; font-family: var(--sans); font-size: 13px; letter-spacing: 0; text-transform: none; color: rgba(244,244,241,.72); }
+.qf .nav2 .back { flex: 0 0 auto; background: transparent; color: var(--paper); box-shadow: inset 0 0 0 1.5px rgba(244,244,241,.3); }
+.qf .consent { display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; font-size: 13px; line-height: 1.5; color: rgba(244,244,241,.7); }
+.qf .consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--lime); flex: 0 0 auto; }
+.qf .consent a { color: var(--paper); text-decoration: underline; }
+.qf .err { border-radius: 12px; box-shadow: inset 0 0 0 1.5px #ff9a8a !important; }
+.qf .done { text-align: left; padding: 8px 0 4px; }
+.qf .done .tick { width: 52px; height: 52px; border-radius: 50%; background: var(--lime); display: grid; place-items: center; color: var(--ink); font-size: 28px; font-weight: 800; }
+.qf .done h3 { margin-top: 18px; font-size: 28px; }
+.qf .done p { margin-top: 10px; color: rgba(244,244,241,.75); line-height: 1.55; }
+.qf .done .btn { margin-top: 22px; width: 100%; justify-content: center; }
+#loader { position: fixed; inset: 0; z-index: 50; background: var(--paper); display: grid; place-items: center; transition: opacity .5s, visibility .5s; }
+#loader.done { opacity: 0; visibility: hidden; }
+#loader .bar { width: 160px; height: 2px; background: var(--line); overflow: hidden; }
+#lbar { height: 100%; width: 0; background: var(--ink); transition: width .2s; }
+
+@media (max-width: 900px) {
+  .nav .links { display: none; }
+  .nav .btn { display: none; }
+  .stage canvas { width: 112vw; top: 47%; }
+  .big { font-size: clamp(46px, 15vw, 96px); }
+  .panel .gap { height: 34vh; }
+  .panel .tag { bottom: 24px; }
+  .panel .cta { position: static; grid-row: 3; align-self: end; margin-bottom: 70px; }
+  .panel:has(.cta) .big.b { padding-bottom: 0; align-self: center; }
+  .hint { display: none; }
+  .dots { right: 10px; }
+  .works { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; row-gap: 26px; }
+  .sec .head { flex-direction: column; align-items: start; }
+  footer { flex-direction: column; align-items: start; }
+}
+</style>
+</head>
+<body>
+<div id="loader"><div class="bar"><div id="lbar"></div></div></div>
+
+<header class="nav" id="nav">
+  <a href="#" class="logo" aria-label="EyesSoftware"><img src="img/logo.svg" alt="eyes."></a>
+  <nav class="links"><a href="#surec">Süreç</a><a href="#iletisim">İletişim</a></nav>
+  <a class="btn" href="#iletisim" data-sektor=""><span class="d"></span>Fiyat al</a>
+</header>
+<div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<main>
+<div class="film" id="film">
+  <div class="stage"><canvas id="cv"></canvas></div>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono">EyesSoftware</span>
+      <h1 style="margin-top:14px">Web sitesi ve<br>uygulama<br>geliştiriyoruz<span class="dot">.</span></h1>
+    </div>
+    <span class="hint mono">Aşağı kaydırın</span>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono"><b>01</b>Restoran</span>
+      <div style="margin-top:14px"><h2>Restoranlar<span class="dot">.</span></h2></div>
+      <p>Menü, rezervasyon ve sipariş sayfaları.</p>
+    
+      <a class="qlink" href="#iletisim" data-sektor="Restoran">Bu sektör için fiyat al →</a></div>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono"><b>02</b>Gıda markası</span>
+      <div style="margin-top:14px"><h2>Gıda<br>markaları<span class="dot">.</span></h2></div>
+      <p>Ürünü sahneye taşıyan animasyonlu siteler.</p>
+    
+      <a class="qlink" href="#iletisim" data-sektor="Gıda markası">Bu sektör için fiyat al →</a></div>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono"><b>03</b>Döner · fast food</span>
+      <div style="margin-top:14px"><h2>Döner ve<br>fast food<span class="dot">.</span></h2></div>
+      <p>Online sipariş, şubeler ve menü.</p>
+    
+      <a class="qlink" href="#iletisim" data-sektor="Döner / fast food">Bu sektör için fiyat al →</a></div>
+  </section>
+
+  <section class="panel">
+    <div class="copy r">
+      <span class="mono"><b>04</b>Kafe</span>
+      <div style="margin-top:14px"><h2>Kafeler<span class="dot">.</span></h2></div>
+      <p>Kahve satışı, abonelik ve şube sayfaları.</p>
+    
+      <a class="qlink" href="#iletisim" data-sektor="Kafe">Bu sektör için fiyat al →</a></div>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono"><b>05</b>Kozmetik</span>
+      <div style="margin-top:14px"><h2>Kozmetik<span class="dot">.</span></h2></div>
+      <p>Ürün sayfaları ve e-ticaret.</p>
+    
+      <a class="qlink" href="#iletisim" data-sektor="Kozmetik">Bu sektör için fiyat al →</a></div>
+  </section>
+
+  <section class="panel">
+    <div class="copy">
+      <span class="mono"><b>06</b>Moda</span>
+      <div style="margin-top:14px"><h2>Moda ve<br>e-ticaret<span class="dot">.</span></h2></div>
+      <p>Koleksiyon, stok ve ödeme tek yerde.</p>
+    
+      <a class="qlink" href="#iletisim" data-sektor="Moda / e-ticaret">Bu sektör için fiyat al →</a></div>
+  </section>
+</div>
+
+<section class="sec" id="surec">
+  <div class="head rv"><h2>Süreç.</h2></div>
+  <div class="steps rv">
+    <div><span class="mono">01</span><b>Konuşalım</b></div>
+    <div><span class="mono">02</span><b>Teklif</b></div>
+    <div><span class="mono">03</span><b>Tasarım</b></div>
+    <div><span class="mono">04</span><b>Yayın</b></div>
+  </div>
+</section>
+
+<section class="sec contact" id="iletisim">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Projenizi<br>konuşalım<span class="dot">.</span></h2>
+      <p class="lead">Üç kısa adımı doldurun, 24 saat içinde WhatsApp'tan fiyatla dönelim. Hemen konuşmak isterseniz doğrudan yazın.</p>
+      <div class="btns">
+        <a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.2 3.7.59.25 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>WhatsApp'tan yazın</a>
+      </div>
+    </div>
+
+    <form class="qf rv" id="quoteForm" novalidate>
+      <h3>Fiyat alın</h3>
+      <p class="sub">3 kısa adım. Fiyatı 24 saat içinde WhatsApp'tan iletiyoruz.</p>
+      <div class="prog"><i class="on"></i><i></i><i></i></div>
+      <p class="stepno" id="qfNo">Adım 1 / 3</p>
+
+      <div class="step on" data-step="1">
+        <div class="q"><b>Sektörünüz</b><div class="chips"><label><input type="radio" name="sektor" value="Restoran"><i>Restoran</i></label><label><input type="radio" name="sektor" value="Gıda markası"><i>Gıda markası</i></label><label><input type="radio" name="sektor" value="Döner / fast food"><i>Döner / fast food</i></label><label><input type="radio" name="sektor" value="Kafe"><i>Kafe</i></label><label><input type="radio" name="sektor" value="Kozmetik"><i>Kozmetik</i></label><label><input type="radio" name="sektor" value="Moda / e-ticaret"><i>Moda / e-ticaret</i></label><label><input type="radio" name="sektor" value="Diğer"><i>Diğer</i></label></div></div>
+        <div class="q"><b>Ne lazım? <small>birden fazla seçebilirsiniz</small></b><div class="chips"><label><input type="checkbox" name="tur" value="Web sitesi"><i>Web sitesi</i></label><label><input type="checkbox" name="tur" value="Animasyonlu web sitesi"><i>Animasyonlu web sitesi</i></label><label><input type="checkbox" name="tur" value="E-ticaret"><i>E-ticaret</i></label><label><input type="checkbox" name="tur" value="Mobil uygulama"><i>Mobil uygulama</i></label><label><input type="checkbox" name="tur" value="Yönetim paneli"><i>Yönetim paneli</i></label><label><input type="checkbox" name="tur" value="Emin değilim"><i>Emin değilim</i></label></div></div>
+        <div class="nav2"><button class="btn" type="button" data-next>Devam</button></div>
+      </div>
+
+      <div class="step" data-step="2">
+        <div class="q"><b>Kaç sayfa?</b><div class="chips"><label><input type="radio" name="sayfa" value="Tek sayfa"><i>Tek sayfa</i></label><label><input type="radio" name="sayfa" value="2–5"><i>2–5</i></label><label><input type="radio" name="sayfa" value="6–10"><i>6–10</i></label><label><input type="radio" name="sayfa" value="10+"><i>10+</i></label><label><input type="radio" name="sayfa" value="Bilmiyorum"><i>Bilmiyorum</i></label></div></div>
+        <div class="q"><b>Ne zaman?</b><div class="chips"><label><input type="radio" name="zaman" value="Hemen"><i>Hemen</i></label><label><input type="radio" name="zaman" value="1 ay içinde"><i>1 ay içinde</i></label><label><input type="radio" name="zaman" value="1–3 ay"><i>1–3 ay</i></label><label><input type="radio" name="zaman" value="Sadece fiyat bakıyorum"><i>Sadece fiyat bakıyorum</i></label></div></div>
+        <div class="q"><b>Bütçe aralığı <small>isteğe bağlı</small></b><div class="chips"><label><input type="radio" name="butce" value="15 bin ₺’ye kadar"><i>15 bin ₺’ye kadar</i></label><label><input type="radio" name="butce" value="15–30 bin ₺"><i>15–30 bin ₺</i></label><label><input type="radio" name="butce" value="30–60 bin ₺"><i>30–60 bin ₺</i></label><label><input type="radio" name="butce" value="60 bin ₺ +"><i>60 bin ₺ +</i></label><label><input type="radio" name="butce" value="Henüz bilmiyorum"><i>Henüz bilmiyorum</i></label></div></div>
+        <div class="nav2"><button class="btn back" type="button" data-back>Geri</button><button class="btn" type="button" data-next>Devam</button></div>
+      </div>
+
+      <div class="step" data-step="3">
+        <label><span>Ad soyad</span><input type="text" name="ad" autocomplete="name" maxlength="200" required></label>
+        <label><span>WhatsApp numaranız</span><input type="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="05xx xxx xx xx" maxlength="40" required></label>
+        <div class="row" style="margin-top:18px">
+          <label><span>E-posta <small style="text-transform:none;letter-spacing:0">(isteğe bağlı)</small></span><input type="email" name="eposta" autocomplete="email" maxlength="254"></label>
+          <label><span>Firma / marka</span><input type="text" name="firma" autocomplete="organization" maxlength="200"></label>
+        </div>
+        <label><span>Eklemek istedikleriniz (isteğe bağlı)</span><textarea name="not" maxlength="3000" placeholder="Örn. mevcut sitemiz var, yenilemek istiyoruz"></textarea></label>
+        <label class="consent"><input type="checkbox" name="kvkk" required><span>Bilgilerimin teklif hazırlamak ve benimle iletişime geçmek için işlenmesini kabul ediyorum. <a href="/privacy" target="_blank" rel="noopener">Gizlilik politikası</a></span></label>
+        <div class="hp" aria-hidden="true"><label>Web sitesi<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="nav2"><button class="btn back" type="button" data-back>Geri</button><button class="btn" type="submit" id="qfSubmit">Fiyat al</button></div>
+      </div>
+
+      <div class="step" data-step="done">
+        <div class="done">
+          <div class="tick">✓</div>
+          <h3 id="qfThanks">Teşekkürler.</h3>
+          <p>Talebiniz bize ulaştı. 24 saat içinde WhatsApp'tan fiyatla dönüyoruz.</p>
+          <a class="btn wa" id="qfWa" href="#" target="_blank" rel="noopener">Beklemeden WhatsApp'tan yazın</a>
+        </div>
+      </div>
+      <p class="msg" id="qfMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+<footer><img src="img/logo-white.svg" alt="eyes."><span class="mono"><a href="/cookies" data-eyes-consent-open>Çerez tercihleri</a> · <a href="/privacy">Gizlilik</a> · © 2026 EyesSoftware</span></footer>
+</main>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const cv = $("#cv"), cx = cv.getContext("2d"), film = $("#film"), nav = $("#nav"), dots = $$("#dots i");
+  const panels = [...film.querySelectorAll(".panel")];
+  const STOPS = panels.length;
+  let N = 0, frames = [], ready = [], anim = false, lastIdx = -1;
+
+  const filmTop = () => film.offsetTop;
+  const stopY = i => filmTop() + panels[Math.max(0, Math.min(STOPS - 1, i))].offsetTop;
+  const prog = () => Math.max(0, Math.min(1, (scrollY - filmTop()) / (stopY(STOPS - 1) - filmTop())));
+
+
+  // ---- frame drawing: desktop = whole frame (CSS contain); mobile = zoom to the object of this frame ----
+  let BOX = null; fetch("film-sektor/bbox.json").then(r => r.json()).then(j => { BOX = j; render(true); }).catch(() => {});
+  const isMob = () => innerWidth <= 900;
+  function sizeCanvas() {
+    if (isMob()) { const d = Math.min(2, devicePixelRatio || 1); cv.width = Math.round(innerWidth * d); cv.height = Math.round(innerHeight * d); }
+    else { cv.width = 1600; cv.height = 900; }
+  }
+  function drawFrame(a) {
+    const im = frames[a];
+    cx.clearRect(0, 0, cv.width, cv.height);
+    if (!isMob() || !BOX) { if (!isMob()) cx.drawImage(im, 0, 0, cv.width, cv.height); else { const s = cv.width / 1600 * 1.9; cx.drawImage(im, (cv.width - 1600 * s) / 2, cv.height * .38 - 450 * s, 1600 * s, 900 * s); } return; }
+    const [x0, y0, x1, y1] = BOX.bbox[Math.min(BOX.bbox.length - 1, a)];
+    const W = cv.width, H = cv.height, bw = Math.max(40, x1 - x0), bh = Math.max(40, y1 - y0);
+    // target: the upper ~58% of the screen (copy sits below), 88% of the width
+    const tw = W * .88, th = H * .5, cxT = W / 2, cyT = H * .36;
+    const s = Math.min(tw / bw, th / bh, W / 1600 * 3.2);
+    const bx = (x0 + x1) / 2, by = (y0 + y1) / 2;
+    cx.drawImage(im, cxT - bx * s, cyT - by * s, 1600 * s, 900 * s);
+  }
+  function render(force) {
+    const p = prog();
+    if (N) {
+      let a = Math.round(Math.max(0, Math.min(N - 1, p * (N - 1))));
+      while (a > 0 && !ready[a]) a--;
+      if (ready[a] && (force || a !== lastIdx)) { drawFrame(a); lastIdx = a; }
+    }
+    const s = Math.round(p * (STOPS - 1));
+    dots.forEach((d, k) => d.classList.toggle("on", k === s));
+    $("#dots").classList.toggle("off", scrollY > stopY(STOPS - 1) + 40);
+    nav.classList.toggle("solid", scrollY > stopY(STOPS - 1) + innerHeight * .6);
+  }
+  let raf = 0;
+  addEventListener("scroll", () => { if (!anim && !raf) raf = requestAnimationFrame(() => { raf = 0; render(); }); }, { passive: true });
+  addEventListener("resize", () => { sizeCanvas(); render(true); });
+
+  // scripted stepping: one gesture = one stop
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  let settleUntilQuiet = false, lastWheel = 0, acc = 0;
+  function goTo(i, dur = 1250) {
+    i = Math.max(0, Math.min(STOPS - 1, i));
+    const from = scrollY, to = stopY(i);
+    if (Math.abs(to - from) < 2) return;
+    const t0 = performance.now(); anim = true;
+    (function tick(t) {
+      const k = Math.min(1, (t - t0) / dur);
+      scrollTo(0, from + (to - from) * ease(k)); render();
+      if (k < 1) requestAnimationFrame(tick); else { anim = false; settleUntilQuiet = true; acc = 0; }
+    })(t0);
+  }
+  function target(dir) {
+    const y = scrollY, last = STOPS - 1;
+    if (dir > 0) { if (y >= stopY(last) - 2) return -1; for (let i = 0; i < STOPS; i++) if (stopY(i) > y + 2) return i; return -1; }
+    if (y > stopY(last) + 2) return y < stopY(last) + innerHeight * .9 ? last : -1;
+    if (y <= stopY(0) + 2) return -1;
+    for (let i = last; i >= 0; i--) if (stopY(i) < y - 2) return i;
+    return -1;
+  }
+  addEventListener("wheel", e => {
+    const now = performance.now(), dt = now - lastWheel; lastWheel = now;
+    const dy = e.deltaMode === 1 ? e.deltaY * 32 : e.deltaY;
+    if (anim) { if (scrollY < stopY(STOPS - 1) + innerHeight) e.preventDefault(); return; }
+    const dir = Math.sign(dy); if (!dir) return;
+    const t = target(dir);
+    if (t < 0) { settleUntilQuiet = false; acc = 0; return; }
+    e.preventDefault();
+    if (settleUntilQuiet) { if (dt < 160) return; settleUntilQuiet = false; }
+    if (dt > 250 || Math.sign(acc) !== dir) acc = 0;
+    acc += dy;
+    if (Math.abs(acc) >= 28) { acc = 0; goTo(t); }
+  }, { passive: false });
+  let ty = null;
+  addEventListener("touchstart", e => { ty = e.touches[0].clientY; }, { passive: true });
+  addEventListener("touchmove", e => {
+    if (ty === null) return;
+    const dy = ty - e.touches[0].clientY;
+    if (anim) { e.preventDefault(); return; }
+    const dir = Math.sign(dy) || 1, t = target(dir);
+    if (t < 0) return;
+    e.preventDefault();
+    if (Math.abs(dy) > 24) { goTo(t); ty = null; }
+  }, { passive: false });
+  addEventListener("touchend", () => { ty = null; }, { passive: true });
+  addEventListener("keydown", e => {
+    const d = { ArrowDown: 1, PageDown: 1, " ": 1, ArrowUp: -1, PageUp: -1 }[e.key]; if (!d) return;
+    if (anim) { e.preventDefault(); return; }
+    const t = target(d); if (t >= 0) { e.preventDefault(); goTo(t); }
+  });
+
+  // preload + pre-decode
+  fetch("film-sektor/manifest.json").then(r => r.json()).then(async m => {
+    N = m.count; let done = 0;
+    const mob = innerWidth < 900;
+    const load = i => new Promise(res => {
+      const im = new Image(); im.src = `film-sektor/${String(i + 1).padStart(4, "0")}.${m.ext}`; frames[i] = im;
+      const fin = () => { ready[i] = !!im.naturalWidth; done++; $("#lbar").style.width = (done / N * 100) + "%"; res(); };
+      im.decode().then(fin, fin);
+    });
+    const all = [...Array(N).keys()], first = mob ? all.filter(i => i % 2 === 0) : all;
+    await Promise.all(first.map(load));
+    sizeCanvas();
+    render(true); $("#loader").classList.add("done");
+    [120, 400, 1000].forEach(ms => setTimeout(() => render(true), ms)); addEventListener("load", () => render(true));
+    for (const i of all) if (!frames[i]) await load(i);
+  }).catch(() => $("#loader").classList.add("done"));
+
+
+  // ---- contact: WhatsApp link + quote form (posts to the site's /api/contact) ----
+  const WA_NUMBER = "38267029737";        // international format without + or spaces, e.g. 9715xxxxxxxx; button stays hidden while empty
+  const wa = $("#waBtn");
+  if (WA_NUMBER) { wa.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Merhaba, web sitesi için fiyat almak istiyorum."); wa.hidden = false; }
+  const qf = $("#quoteForm"), qm = $("#qfMsg"), qb = $("#qfSubmit");
+  const track = (ev, data) => { try { if (window.eyesTrack) window.eyesTrack(ev, data || {}); } catch (_) {} };
+  let step = 1;
+  function show(n) {
+    step = n;
+    qf.querySelectorAll(".step").forEach(s => s.classList.toggle("on", s.dataset.step === String(n)));
+    qf.querySelectorAll(".prog i").forEach((b, k) => b.classList.toggle("on", n === "done" || k < n));
+    $("#qfNo").textContent = n === "done" ? "Tamamlandı" : `Adım ${n} / 3`;
+    qm.textContent = ""; qm.className = "msg";
+  }
+  function need(cond, text, el) {
+    if (cond) return true;
+    qm.textContent = text; qm.className = "msg err";
+    if (el) { el.classList.add("err"); setTimeout(() => el.classList.remove("err"), 1600); }
+    return false;
+  }
+  qf.addEventListener("click", e => {
+    const f = new FormData(qf);
+    if (e.target.closest("[data-back]")) { show(step - 1); return; }
+    if (!e.target.closest("[data-next]")) return;
+    if (step === 1) {
+      if (!need(f.get("sektor"), "Lütfen sektörünüzü seçin.", qf.querySelector('[name="sektor"]').closest(".chips"))) return;
+      if (!need(f.getAll("tur").length, "Ne lazım olduğunu seçin.", qf.querySelector('[name="tur"]').closest(".chips"))) return;
+    }
+    if (step === 2) {
+      if (!need(f.get("zaman"), "Ne zaman başlamak istediğinizi seçin.", qf.querySelector('[name="zaman"]').closest(".chips"))) return;
+    }
+    show(step + 1);
+    qf.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  qf.addEventListener("submit", async e => {
+    e.preventDefault();
+    const f = new FormData(qf), ad = (f.get("ad") || "").trim(), tel = (f.get("tel") || "").trim(), ep = (f.get("eposta") || "").trim();
+    if (!need(ad, "Lütfen adınızı yazın.", qf.querySelector('[name="ad"]'))) return;
+    if (!need(tel.replace(/\D/g, "").length >= 10, "WhatsApp numaranızı kontrol edin.", qf.querySelector('[name="tel"]'))) return;
+    if (!need(!ep || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ep), "E-posta adresini kontrol edin.", qf.querySelector('[name="eposta"]'))) return;
+    if (!need(f.get("kvkk"), "Devam etmek için onay kutusunu işaretleyin.", qf.querySelector('[name="kvkk"]').closest(".consent"))) return;
+    const body = {
+      name: ad, phone: tel, email: ep, company: (f.get("firma") || "").trim(),
+      sector: f.get("sektor") || "", needs: f.getAll("tur"), pages: f.get("sayfa") || "", timeline: f.get("zaman") || "",
+      budget: f.get("butce") || "", note: (f.get("not") || "").trim(), consent: true, website: f.get("website") || "",
+      source: location.pathname + location.search,
+    };
+    qb.disabled = true; qb.textContent = "Gönderiliyor…";
+    try {
+      const r = await fetch("/api/quote", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      if (!r.ok) throw new Error();
+      const eventID = (crypto.randomUUID && crypto.randomUUID()) || String(Date.now());
+      track("Lead", { eventID });
+      const first = ad.split(" ")[0];
+      $("#qfThanks").textContent = `Teşekkürler ${first}.`;
+      const summary = `Merhaba, siteden fiyat formunu doldurdum. Sektör: ${body.sector}. İhtiyaç: ${body.needs.join(", ")}.`;
+      $("#qfWa").href = WA_NUMBER ? "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(summary) : "#";
+      $("#qfWa").hidden = !WA_NUMBER;
+      show("done");
+    } catch (_) {
+      need(false, WA_NUMBER ? "Gönderilemedi. Lütfen WhatsApp'tan yazın." : "Gönderilemedi. Lütfen birazdan tekrar deneyin.");
+    } finally { qb.disabled = false; qb.textContent = "Fiyat al"; }
+  });
+  document.querySelectorAll('a[href^="https://wa.me/"], #waBtn, #qfWa').forEach(a => a.addEventListener("click", () => track("Contact", { method: "whatsapp" })));
+
+  document.querySelectorAll("[data-sektor]").forEach(a => a.addEventListener("click", () => {
+    const v = a.dataset.sektor; if (!v) return;
+    const r = qf.querySelector(`input[name="sektor"][value="${v}"]`); if (r) { r.checked = true; }
+  }));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .15 });
+  $$(".rv").forEach(el => io.observe(el));
+})();
+</script>
+<script src="/js/consent.js" defer></script>
+<script src="/js/analytics.js" defer></script>
+</body>
+</html>

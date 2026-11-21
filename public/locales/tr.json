@@ -154,5 +154,21 @@
   },
   "legal": {
     "englishOnly": "Bu belge yalnızca İngilizce olarak sunulmaktadır."
+  },
+  "consent": {
+    "title": "Çerez tercihleri",
+    "text": "Sitenin çalışması için gereken çerezleri her zaman kullanıyoruz. İzin verirseniz ziyaretleri ölçmek için Google Analytics’i, reklamlarımızı ölçmek için Meta Pixel’i de kullanırız. Seçiminizi sayfanın altındaki “Çerez tercihleri” bağlantısından istediğiniz zaman değiştirebilirsiniz.",
+    "policyLink": "Çerez Politikası",
+    "accept": "Kabul et",
+    "reject": "Reddet",
+    "settings": "Ayarlar",
+    "save": "Seçimi kaydet",
+    "necessary": "Zorunlu",
+    "necessaryDesc": "Dil seçimi, çerez tercihiniz ve site güvenliği. Her zaman açık.",
+    "analytics": "Analitik",
+    "analyticsDesc": "Google Analytics: siteyi kaç kişinin ziyaret ettiği ve hangi sayfaların görüntülendiği.",
+    "ads": "Reklam",
+    "adsDesc": "Meta Pixel: reklamlarımızdan gelen ziyaretler ve talepler, siteyi ziyaret edenlere reklamlarımızın gösterilmesi.",
+    "footerLink": "Çerez tercihleri"
   }
 }

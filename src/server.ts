@@ -112,6 +112,96 @@ app.post('/api/contact', async (req: Request, res: Response) => {
   }
 });
 
+interface QuoteBody {
+  name?: string;
+  phone?: string;
+  email?: string;
+  company?: string;
+  sector?: string;
+  needs?: unknown;
+  pages?: string;
+  timeline?: string;
+  budget?: string;
+  note?: string;
+  consent?: boolean;
+  source?: string;
+  website?: string; // honeypot
+}
+
+const clip = (v: unknown, max: number): string => (typeof v === 'string' ? v.trim().slice(0, max) : '');
+
+// Quote form on /tr/ (WhatsApp-first: phone required, email optional).
+app.post('/api/quote', async (req: Request, res: Response) => {
+  try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      res.status(500).json({ error: 'Email service not configured.' });
+      return;
+    }
+    const b = req.body as QuoteBody;
+    if (b.website) {
+      res.json({ success: true });
+      return;
+    }
+    const name = clip(b.name, 200);
+    const phone = clip(b.phone, 40);
+    const email = clip(b.email, 254);
+    if (!name || phone.replace(/\D/g, '').length < 10) {
+      res.status(400).json({ error: 'Name and phone are required.' });
+      return;
+    }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      res.status(400).json({ error: 'Invalid email address.' });
+      return;
+    }
+    if (b.consent !== true) {
+      res.status(400).json({ error: 'Consent is required.' });
+      return;
+    }
+    const needs = Array.isArray(b.needs) ? b.needs.filter((x): x is string => typeof x === 'string').map(x => x.slice(0, 60)).slice(0, 10) : [];
+    const sector = clip(b.sector, 60);
+    const rows: [string, string][] = [
+      ['Ad soyad', name],
+      ['WhatsApp', phone],
+      ['E-posta', email || '-'],
+      ['Firma / marka', clip(b.company, 200) || '-'],
+      ['Sektör', sector || '-'],
+      ['İhtiyaç', needs.join(', ') || '-'],
+      ['Sayfa sayısı', clip(b.pages, 40) || '-'],
+      ['Zaman', clip(b.timeline, 60) || '-'],
+      ['Bütçe', clip(b.budget, 60) || '-'],
+      ['Kaynak', clip(b.source, 300) || '-'],
+    ];
+    const note = clip(b.note, 3000);
+    const waLink = `https://wa.me/${phone.replace(/\D/g, '').replace(/^0/, '90')}`;
+
+    const resend = new Resend(apiKey);
+    const { error } = await resend.emails.send({
+      from: 'EyesSoftware <form@eyessoftware.com>',
+      to: ['dev@eyessoftware.com'],
+      ...(email ? { replyTo: email } : {}),
+      subject: `Teklif talebi — ${name}${sector ? ` (${sector})` : ''}`,
+      text: ['Yeni teklif talebi (eyessoftware.com/tr)', '', ...rows.map(([k, v]) => `${k}: ${v}`), '', note || '(not yok)', '', `WhatsApp: ${waLink}`].join('\n'),
+      html: [
+        '<p>Yeni teklif talebi (eyessoftware.com/tr)</p><table cellpadding="4">',
+        ...rows.map(([k, v]) => `<tr><td><strong>${escapeHtml(k)}</strong></td><td>${escapeHtml(v)}</td></tr>`),
+        '</table><hr>',
+        `<p>${escapeHtml(note || '(not yok)').replace(/\n/g, '<br>')}</p>`,
+        `<p><a href="${escapeHtml(waLink)}">WhatsApp'tan yaz</a></p>`,
+      ].join(''),
+    });
+    if (error) {
+      console.error('Resend error:', error);
+      res.status(502).json({ error: 'Failed to send email.' });
+      return;
+    }
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Quote form error:', err);
+    res.status(500).json({ error: 'Internal server error.' });
+  }
+});
+
 app.listen(port, host, () => {
   console.log(`EyesSoftware server listening on ${host}:${port}`);
 });

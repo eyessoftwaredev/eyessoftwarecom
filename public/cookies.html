@@ -43,6 +43,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <script src="/locales/bundle.js"></script>
+  <script src="/js/consent.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
 </head>
 <body>
 
@@ -87,7 +89,7 @@
     <div class="wrap reveal">
       <span class="chip" data-i18n="footer.legalLinks">Legal</span>
       <h1 class="hero-title" data-i18n="footer.cookiePolicy">Cookie Policy</h1>
-      <p class="legal-meta">Last updated: 13 October 2026</p>
+      <p class="legal-meta">Last updated: 21 November 2026</p>
       <p class="legal-note" data-i18n="legal.englishOnly">This document is available in English only.</p>
     </div>
   </section>
@@ -96,25 +98,46 @@
     <div class="wrap">
       <article class="legal" lang="en" dir="ltr">
         <h2>1. What cookies are</h2>
-        <p>Cookies are small text files that a website stores in your browser. This page explains which ones eyessoftware.com, operated by Eyes Software FZCO, uses.</p>
+        <p>Cookies are small text files that a website stores in your browser. Similar technologies, such as your browser’s local storage and small scripts (“pixels” or “tags”) that send information to another company, work in a comparable way; this page calls all of them cookies. This page explains which ones eyessoftware.com, operated by Eyes Software FZCO, uses.</p>
 
-        <h2>2. Cookies we use</h2>
+        <h2>2. Strictly necessary cookies</h2>
+        <p>These are needed for the website to work and to remember your choices. They are always on and are not used for analytics or advertising.</p>
         <ul>
           <li><strong>lang</strong> — remembers the language you selected. It is a first-party cookie that lasts one year. The same preference is also saved in your browser’s local storage.</li>
+          <li><strong>eyes_consent</strong> — remembers whether you accepted or rejected analytics and advertising cookies, and when. It is a first-party cookie that lasts 180 days; after that we ask you again.</li>
           <li><strong>Cloudflare security cookies</strong> (for example <code>__cf_bm</code> or <code>cf_clearance</code>) — may be set by Cloudflare, our security provider, to tell real visitors from automated traffic. They are strictly necessary and short-lived.</li>
         </ul>
-        <p>We do not use analytics or advertising cookies. If that changes, we will update this page first.</p>
 
-        <h2>3. Third parties</h2>
+        <h2>3. Analytics cookies (only with your consent)</h2>
+        <p>If you allow <strong>Analytics</strong>, we use Google Analytics 4, provided by Google Ireland Limited and Google LLC, to count visits and see which pages are viewed and where visitors come from (for example a link with campaign parameters). We have turned off Google signals and ad personalisation in Google Analytics.</p>
+        <ul>
+          <li><strong>_ga</strong> — distinguishes one browser from another so visits can be counted. First-party, about 13 months.</li>
+          <li><strong>_ga_&lt;ID&gt;</strong> — keeps the state of the current visit (session). First-party, about 13 months.</li>
+        </ul>
+
+        <h2>4. Advertising cookies (only with your consent)</h2>
+        <p>If you allow <strong>Advertising</strong>, we use the Meta Pixel, provided by Meta Platforms Ireland Limited and Meta Platforms, Inc. It tells Meta (Facebook and Instagram) which pages you viewed, when you click an email, WhatsApp or Instagram link, and when you send the contact form. We use this to measure our ads and to show our ads to people who have visited the website. We do not send the contents of the contact form (your name, email address or message) to Meta, and we do not use Meta’s advanced matching.</p>
+        <ul>
+          <li><strong>_fbp</strong> — identifies your browser so Meta can measure visits and ad results. First-party, 90 days.</li>
+          <li><strong>_fbc</strong> — stores the click identifier when you arrive from a Meta ad. First-party, 90 days.</li>
+          <li><strong>fr</strong> and other cookies on facebook.com — set by Meta in its own domain, for example if you are logged in to Facebook or Instagram, and used for ad delivery and measurement. Up to 90 days. See the <a href="https://www.facebook.com/policies/cookies/" target="_blank" rel="noopener">Meta Cookies Policy</a>.</li>
+        </ul>
+        <p>Data sent to Google and Meta may be processed outside the United Arab Emirates, the European Union and Turkey, including in the United States. Google and Meta act as independent controllers for their own use of this data under their privacy policies: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>, <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a>.</p>
+
+        <h2>5. Giving and withdrawing consent</h2>
+        <p>When you first visit, a banner asks for your choice. Analytics and advertising cookies are not set, and the Google Analytics and Meta Pixel scripts are not loaded, until you click <strong>Accept</strong> or allow them under <strong>Settings</strong>. If you click <strong>Reject</strong>, they are not loaded at all.</p>
+        <p>You can change or withdraw your consent at any time with the <a href="/cookies" data-eyes-consent-open>Cookie preferences</a> link at the bottom of every page. When you withdraw consent, we stop sending data and delete the <code>_ga</code>, <code>_ga_&lt;ID&gt;</code>, <code>_fbp</code> and <code>_fbc</code> cookies on this website. Withdrawing consent does not affect data sent before you withdrew it.</p>
+
+        <h2>6. Other third parties</h2>
         <ul>
           <li>Fonts are served by Google Fonts, which does not set cookies on this website.</li>
           <li>Card payments are made on pages hosted by Stripe, which sets its own cookies there under the <a href="https://stripe.com/cookie-settings" target="_blank" rel="noopener">Stripe cookie policy</a>.</li>
         </ul>
 
-        <h2>4. How to disable cookies</h2>
-        <p>You can block or delete cookies in your browser settings. If you block the <strong>lang</strong> cookie, the website still works but may not remember your language.</p>
+        <h2>7. Blocking cookies in your browser</h2>
+        <p>You can also block or delete cookies in your browser settings. If you block the <strong>lang</strong> or <strong>eyes_consent</strong> cookie, the website still works but may not remember your language or your cookie choice.</p>
 
-        <h2>5. More information</h2>
+        <h2>8. More information</h2>
         <p>See our <a href="/privacy">Privacy Policy</a> for how we handle personal data.</p>
         <address>
           <strong>Eyes Software FZCO</strong><br />
@@ -162,6 +185,7 @@
             <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
             <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
             <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+            <li><a href="/cookies" data-eyes-consent-open data-i18n="consent.footerLink">Cookie preferences</a></li>
           </ul>
         </div>
       </div>

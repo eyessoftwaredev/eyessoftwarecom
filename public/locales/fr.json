@@ -154,5 +154,21 @@
   },
   "legal": {
     "englishOnly": "Ce document est disponible uniquement en anglais."
+  },
+  "consent": {
+    "title": "Préférences de cookies",
+    "text": "Nous utilisons toujours les cookies nécessaires au fonctionnement de ce site. Avec votre accord, nous utilisons aussi Google Analytics pour mesurer les visites et le Meta Pixel pour mesurer nos publicités. Vous pouvez modifier votre choix à tout moment via le lien « Préférences de cookies » en bas de page.",
+    "policyLink": "Politique de cookies",
+    "accept": "Accepter",
+    "reject": "Refuser",
+    "settings": "Paramètres",
+    "save": "Enregistrer mon choix",
+    "necessary": "Nécessaires",
+    "necessaryDesc": "Langue, votre choix de cookies et sécurité du site. Toujours actifs.",
+    "analytics": "Mesure d’audience",
+    "analyticsDesc": "Google Analytics : nombre de visiteurs et pages consultées.",
+    "ads": "Publicité",
+    "adsDesc": "Meta Pixel : visites et demandes issues de nos publicités, et affichage de nos publicités aux personnes ayant visité le site.",
+    "footerLink": "Préférences de cookies"
   }
 }
