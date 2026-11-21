@@ -87,7 +87,7 @@ footer .mono { color: rgba(244,244,241,.55); }
 .rv.in { opacity: 1; transform: none; }
 
 /* multi-sector hero (light) */
-.stage canvas { left: 0; top: 0; width: 100%; height: 100%; aspect-ratio: auto; transform: none; object-fit: contain; }
+.stage canvas { left: 0; top: 0; width: 100%; height: 100%; aspect-ratio: auto; transform: none; object-fit: fill; }
 @media (max-width: 900px) { .film .stage canvas { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; transform: none !important; object-fit: fill; } }
 .film .panel { display: block; text-align: left; }
 .film .copy { position: absolute; left: var(--pad); bottom: 10vh; max-width: min(460px, 30vw); z-index: 6; }
@@ -340,24 +340,22 @@ footer .mono { color: rgba(244,244,241,.55); }
   const prog = () => Math.max(0, Math.min(1, (scrollY - filmTop()) / (stopY(STOPS - 1) - filmTop())));
 
 
-  // ---- frame drawing: desktop = whole frame (CSS contain); mobile = zoom to the object of this frame ----
-  let BOX = null; fetch("film-sektor/bbox.json").then(r => r.json()).then(j => { BOX = j; render(true); }).catch(() => {});
+  // ---- frame drawing at device resolution; frames are cropped to the product (manifest rects) ----
+  let FW = 1600, FH = 900, RECTS = null, BOXS = null;
   const isMob = () => innerWidth <= 900;
-  function sizeCanvas() {
-    if (isMob()) { const d = Math.min(2, devicePixelRatio || 1); cv.width = Math.round(innerWidth * d); cv.height = Math.round(innerHeight * d); }
-    else { cv.width = 1600; cv.height = 900; }
-  }
+  function sizeCanvas() { const d = Math.min(2, devicePixelRatio || 1); cv.width = Math.round(innerWidth * d); cv.height = Math.round(innerHeight * d); }
   function drawFrame(a) {
-    const im = frames[a];
-    cx.clearRect(0, 0, cv.width, cv.height);
-    if (!isMob() || !BOX) { if (!isMob()) cx.drawImage(im, 0, 0, cv.width, cv.height); else { const s = cv.width / 1600 * 1.9; cx.drawImage(im, (cv.width - 1600 * s) / 2, cv.height * .38 - 450 * s, 1600 * s, 900 * s); } return; }
-    const [x0, y0, x1, y1] = BOX.bbox[Math.min(BOX.bbox.length - 1, a)];
-    const W = cv.width, H = cv.height, bw = Math.max(40, x1 - x0), bh = Math.max(40, y1 - y0);
-    // target: the upper ~58% of the screen (copy sits below), 88% of the width
-    const tw = W * .88, th = H * .5, cxT = W / 2, cyT = H * .36;
-    const s = Math.min(tw / bw, th / bh, W / 1600 * 3.2);
-    const bx = (x0 + x1) / 2, by = (y0 + y1) / 2;
-    cx.drawImage(im, cxT - bx * s, cyT - by * s, 1600 * s, 900 * s);
+    const im = frames[a], W = cv.width, H = cv.height;
+    cx.clearRect(0, 0, W, H);
+    let s, ox, oy;
+    if (isMob() && BOXS) {
+      const [x0, y0, x1, y1] = BOXS[Math.min(BOXS.length - 1, a)], bw = Math.max(40, x1 - x0), bh = Math.max(40, y1 - y0);
+      s = Math.min(W * .88 / bw, H * .5 / bh, W / FW * 3.0);
+      ox = W / 2 - (x0 + x1) / 2 * s; oy = H * .36 - (y0 + y1) / 2 * s;
+    } else { s = Math.min(W / FW, H / FH); ox = (W - FW * s) / 2; oy = (H - FH * s) / 2; }
+    const r = RECTS ? RECTS[a] : [0, 0, FW, FH];
+    cx.imageSmoothingQuality = "high";
+    cx.drawImage(im, ox + r[0] * s, oy + r[1] * s, r[2] * s, r[3] * s);
   }
   function render(force) {
     const p = prog();
@@ -431,13 +429,14 @@ footer .mono { color: rgba(244,244,241,.55); }
   // preload + pre-decode
   fetch("film-sektor/manifest.json").then(r => r.json()).then(async m => {
     N = m.count; let done = 0;
+    if (m.rects) { FW = m.fw; FH = m.fh; RECTS = m.rects; BOXS = m.box; }
     const mob = innerWidth < 900;
     const load = i => new Promise(res => {
       const im = new Image(); im.src = `film-sektor/${String(i + 1).padStart(4, "0")}.${m.ext}`; frames[i] = im;
       const fin = () => { ready[i] = !!im.naturalWidth; done++; $("#lbar").style.width = (done / N * 100) + "%"; res(); };
       im.decode().then(fin, fin);
     });
-    const all = [...Array(N).keys()], first = mob ? all.filter(i => i % 2 === 0) : all;
+    const all = [...Array(N).keys()], first = all.filter(i => i % 6 === 0 || i === N - 1);   // show early, fill the rest in the background
     await Promise.all(first.map(load));
     sizeCanvas();
     render(true); $("#loader").classList.add("done");
