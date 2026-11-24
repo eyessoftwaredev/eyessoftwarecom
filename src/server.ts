@@ -38,6 +38,11 @@ app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({ status: 'ok' });
 });
 
+// /tr/ landing page was removed; send old links to the homepage.
+app.get(/^\/tr(\/.*)?$/, (_req: Request, res: Response) => {
+  res.redirect(301, '/');
+});
+
 app.use(express.static(publicDir, { extensions: ['html'] }));
 
 app.post('/api/contact', async (req: Request, res: Response) => {
