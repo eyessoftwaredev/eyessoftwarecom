@@ -1,66 +1,74 @@
 {
+  "meta": {
+    "home": "EyesSoftware — Websites, mobile Apps und individuelle Software",
+    "homeDescription": "EyesSoftware entwickelt von Dubai aus Websites, mobile Apps und individuelle Software für Unternehmen und Privatpersonen.",
+    "products": "Produkte — EyesSoftware",
+    "productsDescription": "Von EyesSoftware entwickelte Produkte: Short.ky, InfoTube, Snapia, billur.ai, Rejee und Veer."
+  },
+  "lang": {
+    "select": "Sprache wählen"
+  },
   "nav": {
     "home": "Startseite",
     "products": "Produkte",
     "services": "Leistungen",
-    "platforms": "Plattformen",
+    "platforms": "Technologien",
     "about": "Über uns",
     "contact": "Kontakt"
   },
   "hero": {
     "badge": "Softwareentwicklungs-Studio",
-    "title": "Wir entwickeln Software, die funktioniert",
-    "subtitle": "EyesSoftware konzipiert und entwickelt Web-, Mobile- und individuelle Software für Unternehmen und Privatpersonen — von der ersten Idee bis zum stabilen Produkt im Live-Betrieb.",
-    "cta": "Projekt starten",
-    "ctaSecondary": "Leistungen entdecken"
+    "title": "Wir entwickeln Websites, mobile Apps und individuelle Software",
+    "subtitle": "Wir planen, gestalten und veröffentlichen Ihr Projekt gemeinsam mit Ihnen. Bei Bedarf übernehmen wir auch Wartung und Weiterentwicklung.",
+    "cta": "Projekt beschreiben",
+    "ctaSecondary": "Unsere Leistungen ansehen"
   },
   "services": {
-    "title": "Was wir entwickeln",
-    "subtitle": "Softwareentwicklung aus einer Hand: Wir planen, gestalten, entwickeln und betreuen Produkte, auf die Sie und Ihre Kunden sich verlassen.",
+    "title": "Was entwickeln wir?",
+    "subtitle": "Wir legen den Projektumfang gemeinsam mit Ihnen fest, übernehmen Design und Entwicklung und bringen das Produkt live.",
     "items": {
       "website": {
         "title": "Webentwicklung",
-        "description": "Schnelle, sichere Websites und Webanwendungen auf modernem, wartbarem Code."
+        "description": "Wir entwickeln schnelle, sichere und leicht wartbare Websites und Webanwendungen."
       },
       "mobile": {
         "title": "App-Entwicklung",
-        "description": "Native und plattformübergreifende iOS- und Android-Apps mit klarem Design und zuverlässiger Performance."
+        "description": "Wir entwickeln native und plattformübergreifende Apps für iOS und Android."
       },
       "software": {
         "title": "Individualsoftware",
-        "description": "Interne Tools, Integrationen und individuelle Software, die sich an Ihren echten Abläufen orientieren."
+        "description": "Wir entwickeln Verwaltungsoberflächen, interne Tools und Systemintegrationen, zugeschnitten auf Ihre Geschäftsprozesse."
       },
       "uiux": {
-        "title": "UI/UX-Design",
-        "description": "Klare, gut bedienbare Oberflächen, gemeinsam mit den späteren Nutzern gestaltet."
+        "title": "Oberflächen- und UX-Design",
+        "description": "Wir gestalten klare Oberflächen, in denen Nutzer schnell finden, was sie suchen."
       }
     }
   },
   "process": {
-    "title": "So funktioniert es",
+    "title": "Wie arbeiten wir?",
     "steps": {
       "brief": {
-        "title": "Projektbriefing senden",
-        "description": "Beschreiben Sie Ihr Vorhaben über das Kontaktformular oder per E-Mail."
+        "title": "Projekt beschreiben",
+        "description": "Füllen Sie das Formular aus oder schreiben Sie uns eine E-Mail. Eine kurze Beschreibung Ihres Vorhabens genügt."
       },
       "quote": {
-        "title": "Umfang und Angebot erhalten",
-        "description": "Sie erhalten von uns einen schriftlichen Leistungsumfang, Zeitplan und Festpreis."
+        "title": "Angebot erhalten",
+        "description": "Wir senden Ihnen Projektumfang, Zeitplan und Preisangebot schriftlich zu."
       },
       "pay": {
-        "title": "Freigeben und sicher bezahlen",
-        "description": "Nach Ihrer Freigabe senden wir eine Rechnung; Sie zahlen per Karte über einen sicheren Checkout."
+        "title": "Angebot bestätigen",
+        "description": "Nach Ihrer Bestätigung senden wir Ihnen die Rechnung und einen Link zur Kartenzahlung."
       },
       "deliver": {
         "title": "Entwicklung und Übergabe",
-        "description": "Wir entwickeln in Meilensteinen, berichten über den Fortschritt und übergeben das fertige Ergebnis."
+        "description": "Wir teilen den Fortschritt in Etappen und übergeben das fertige Projekt."
       }
-    },
-    "note": "Jedes Projekt wird individuell angeboten."
+    }
   },
   "platforms": {
-    "title": "Technologie-Stack",
-    "subtitle": "Wir arbeiten auf allen Ebenen des modernen Stacks — sicher, skalierbar und langlebig.",
+    "title": "Technologien",
+    "subtitle": "Von der mobilen App über die Datenbank bis zur Cloud-Infrastruktur wählen wir die Technologien, die zu Ihrem Projekt passen.",
     "items": {
       "android": {
         "title": "Android",
@@ -84,23 +92,17 @@
       },
       "cloud": {
         "title": "Cloud",
-        "description": "AWS-, Azure- und Google-Cloud-Infrastruktur und Deployment"
+        "description": "Einrichtung der Infrastruktur und Deployment auf AWS, Azure und Google Cloud"
       }
     }
   },
   "about": {
     "title": "Über EyesSoftware",
-    "description": "Wir sind ein Softwareentwicklungs-Studio mit Sitz in Dubai. Gemeinsam mit Unternehmen und Privatpersonen konzipieren, entwickeln und betreuen wir Software, die echte Probleme löst — mit klarer Kommunikation, ehrlichen Zeitplänen und Code, der leicht anpassbar bleibt.",
-    "features": {
-      "quality": "Qualitätsorientiert",
-      "goal": "Ergebnisorientiert",
-      "client": "Kundenfokussiert",
-      "fast": "Schnelle Lieferung"
-    }
+    "description": "Wir sind ein Softwareentwicklungs-Studio mit Sitz in Dubai. Wir entwickeln Software für Unternehmen und Privatpersonen und legen Projektumfang und Zeitplan von Anfang an fest. Während der Entwicklung informieren wir Sie regelmäßig über den Fortschritt."
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "subtitle": "Erzählen Sie uns von Ihrem Projekt – unser Team meldet sich innerhalb von 24 Stunden.",
+    "subtitle": "Beschreiben Sie kurz Ihr Projekt. Wir melden uns, um Umfang und nächste Schritte zu besprechen.",
     "info": {
       "email": "E-Mail",
       "location": "Standort"
@@ -108,42 +110,44 @@
     "form": {
       "name": "Vollständiger Name",
       "email": "E-Mail-Adresse",
-      "message": "Projektbriefing",
+      "message": "Ihr Projekt",
       "submit": "Nachricht senden",
       "namePlaceholder": "Max Mustermann",
       "emailPlaceholder": "max@example.com",
-      "messagePlaceholder": "Beschreiben Sie Vision, Zeitplan und Ziele...",
+      "messagePlaceholder": "Was sollen wir für Sie entwickeln? Wenn Sie einen Wunschtermin haben, nennen Sie ihn gern.",
       "successMessage": "Nachricht erfolgreich gesendet!",
       "errorRequired": "Alle Felder sind erforderlich.",
       "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
       "sending": "Wird gesendet…",
-      "errorSend": "Deine Nachricht konnte nicht gesendet werden. Bitte schreib uns direkt eine E-Mail."
+      "errorSend": "Deine Nachricht konnte nicht gesendet werden. Bitte schreib uns direkt eine E-Mail.",
+      "privacyNote": "Wir verwenden Ihre Angaben, um Ihre Anfrage zu beantworten."
     }
   },
   "footer": {
     "description": "Softwareentwicklungs-Studio — Dubai, VAE.",
     "copyright": "© 2026 Eyes Software FZCO. Alle Rechte vorbehalten.",
-    "quickLinks": "Navigation",
+    "quickLinks": "Seitenmenü",
     "legalLinks": "Rechtliches",
     "privacyPolicy": "Datenschutz",
     "termsOfService": "Nutzungsbedingungen",
-    "refundPolicy": "Rückerstattungsrichtlinie",
-    "cookiePolicy": "Cookie-Richtlinie"
+    "refundPolicy": "Rückerstattungs- und Stornierungsrichtlinie",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "allProducts": "Alle Produkte"
   },
   "products": {
-    "title": "Einige der Produkte, die wir gebaut haben",
-    "subtitle": "Live-Produkte, die unser eigenes Team entwirft, entwickelt und betreibt.",
+    "title": "Unsere Produkte",
+    "subtitle": "Entdecken Sie die Produkte, die unser Team entwickelt hat und die bereits live sind.",
     "shortky": {
-      "tagline": "Kurzlinks, QR-Codes & Bio-Seiten"
+      "tagline": "Links kürzen, QR-Codes erstellen und Link-in-Bio-Seiten."
     },
     "infotube": {
-      "tagline": "KI-gestützte YouTube-Analytik"
+      "tagline": "KI-gestützte Analysen für YouTube-Kanäle."
     },
     "snapia": {
-      "tagline": "QR-Fotoalben für Feiern"
+      "tagline": "Eventfotos per QR-Code in einem Album sammeln."
     },
     "billur": {
-      "tagline": "Ein KI-Chat für markengerechte Posts, Anzeigen, Websites und Apps"
+      "tagline": "Mit KI markengerechte Social-Media-Inhalte, Anzeigen, Websites und Apps erstellen."
     },
     "rejee": {
       "tagline": "Livestreaming-Studio im Browser"
@@ -153,7 +157,9 @@
     }
   },
   "legal": {
-    "englishOnly": "Dieses Dokument ist nur auf Englisch verfügbar."
+    "englishOnly": "Dieses Dokument ist nur auf Englisch verfügbar.",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "enBadge": "(Englisch)"
   },
   "consent": {
     "title": "Cookie-Einstellungen",

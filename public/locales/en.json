@@ -1,66 +1,74 @@
 {
+  "meta": {
+    "home": "EyesSoftware — Websites, mobile apps and custom software",
+    "homeDescription": "EyesSoftware builds websites, mobile apps and custom software for businesses and individuals, from Dubai.",
+    "products": "Products — EyesSoftware",
+    "productsDescription": "Products built by EyesSoftware: Short.ky, InfoTube, Snapia, billur.ai, Rejee and Veer."
+  },
+  "lang": {
+    "select": "Select language"
+  },
   "nav": {
     "home": "Home",
     "products": "Products",
     "services": "Services",
-    "platforms": "Platforms",
+    "platforms": "Technologies",
     "about": "About",
     "contact": "Contact"
   },
   "hero": {
     "badge": "Software Development Studio",
-    "title": "We build software that works",
-    "subtitle": "EyesSoftware designs and builds web, mobile and custom software for businesses and individuals — from the first idea to a stable product in production.",
-    "cta": "Start Your Project",
-    "ctaSecondary": "Explore Services"
+    "title": "We build websites, mobile apps and custom software",
+    "subtitle": "We plan, design and launch your project with you, and provide maintenance and development support whenever you need it.",
+    "cta": "Tell us about your project",
+    "ctaSecondary": "See our services"
   },
   "services": {
-    "title": "What we build",
-    "subtitle": "End-to-end software development: we plan, design, build and maintain products you and your customers rely on.",
+    "title": "What do we build?",
+    "subtitle": "We define the project scope with you, run design and development, and launch the product.",
     "items": {
       "website": {
         "title": "Web Development",
-        "description": "Fast, secure websites and web applications built on modern, maintainable code."
+        "description": "We build fast, secure, easy-to-maintain websites and web applications."
       },
       "mobile": {
         "title": "Mobile App Development",
-        "description": "Native and cross-platform iOS and Android apps with clean design and reliable performance."
+        "description": "We build native and cross-platform apps for iOS and Android."
       },
       "software": {
         "title": "Custom Software",
-        "description": "Internal tools, integrations and custom software built around how you actually work."
+        "description": "We build admin panels, internal tools and system integrations tailored to your business processes."
       },
       "uiux": {
-        "title": "UI/UX Design",
-        "description": "Clear, usable interfaces designed together with the people who will use them."
+        "title": "Interface and UX design",
+        "description": "We design simple interfaces where users easily find what they are looking for."
       }
     }
   },
   "process": {
-    "title": "How it works",
+    "title": "How do we work?",
     "steps": {
       "brief": {
-        "title": "Send your brief",
-        "description": "Tell us what you need through the contact form or by email."
+        "title": "Tell us about your project",
+        "description": "Fill in the form or email us. A short description of what you want to build is enough."
       },
       "quote": {
-        "title": "Get scope and price",
-        "description": "We reply with a written scope, timeline and fixed quote."
+        "title": "Get your quote",
+        "description": "We send you the project scope, delivery timeline and price quote in writing."
       },
       "pay": {
-        "title": "Approve and pay securely",
-        "description": "Once you approve, we send an invoice; you pay by card through a secure checkout."
+        "title": "Approve the quote",
+        "description": "Once you approve, we send your invoice and a card payment link."
       },
       "deliver": {
         "title": "Development and delivery",
-        "description": "We build in milestones, share progress and hand over the finished work."
+        "description": "We share progress in milestones and deliver the finished project."
       }
-    },
-    "note": "Every project is quoted individually."
+    }
   },
   "platforms": {
-    "title": "Technology Stack",
-    "subtitle": "We work across every layer of the modern stack — secure, scalable and built to last.",
+    "title": "Technologies",
+    "subtitle": "From mobile apps to databases and cloud infrastructure, we choose the technologies that fit your project.",
     "items": {
       "android": {
         "title": "Android",
@@ -84,23 +92,17 @@
       },
       "cloud": {
         "title": "Cloud",
-        "description": "AWS, Azure and Google Cloud infrastructure and deployment"
+        "description": "Infrastructure setup and deployment on AWS, Azure and Google Cloud"
       }
     }
   },
   "about": {
     "title": "About EyesSoftware",
-    "description": "We are a Dubai-based software development studio. We work with businesses and individuals to design, build and maintain software that solves real problems — with clear communication, honest timelines and code that stays easy to change.",
-    "features": {
-      "quality": "Quality-Driven",
-      "goal": "Results-Focused",
-      "client": "Client-Centric",
-      "fast": "Rapid Delivery"
-    }
+    "description": "We are a Dubai-based software development studio. We build software for businesses and individuals, and agree on project scope and delivery timeline from the start. Throughout development, we share progress regularly."
   },
   "contact": {
     "title": "Get in touch",
-    "subtitle": "Tell us about your project and our team will get back to you within 24 hours.",
+    "subtitle": "Tell us briefly about your project. We will get in touch to discuss the scope and next steps.",
     "info": {
       "email": "Email",
       "location": "Location"
@@ -108,52 +110,55 @@
     "form": {
       "name": "Full Name",
       "email": "Email Address",
-      "message": "Project Brief",
+      "message": "About your project",
       "submit": "Send Message",
       "namePlaceholder": "John Doe",
       "emailPlaceholder": "john@example.com",
-      "messagePlaceholder": "Describe your vision, timeline, and goals...",
+      "messagePlaceholder": "What would you like us to build? You can also add your target delivery date, if you have one.",
       "successMessage": "Message sent successfully!",
       "errorRequired": "All fields are required.",
       "errorEmail": "Please enter a valid email address.",
       "sending": "Sending…",
-      "errorSend": "Your message could not be sent. Please email us directly."
+      "errorSend": "Your message could not be sent. Please email us directly.",
+      "privacyNote": "We use your details to respond to your request."
     }
   },
   "footer": {
     "description": "Software development studio — Dubai, UAE.",
     "copyright": "© 2026 Eyes Software FZCO. All rights reserved.",
-    "quickLinks": "Navigation",
+    "quickLinks": "Site menu",
     "legalLinks": "Legal",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "refundPolicy": "Refund Policy",
-    "cookiePolicy": "Cookie Policy"
+    "refundPolicy": "Refund & Cancellation Policy",
+    "cookiePolicy": "Cookie Policy",
+    "allProducts": "All products"
   },
   "products": {
-    "title": "A few of the products we have built",
-    "subtitle": "Live products designed, built and run by our own team.",
+    "title": "Products we have built",
+    "subtitle": "Explore the live products our team has built.",
     "shortky": {
-      "tagline": "Short links, QR codes & bio pages"
+      "tagline": "Link shortening, QR code generation and link-in-bio pages."
     },
     "infotube": {
-      "tagline": "AI-powered YouTube analytics"
+      "tagline": "AI-powered analytics for YouTube channels."
     },
     "snapia": {
-      "tagline": "QR photo albums for celebrations"
+      "tagline": "Collect event photos in one album with a QR code."
     },
     "billur": {
-      "tagline": "One AI chat for on-brand posts, ads, sites and apps"
+      "tagline": "Create on-brand social media content, ads, websites and apps with AI."
     },
     "rejee": {
-      "tagline": "Live streaming studio in your browser"
+      "tagline": "A live streaming studio that runs in your browser."
     },
     "veer": {
-      "tagline": "Vocal-first audio plugins for rap, trap and pop"
+      "tagline": "Vocal-first audio plugins for rap, trap and pop."
     }
   },
   "legal": {
-    "englishOnly": "This document is available in English only."
+    "englishOnly": "This document is available in English only.",
+    "lastUpdated": "Last updated"
   },
   "consent": {
     "title": "Cookie preferences",

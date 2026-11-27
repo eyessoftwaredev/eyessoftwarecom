@@ -8,14 +8,45 @@
     return path.split('.').reduce(function (o, k) { return o && o[k] !== undefined ? o[k] : null; }, obj);
   }
 
+  // English lives at the bare path; other languages under /tr/, /ar/, /de/, /fr/ so a link opens in its language.
+  var LANG_PREFIX = /^\/(tr|ar|de|fr)(?=\/|$)/;
+  function localizePath(path, lang) {
+    var bare = path.replace(LANG_PREFIX, '') || '/';
+    if (lang === 'en') return bare;
+    return '/' + lang + (bare.charAt(0) === '/' ? bare : '/' + bare);
+  }
+
+  function saveLanguage(lang) {
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    document.cookie = 'lang=' + encodeURIComponent(lang) + ';path=/;max-age=31536000;SameSite=Lax';
+  }
+
   function applyTranslations(lang) {
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var val = getNestedValue(translations, el.getAttribute('data-i18n'));
-      if (val) el.textContent = val;
+      if (val) el.textContent = val + (el.getAttribute('data-i18n-suffix') || '');
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
       var val = getNestedValue(translations, el.getAttribute('data-i18n-placeholder'));
       if (val) el.placeholder = val;
+    });
+    document.querySelectorAll('[data-i18n-content]').forEach(function (el) {
+      var val = getNestedValue(translations, el.getAttribute('data-i18n-content'));
+      if (val) el.setAttribute('content', val);
+    });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(function (el) {
+      var val = getNestedValue(translations, el.getAttribute('data-i18n-aria-label'));
+      if (val) el.setAttribute('aria-label', val);
+    });
+    document.querySelectorAll('time[datetime]').forEach(function (el) {
+      try {
+        el.textContent = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'long', year: 'numeric' })
+          .format(new Date(el.getAttribute('datetime') + 'T12:00:00'));
+      } catch (e) {}
+    });
+    document.querySelectorAll('a[href^="/"]:not([href^="//"])').forEach(function (a) {
+      if (!a.dataset.baseHref) a.dataset.baseHref = a.getAttribute('href');
+      a.setAttribute('href', localizePath(a.dataset.baseHref, lang));
     });
     var code = LANG_FLAGS[lang] || 'gb';
     var root = document.documentElement;
@@ -24,6 +55,8 @@
     root.dataset.lang = lang;
     root.dataset.flag = code;
     document.getElementById('langCurrentFlag').className = 'fi fi-' + code + ' fis';
+    var codeEl = document.getElementById('langCurrentCode');
+    if (codeEl) codeEl.textContent = lang.toUpperCase();
     document.querySelectorAll('.lang-option').forEach(function (opt) {
       opt.classList.toggle('active', opt.dataset.lang === lang);
     });
@@ -44,8 +77,10 @@
     if (!data || Object.keys(data).length === 0) return;
     translations = data;
     applyTranslations(lang);
-    try { localStorage.setItem('lang', lang); } catch (e) {}
-    document.cookie = 'lang=' + encodeURIComponent(lang) + ';path=/;max-age=31536000;SameSite=Lax';
+    saveLanguage(lang);
+    if (window.history && history.replaceState) {
+      history.replaceState(null, '', localizePath(location.pathname, lang) + location.search + location.hash);
+    }
   }
 
   (function initI18n() {
@@ -56,6 +91,8 @@
       translations = data;
       applyTranslations(lang);
     }
+    // Opening a /tr/ link keeps Turkish on the next visit too.
+    if (LANG_PREFIX.test(location.pathname)) saveLanguage(lang);
     document.documentElement.classList.add('i18n-ready');
   })();
 
@@ -81,6 +118,38 @@
     document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  /* ── In-page links ── */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function revealNow(target) {
+    var items = Array.prototype.slice.call(target.querySelectorAll('.reveal'));
+    if (target.classList.contains('reveal')) items.push(target);
+    items.forEach(function (el) { el.classList.add('instant', 'visible'); });
+  }
+  function scrollToSection(target) {
+    revealNow(target);
+    var y = target.getBoundingClientRect().top + window.scrollY - (navbar.offsetHeight + 12);
+    if (reduceMotion.matches) { window.scrollTo(0, y); return; }
+    var distance = y - window.scrollY;
+    var stretch = window.innerHeight * 0.6;
+    if (Math.abs(distance) > stretch) window.scrollTo(0, y - (distance > 0 ? stretch : -stretch));
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="#"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var url = new URL(a.href, location.href);
+    if (url.origin !== location.origin || url.pathname !== location.pathname || !url.hash) return;
+    var target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (!target) return;
+    e.preventDefault();
+    if (history.pushState && location.hash !== url.hash) history.pushState(null, '', url.hash);
+    scrollToSection(target);
+  });
+  if (location.hash) {
+    var initialTarget = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (initialTarget) revealNow(initialTarget);
   }
 
   /* ── Nav ── */

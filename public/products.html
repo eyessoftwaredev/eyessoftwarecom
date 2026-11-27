@@ -22,7 +22,11 @@
         return 'en';
       }
 
-      var saved = getSavedLang();
+      var match = location.pathname.match(/^\/(tr|ar|de|fr)(?=\/|$)/);
+      var saved = match ? match[1] : getSavedLang();
+      if (!match && saved !== 'en' && window.history && history.replaceState) {
+        history.replaceState(null, '', '/' + saved + (location.pathname === '/' ? '/' : location.pathname) + location.search + location.hash);
+      }
       var root = document.documentElement;
       root.lang = saved;
       root.dir = saved === 'ar' ? 'rtl' : 'ltr';
@@ -31,8 +35,8 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Products — EyesSoftware</title>
-  <meta name="description" content="A few of the products EyesSoftware has built: billur.ai, Rejee, Veer, Short.ky, InfoTube and Snapia." />
+  <title data-i18n="meta.products">Products — EyesSoftware</title>
+  <meta name="description" data-i18n-content="meta.productsDescription" content="Products built by EyesSoftware: Short.ky, InfoTube, Snapia, billur.ai, Rejee and Veer." />
   <meta name="theme-color" content="#0A0A0A" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/brand/eyes-mark-lime.png" />
@@ -53,17 +57,18 @@
       <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/#services" data-i18n="nav.services">Services</a></li>
-        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Technologies</a></li>
         <li><a href="/#about" data-i18n="nav.about">About</a></li>
         <li><a href="/products" aria-current="page" data-i18n="nav.products">Products</a></li>
         <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
-        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Start Your Project</a></li>
+        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Tell us about your project</a></li>
       </ul>
       <div class="nav-actions">
         <div class="lang-switch">
-          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" data-i18n-aria-label="lang.select" aria-haspopup="true" aria-expanded="false">
             <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
-            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <span id="langCurrentCode" class="lang-code" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));document.getElementById('langCurrentCode').textContent = (document.documentElement.dataset.lang || 'en').toUpperCase();</script>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
@@ -74,7 +79,7 @@
             <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
           </div>
         </div>
-        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Tell us about your project</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
           <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
           <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -87,8 +92,8 @@
   <section class="hero page-hero">
     <div class="wrap reveal">
       <span class="chip" data-i18n="nav.products">Products</span>
-      <h1 class="hero-title" data-i18n="products.title">A few of the products we have built</h1>
-      <p class="lead" data-i18n="products.subtitle">Live products designed, built and run by our own team.</p>
+      <h1 class="hero-title" data-i18n="products.title">Products we have built</h1>
+      <p class="lead" data-i18n="products.subtitle">Explore the live products our team has built.</p>
     </div>
   </section>
 
@@ -98,37 +103,37 @@
         <li><a class="pcard" href="https://short.ky" target="_blank" rel="noopener">
           <img src="/assets/products/shortky.png" alt="" width="40" height="40" />
           <span class="pname">Short.ky</span>
-          <span class="ptag" data-i18n="products.shortky.tagline">Short links, QR codes &amp; bio pages</span>
+          <span class="ptag" data-i18n="products.shortky.tagline">Link shortening, QR code generation and link-in-bio pages.</span>
           <span class="purl">short.ky <i data-lucide="arrow-up-right"></i></span>
         </a></li>
         <li><a class="pcard" href="https://infotube.ai" target="_blank" rel="noopener">
           <img src="/assets/products/infotube.svg" alt="" width="40" height="40" />
           <span class="pname">InfoTube</span>
-          <span class="ptag" data-i18n="products.infotube.tagline">AI-powered YouTube analytics</span>
+          <span class="ptag" data-i18n="products.infotube.tagline">AI-powered analytics for YouTube channels.</span>
           <span class="purl">infotube.ai <i data-lucide="arrow-up-right"></i></span>
         </a></li>
         <li><a class="pcard" href="https://snapia.co" target="_blank" rel="noopener">
           <img src="/assets/products/snapia.svg" alt="" width="40" height="40" />
           <span class="pname">Snapia</span>
-          <span class="ptag" data-i18n="products.snapia.tagline">QR photo albums for celebrations</span>
+          <span class="ptag" data-i18n="products.snapia.tagline">Collect event photos in one album with a QR code.</span>
           <span class="purl">snapia.co <i data-lucide="arrow-up-right"></i></span>
         </a></li>
         <li><a class="pcard" href="https://billur.ai" target="_blank" rel="noopener">
           <img src="/assets/products/billur.svg" alt="" width="40" height="40" />
           <span class="pname">billur.ai</span>
-          <span class="ptag" data-i18n="products.billur.tagline">One AI chat for on-brand posts, ads, sites and apps</span>
+          <span class="ptag" data-i18n="products.billur.tagline">Create on-brand social media content, ads, websites and apps with AI.</span>
           <span class="purl">billur.ai <i data-lucide="arrow-up-right"></i></span>
         </a></li>
         <li><a class="pcard" href="https://rejee.live" target="_blank" rel="noopener">
           <img src="/assets/products/rejee.svg" alt="" width="40" height="40" />
           <span class="pname">Rejee</span>
-          <span class="ptag" data-i18n="products.rejee.tagline">Live streaming studio in your browser</span>
+          <span class="ptag" data-i18n="products.rejee.tagline">A live streaming studio that runs in your browser.</span>
           <span class="purl">rejee.live <i data-lucide="arrow-up-right"></i></span>
         </a></li>
         <li><a class="pcard" href="https://veerplugin.com" target="_blank" rel="noopener">
           <img src="/assets/products/veer.svg" alt="" width="40" height="40" />
           <span class="pname">Veer</span>
-          <span class="ptag" data-i18n="products.veer.tagline">Vocal-first audio plugins for rap, trap and pop</span>
+          <span class="ptag" data-i18n="products.veer.tagline">Vocal-first audio plugins for rap, trap and pop.</span>
           <span class="purl">veerplugin.com <i data-lucide="arrow-up-right"></i></span>
         </a></li>
       </ul>
@@ -145,10 +150,10 @@
           <p data-i18n="footer.description">Software development studio — Dubai, UAE.</p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <h4 data-i18n="footer.quickLinks">Site menu</h4>
           <ul>
             <li><a href="/#services" data-i18n="nav.services">Services</a></li>
-            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Technologies</a></li>
             <li><a href="/#about" data-i18n="nav.about">About</a></li>
             <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
@@ -162,15 +167,16 @@
             <li><a href="https://billur.ai" target="_blank" rel="noopener">billur.ai</a></li>
             <li><a href="https://rejee.live" target="_blank" rel="noopener">Rejee</a></li>
             <li><a href="https://veerplugin.com" target="_blank" rel="noopener">Veer</a></li>
+            <li><a href="/products" data-i18n="footer.allProducts">All products</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.legalLinks">Legal</h4>
           <ul>
-            <li><a href="/terms" data-i18n="footer.termsOfService">Terms of Service</a></li>
-            <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
-            <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
-            <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+            <li><a href="/terms"><span data-i18n="footer.termsOfService">Terms of Service</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/refund-policy"><span data-i18n="footer.refundPolicy">Refund &amp; Cancellation Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/privacy"><span data-i18n="footer.privacyPolicy">Privacy Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/cookies"><span data-i18n="footer.cookiePolicy">Cookie Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
             <li><a href="/cookies" data-eyes-consent-open data-i18n="consent.footerLink">Cookie preferences</a></li>
           </ul>
         </div>

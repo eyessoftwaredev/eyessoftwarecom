@@ -22,7 +22,11 @@
         return 'en';
       }
 
-      var saved = getSavedLang();
+      var match = location.pathname.match(/^\/(tr|ar|de|fr)(?=\/|$)/);
+      var saved = match ? match[1] : getSavedLang();
+      if (!match && saved !== 'en' && window.history && history.replaceState) {
+        history.replaceState(null, '', '/' + saved + (location.pathname === '/' ? '/' : location.pathname) + location.search + location.hash);
+      }
       var root = document.documentElement;
       root.lang = saved;
       root.dir = saved === 'ar' ? 'rtl' : 'ltr';
@@ -31,8 +35,8 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>EyesSoftware — Software Development Studio</title>
-  <meta name="description" content="EyesSoftware builds web, mobile and custom software for businesses and individuals, from Dubai." />
+  <title data-i18n="meta.home">EyesSoftware — Websites, mobile apps and custom software</title>
+  <meta name="description" data-i18n-content="meta.homeDescription" content="EyesSoftware builds websites, mobile apps and custom software for businesses and individuals, from Dubai." />
   <meta name="theme-color" content="#0A0A0A" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/brand/eyes-mark-lime.png" />
@@ -53,17 +57,18 @@
       <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/#services" data-i18n="nav.services">Services</a></li>
-        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Technologies</a></li>
         <li><a href="/#about" data-i18n="nav.about">About</a></li>
         <li><a href="/products" data-i18n="nav.products">Products</a></li>
         <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
-        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Start Your Project</a></li>
+        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Tell us about your project</a></li>
       </ul>
       <div class="nav-actions">
         <div class="lang-switch">
-          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" data-i18n-aria-label="lang.select" aria-haspopup="true" aria-expanded="false">
             <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
-            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <span id="langCurrentCode" class="lang-code" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));document.getElementById('langCurrentCode').textContent = (document.documentElement.dataset.lang || 'en').toUpperCase();</script>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
@@ -74,7 +79,7 @@
             <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
           </div>
         </div>
-        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Tell us about your project</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
           <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
           <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -88,12 +93,12 @@
   <section class="hero" id="top">
     <div class="wrap reveal">
       <span class="chip" data-i18n="hero.badge">Software Development Studio</span>
-      <h1 class="hero-title" data-i18n="hero.title">We build software that works</h1>
+      <h1 class="hero-title" data-i18n="hero.title">We build websites, mobile apps and custom software</h1>
       <div class="hero-bottom">
-        <p class="hero-sub" data-i18n="hero.subtitle">EyesSoftware designs and builds web, mobile and custom software for businesses and individuals — from the first idea to a stable product in production.</p>
+        <p class="hero-sub" data-i18n="hero.subtitle">We plan, design and launch your project with you, and provide maintenance and development support whenever you need it.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn"><span data-i18n="hero.cta">Start Your Project</span> <i data-lucide="arrow-right" class="dir"></i></a>
-          <a href="#services" class="btn btn-line" data-i18n="hero.ctaSecondary">Explore Services</a>
+          <a href="#contact" class="btn"><span data-i18n="hero.cta">Tell us about your project</span> <i data-lucide="arrow-right" class="dir"></i></a>
+          <a href="#services" class="btn btn-line" data-i18n="hero.ctaSecondary">See our services</a>
         </div>
       </div>
     </div>
@@ -105,26 +110,25 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="label"><b>01</b><span data-i18n="nav.services">Services</span></div>
-        <h2 class="h2" data-i18n="services.title">What we build</h2>
-        <p class="lead" data-i18n="services.subtitle">End-to-end software development: we plan, design, build and maintain products you and your customers rely on.</p>
+        <h2 class="h2" data-i18n="services.title">What do we build?</h2>
+        <p class="lead" data-i18n="services.subtitle">We define the project scope with you, run design and development, and launch the product.</p>
       </div>
       <div class="svc-grid">
-        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="globe"></i></div><span class="svc-n">01</span></div><h3 data-i18n="services.items.website.title">Web Development</h3><p data-i18n="services.items.website.description">Fast, secure websites and web applications built on modern, maintainable code.</p></div>
-        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="smartphone"></i></div><span class="svc-n">02</span></div><h3 data-i18n="services.items.mobile.title">Mobile App Development</h3><p data-i18n="services.items.mobile.description">Native and cross-platform iOS and Android apps with clean design and reliable performance.</p></div>
-        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="code"></i></div><span class="svc-n">03</span></div><h3 data-i18n="services.items.software.title">Custom Software</h3><p data-i18n="services.items.software.description">Internal tools, integrations and custom software built around how you actually work.</p></div>
-        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="pen-tool"></i></div><span class="svc-n">04</span></div><h3 data-i18n="services.items.uiux.title">UI/UX Design</h3><p data-i18n="services.items.uiux.description">Clear, usable interfaces designed together with the people who will use them.</p></div>
+        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="globe"></i></div><span class="svc-n">01</span></div><h3 data-i18n="services.items.website.title">Web Development</h3><p data-i18n="services.items.website.description">We build fast, secure, easy-to-maintain websites and web applications.</p></div>
+        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="smartphone"></i></div><span class="svc-n">02</span></div><h3 data-i18n="services.items.mobile.title">Mobile App Development</h3><p data-i18n="services.items.mobile.description">We build native and cross-platform apps for iOS and Android.</p></div>
+        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="code"></i></div><span class="svc-n">03</span></div><h3 data-i18n="services.items.software.title">Custom Software</h3><p data-i18n="services.items.software.description">We build admin panels, internal tools and system integrations tailored to your business processes.</p></div>
+        <div class="svc reveal"><div class="svc-top"><div class="svc-icon"><i data-lucide="pen-tool"></i></div><span class="svc-n">04</span></div><h3 data-i18n="services.items.uiux.title">Interface and UX design</h3><p data-i18n="services.items.uiux.description">We design simple interfaces where users easily find what they are looking for.</p></div>
       </div>
 
       <div class="steps-head reveal">
-        <h3 class="h3" data-i18n="process.title">How it works</h3>
+        <h3 class="h3" data-i18n="process.title">How do we work?</h3>
       </div>
       <ol class="steps">
-        <li class="step reveal"><span class="step-n">01</span><h4 data-i18n="process.steps.brief.title">Send your brief</h4><p data-i18n="process.steps.brief.description">Tell us what you need through the contact form or by email.</p></li>
-        <li class="step reveal"><span class="step-n">02</span><h4 data-i18n="process.steps.quote.title">Get scope and price</h4><p data-i18n="process.steps.quote.description">We reply with a written scope, timeline and fixed quote.</p></li>
-        <li class="step reveal"><span class="step-n">03</span><h4 data-i18n="process.steps.pay.title">Approve and pay securely</h4><p data-i18n="process.steps.pay.description">Once you approve, we send an invoice; you pay by card through a secure checkout.</p></li>
-        <li class="step reveal"><span class="step-n">04</span><h4 data-i18n="process.steps.deliver.title">Development and delivery</h4><p data-i18n="process.steps.deliver.description">We build in milestones, share progress and hand over the finished work.</p></li>
+        <li class="step reveal"><span class="step-n">01</span><h4 data-i18n="process.steps.brief.title">Tell us about your project</h4><p data-i18n="process.steps.brief.description">Fill in the form or email us. A short description of what you want to build is enough.</p></li>
+        <li class="step reveal"><span class="step-n">02</span><h4 data-i18n="process.steps.quote.title">Get your quote</h4><p data-i18n="process.steps.quote.description">We send you the project scope, delivery timeline and price quote in writing.</p></li>
+        <li class="step reveal"><span class="step-n">03</span><h4 data-i18n="process.steps.pay.title">Approve the quote</h4><p data-i18n="process.steps.pay.description">Once you approve, we send your invoice and a card payment link.</p></li>
+        <li class="step reveal"><span class="step-n">04</span><h4 data-i18n="process.steps.deliver.title">Development and delivery</h4><p data-i18n="process.steps.deliver.description">We share progress in milestones and deliver the finished project.</p></li>
       </ol>
-      <p class="steps-note reveal" data-i18n="process.note">Every project is quoted individually.</p>
     </div>
   </section>
 
@@ -132,9 +136,9 @@
   <section id="platforms" class="sec sec-tight">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="label"><b>02</b><span data-i18n="nav.platforms">Platforms</span></div>
-        <h2 class="h2" data-i18n="platforms.title">Technology Stack</h2>
-        <p class="lead" data-i18n="platforms.subtitle">We work across every layer of the modern stack — secure, scalable and built to last.</p>
+        <div class="label"><b>02</b><span data-i18n="nav.platforms">Technologies</span></div>
+        <h2 class="h2" data-i18n="platforms.title">Technologies</h2>
+        <p class="lead" data-i18n="platforms.subtitle">From mobile apps to databases and cloud infrastructure, we choose the technologies that fit your project.</p>
       </div>
       <div class="stack-grid">
         <div class="stack reveal"><div class="stack-icon"><img src="/assets/brands/android.svg" alt="Android" /></div><div><h3 data-i18n="platforms.items.android.title">Android</h3><p data-i18n="platforms.items.android.description">Native and cross-platform Android apps</p></div></div>
@@ -142,7 +146,7 @@
         <div class="stack reveal"><div class="stack-icon"><img src="/assets/brands/react.svg" alt="React" /></div><div><h3 data-i18n="platforms.items.web.title">Web</h3><p data-i18n="platforms.items.web.description">React, Next.js and Node.js applications</p></div></div>
         <div class="stack reveal"><div class="stack-icon"><i data-lucide="database"></i></div><div><h3 data-i18n="platforms.items.database.title">Data Systems</h3><p data-i18n="platforms.items.database.description">SQL and NoSQL database design and optimization</p></div></div>
         <div class="stack reveal"><div class="stack-icon"><i data-lucide="shield-check"></i></div><div><h3 data-i18n="platforms.items.security.title">Security</h3><p data-i18n="platforms.items.security.description">Secure architecture, code review and compliance</p></div></div>
-        <div class="stack reveal"><div class="stack-icon"><i data-lucide="cloud"></i></div><div><h3 data-i18n="platforms.items.cloud.title">Cloud</h3><p data-i18n="platforms.items.cloud.description">AWS, Azure and Google Cloud infrastructure and deployment</p></div></div>
+        <div class="stack reveal"><div class="stack-icon"><i data-lucide="cloud"></i></div><div><h3 data-i18n="platforms.items.cloud.title">Cloud</h3><p data-i18n="platforms.items.cloud.description">Infrastructure setup and deployment on AWS, Azure and Google Cloud</p></div></div>
       </div>
     </div>
   </section>
@@ -150,16 +154,11 @@
   <!-- ── About ── -->
   <section id="about" class="sec sec-tight">
     <div class="wrap">
-      <div class="label reveal"><b>03</b><span data-i18n="about.title">About EyesSoftware</span></div>
-      <div class="about-grid">
-        <p class="about-text reveal" data-i18n="about.description">We are a Dubai-based software development studio. We work with businesses and individuals to design, build and maintain software that solves real problems — with clear communication, honest timelines and code that stays easy to change.</p>
-        <ul class="about-feats reveal">
-          <li data-i18n="about.features.quality">Quality-Driven</li>
-          <li data-i18n="about.features.goal">Results-Focused</li>
-          <li data-i18n="about.features.client">Client-Centric</li>
-          <li data-i18n="about.features.fast">Rapid Delivery</li>
-        </ul>
+      <div class="sec-head reveal">
+        <div class="label"><b>03</b><span data-i18n="nav.about">About</span></div>
+        <h2 class="h2" data-i18n="about.title">About EyesSoftware</h2>
       </div>
+      <p class="about-text reveal" data-i18n="about.description">We are a Dubai-based software development studio. We build software for businesses and individuals, and agree on project scope and delivery timeline from the start. Throughout development, we share progress regularly.</p>
     </div>
   </section>
 
@@ -171,7 +170,7 @@
         <div>
           <div class="label"><b>04</b><span data-i18n="nav.contact">Contact</span></div>
           <h2 class="h2" data-i18n="contact.title">Get in touch</h2>
-          <p class="lead" data-i18n="contact.subtitle">Tell us about your project and our team will get back to you within 24 hours.</p>
+          <p class="lead" data-i18n="contact.subtitle">Tell us briefly about your project. We will get in touch to discuss the scope and next steps.</p>
           <div class="contact-info-list">
             <div class="contact-item">
               <div class="contact-item-icon"><i data-lucide="mail"></i></div>
@@ -196,14 +195,15 @@
             <input id="contactEmail" name="email" type="email" inputmode="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="john@example.com" required autocomplete="email" maxlength="254" />
           </div>
           <div class="form-group">
-            <label for="contactMessage" data-i18n="contact.form.message">Project Brief</label>
-            <textarea id="contactMessage" name="message" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Describe your vision, timeline, and goals..." required maxlength="5000"></textarea>
+            <label for="contactMessage" data-i18n="contact.form.message">About your project</label>
+            <textarea id="contactMessage" name="message" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="What would you like us to build? You can also add your target delivery date, if you have one." required maxlength="5000"></textarea>
           </div>
           <div class="form-hp" aria-hidden="true">
             <label for="contactWebsite">Website</label>
             <input id="contactWebsite" name="website" type="text" tabindex="-1" autocomplete="off" />
           </div>
           <button type="submit" class="btn form-submit" id="contactSubmit" data-i18n="contact.form.submit">Send Message</button>
+          <p class="form-privacy"><span data-i18n="contact.form.privacyNote">We use your details to respond to your request.</span> <a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></p>
         </form>
       </div>
     </div>
@@ -219,10 +219,10 @@
           <p data-i18n="footer.description">Software development studio — Dubai, UAE.</p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <h4 data-i18n="footer.quickLinks">Site menu</h4>
           <ul>
             <li><a href="/#services" data-i18n="nav.services">Services</a></li>
-            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Technologies</a></li>
             <li><a href="/#about" data-i18n="nav.about">About</a></li>
             <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
@@ -236,15 +236,16 @@
             <li><a href="https://billur.ai" target="_blank" rel="noopener">billur.ai</a></li>
             <li><a href="https://rejee.live" target="_blank" rel="noopener">Rejee</a></li>
             <li><a href="https://veerplugin.com" target="_blank" rel="noopener">Veer</a></li>
+            <li><a href="/products" data-i18n="footer.allProducts">All products</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.legalLinks">Legal</h4>
           <ul>
-            <li><a href="/terms" data-i18n="footer.termsOfService">Terms of Service</a></li>
-            <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
-            <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
-            <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+            <li><a href="/terms"><span data-i18n="footer.termsOfService">Terms of Service</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/refund-policy"><span data-i18n="footer.refundPolicy">Refund &amp; Cancellation Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/privacy"><span data-i18n="footer.privacyPolicy">Privacy Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/cookies"><span data-i18n="footer.cookiePolicy">Cookie Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
             <li><a href="/cookies" data-eyes-consent-open data-i18n="consent.footerLink">Cookie preferences</a></li>
           </ul>
         </div>

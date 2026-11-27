@@ -1,33 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://eyessoftware.com/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/" />
+    <lastmod>2026-11-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://eyessoftware.com/products</loc>
-    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/products" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/products" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/products" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/products" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/products" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/tr/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/products" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/products" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/products" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/products" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/products" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/ar/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/products" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/products" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/products" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/products" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/products" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/de/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/products" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/products" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/products" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/products" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/products" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/fr/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/products" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/products" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/products" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/products" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/products" />
+    <lastmod>2026-11-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eyessoftware.com/terms</loc>
-    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/terms" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/tr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/terms" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/ar/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/terms" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/de/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/terms" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/terms" />
+    <lastmod>2026-11-27</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://eyessoftware.com/refund-policy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/refund-policy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/tr/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/refund-policy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/ar/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/refund-policy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/de/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/refund-policy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/fr/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/refund-policy" />
+    <lastmod>2026-11-27</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://eyessoftware.com/privacy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/privacy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/tr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/privacy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/ar/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/privacy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/privacy" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/privacy" />
+    <lastmod>2026-11-27</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://eyessoftware.com/cookies</loc>
-    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/cookies" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/cookies" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/cookies" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/cookies" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/tr/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/cookies" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/cookies" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/cookies" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/cookies" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/ar/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/cookies" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/cookies" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/cookies" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/cookies" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/de/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/cookies" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/cookies" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/cookies" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/cookies" />
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://eyessoftware.com/fr/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eyessoftware.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://eyessoftware.com/tr/cookies" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://eyessoftware.com/ar/cookies" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eyessoftware.com/de/cookies" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://eyessoftware.com/fr/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eyessoftware.com/cookies" />
+    <lastmod>2026-11-27</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>

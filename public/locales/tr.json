@@ -1,70 +1,78 @@
 {
+  "meta": {
+    "home": "EyesSoftware — Web siteleri, mobil uygulamalar ve özel yazılımlar",
+    "homeDescription": "EyesSoftware, Dubai'den işletmeler ve bireyler için web siteleri, mobil uygulamalar ve özel yazılımlar geliştirir.",
+    "products": "Ürünler — EyesSoftware",
+    "productsDescription": "EyesSoftware'in geliştirdiği ürünler: Short.ky, InfoTube, Snapia, billur.ai, Rejee ve Veer."
+  },
+  "lang": {
+    "select": "Dil seçin"
+  },
   "nav": {
     "home": "Ana Sayfa",
     "products": "Ürünler",
     "services": "Hizmetler",
-    "platforms": "Platformlar",
+    "platforms": "Teknolojiler",
     "about": "Hakkımızda",
     "contact": "İletişim"
   },
   "hero": {
     "badge": "Yazılım Geliştirme Stüdyosu",
-    "title": "Çalışan yazılımlar geliştiriyoruz",
-    "subtitle": "EyesSoftware; işletmeler ve bireyler için web, mobil ve özel yazılımlar tasarlar ve geliştirir — ilk fikirden canlıda sorunsuz çalışan bir ürüne kadar.",
-    "cta": "Projenizi Başlatın",
-    "ctaSecondary": "Hizmetleri Keşfedin"
+    "title": "Web siteleri, mobil uygulamalar ve özel yazılımlar geliştiriyoruz",
+    "subtitle": "Projenizi birlikte planlıyor, tasarlıyor ve yayına alıyoruz. İhtiyaç duyduğunuzda bakım ve geliştirme desteği de sağlıyoruz.",
+    "cta": "Projenizi anlatın",
+    "ctaSecondary": "Hizmetlerimizi inceleyin"
   },
   "services": {
-    "title": "Neler geliştiriyoruz",
-    "subtitle": "Uçtan uca yazılım geliştirme: sizin ve müşterilerinizin güvendiği ürünleri planlıyor, tasarlıyor, geliştiriyor ve bakımını yapıyoruz.",
+    "title": "Neler geliştiriyoruz?",
+    "subtitle": "Projenin kapsamını birlikte belirliyor, tasarım ve geliştirme sürecini yürütüyor, ürünü yayına alıyoruz.",
     "items": {
       "website": {
         "title": "Web Geliştirme",
-        "description": "Modern ve sürdürülebilir kodla hızlı, güvenli web siteleri ve web uygulamaları."
+        "description": "Hızlı, güvenli ve bakımı kolay web siteleri ve web uygulamaları geliştiriyoruz."
       },
       "mobile": {
         "title": "Mobil Uygulama Geliştirme",
-        "description": "Sade tasarımlı ve güvenilir performanslı native ve cross-platform iOS ve Android uygulamaları."
+        "description": "iOS ve Android için platforma özel ve çapraz platform uygulamalar geliştiriyoruz."
       },
       "software": {
         "title": "Özel Yazılım",
-        "description": "Gerçek iş akışınıza göre geliştirilen iç araçlar, entegrasyonlar ve özel yazılımlar."
+        "description": "İş süreçlerinize özel yönetim panelleri, ekip içi araçlar ve sistem entegrasyonları geliştiriyoruz."
       },
       "uiux": {
-        "title": "UI/UX Tasarım",
-        "description": "Onu kullanacak kişilerle birlikte tasarlanan, anlaşılır ve kullanışlı arayüzler."
+        "title": "Arayüz ve kullanıcı deneyimi tasarımı",
+        "description": "Kullanıcıların aradıklarını kolayca bulabileceği, sade arayüzler tasarlıyoruz."
       }
     }
   },
   "process": {
-    "title": "Nasıl çalışıyoruz",
+    "title": "Nasıl çalışıyoruz?",
     "steps": {
       "brief": {
-        "title": "Proje özetinizi gönderin",
-        "description": "İletişim formundan ya da e-postayla neye ihtiyacınız olduğunu anlatın."
+        "title": "Projenizi anlatın",
+        "description": "Formu doldurun veya bize e-posta gönderin. Ne yapmak istediğinizi kısaca anlatmanız yeterli."
       },
       "quote": {
-        "title": "Kapsam ve fiyat teklifi alın",
-        "description": "Size yazılı bir kapsam, takvim ve sabit fiyat teklifiyle dönüyoruz."
+        "title": "Teklifinizi alın",
+        "description": "Projenin kapsamını, teslim takvimini ve fiyat teklifini yazılı olarak paylaşırız."
       },
       "pay": {
-        "title": "Onaylayın, güvenle ödeyin",
-        "description": "Onayınızın ardından fatura göndeririz; ödemeyi güvenli ödeme sayfasından kartla yaparsınız."
+        "title": "Teklifi onaylayın",
+        "description": "Onayınızın ardından faturanızı ve kartla ödeme bağlantısını göndeririz."
       },
       "deliver": {
         "title": "Geliştirme ve teslim",
-        "description": "Aşama aşama geliştirir, ilerlemeyi paylaşır ve tamamlanan işi teslim ederiz."
+        "description": "İlerlemeyi aşamalar hâlinde paylaşır, tamamlanan projeyi teslim ederiz."
       }
-    },
-    "note": "Her proje için ayrı fiyat teklifi verilir."
+    }
   },
   "platforms": {
-    "title": "Teknoloji Yığını",
-    "subtitle": "Modern teknolojilerin her katmanında çalışıyoruz — güvenli, ölçeklenebilir ve uzun ömürlü.",
+    "title": "Teknolojiler",
+    "subtitle": "Mobil uygulamadan veritabanına ve bulut altyapısına kadar, projenin ihtiyacına uygun teknolojileri seçiyoruz.",
     "items": {
       "android": {
         "title": "Android",
-        "description": "Native ve cross-platform Android uygulamaları"
+        "description": "Platforma özel ve çapraz platform Android uygulamaları"
       },
       "ios": {
         "title": "iOS",
@@ -84,23 +92,17 @@
       },
       "cloud": {
         "title": "Bulut",
-        "description": "AWS, Azure ve Google Cloud altyapısı ve dağıtımı"
+        "description": "AWS, Azure ve Google Cloud üzerinde altyapı kurulumu ve yayına alma"
       }
     }
   },
   "about": {
-    "title": "EyesSoftware Hakkında",
-    "description": "Dubai merkezli bir yazılım geliştirme stüdyosuyuz. İşletmeler ve bireylerle birlikte gerçek sorunları çözen yazılımlar tasarlıyor, geliştiriyor ve bakımını yapıyoruz — açık iletişim, dürüst takvimler ve kolay değiştirilebilen kodla.",
-    "features": {
-      "quality": "Kalite Odaklı",
-      "goal": "Sonuç Odaklı",
-      "client": "Müşteri Merkezli",
-      "fast": "Hızlı Teslimat"
-    }
+    "title": "EyesSoftware hakkında",
+    "description": "Dubai merkezli bir yazılım geliştirme stüdyosuyuz. İşletmeler ve bireyler için yazılım geliştiriyor, proje kapsamını ve teslim takvimini baştan netleştiriyoruz. Geliştirme boyunca ilerlemeyi düzenli olarak paylaşıyoruz."
   },
   "contact": {
     "title": "Bize ulaşın",
-    "subtitle": "Projenizi anlatın, ekibimiz 24 saat içinde size dönüş yapsın.",
+    "subtitle": "Projenizi kısaca anlatın. Kapsamı ve sonraki adımları görüşmek için size ulaşalım.",
     "info": {
       "email": "E-posta",
       "location": "Konum"
@@ -108,52 +110,56 @@
     "form": {
       "name": "Ad Soyad",
       "email": "E-posta Adresi",
-      "message": "Proje Brifingi",
+      "message": "Projeniz hakkında",
       "submit": "Mesaj Gönder",
       "namePlaceholder": "Ahmet Yılmaz",
       "emailPlaceholder": "ahmet@example.com",
-      "messagePlaceholder": "Vizyonunuzu, zaman çizelgenizi ve hedeflerinizi anlatın...",
+      "messagePlaceholder": "Ne yaptırmak istiyorsunuz? Varsa hedeflediğiniz teslim tarihini de yazabilirsiniz.",
       "successMessage": "Mesaj başarıyla gönderildi!",
       "errorRequired": "Tüm alanlar zorunludur.",
       "errorEmail": "Lütfen geçerli bir e-posta adresi girin.",
       "sending": "Gönderiliyor…",
-      "errorSend": "Mesajınız gönderilemedi. Lütfen bize doğrudan e-posta atın."
+      "errorSend": "Mesajınız gönderilemedi. Lütfen bize doğrudan e-posta atın.",
+      "privacyNote": "Bilgilerinizi talebinize yanıt vermek için kullanıyoruz."
     }
   },
   "footer": {
     "description": "Yazılım geliştirme stüdyosu — Dubai, BAE.",
     "copyright": "© 2026 Eyes Software FZCO. Tüm hakları saklıdır.",
-    "quickLinks": "Navigasyon",
+    "quickLinks": "Site menüsü",
     "legalLinks": "Yasal",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları",
-    "refundPolicy": "İade Politikası",
-    "cookiePolicy": "Çerez Politikası"
+    "refundPolicy": "İade ve İptal Politikası",
+    "cookiePolicy": "Çerez Politikası",
+    "allProducts": "Tüm ürünler"
   },
   "products": {
-    "title": "Geliştirdiğimiz ürünlerden birkaçı",
-    "subtitle": "Ekibimizin tasarlayıp geliştirdiği ve işlettiği canlı ürünler.",
+    "title": "Geliştirdiğimiz ürünler",
+    "subtitle": "Ekibimizin geliştirdiği ve yayında olan ürünleri inceleyin.",
     "shortky": {
-      "tagline": "Kısa linkler, QR kodlar ve bio sayfaları"
+      "tagline": "Bağlantı kısaltma, QR kod oluşturma ve profil bağlantı sayfaları."
     },
     "infotube": {
-      "tagline": "Yapay zekâ destekli YouTube analitiği"
+      "tagline": "YouTube kanalları için yapay zekâ destekli analiz."
     },
     "snapia": {
-      "tagline": "Kutlamalar için QR fotoğraf albümleri"
+      "tagline": "Etkinlik fotoğraflarını QR kodla tek albümde toplayın."
     },
     "billur": {
-      "tagline": "Markana uygun gönderi, reklam, site ve uygulama için tek AI sohbet"
+      "tagline": "Yapay zekâyla markanıza uygun sosyal medya içerikleri, reklamlar, web siteleri ve uygulamalar oluşturun."
     },
     "rejee": {
-      "tagline": "Tarayıcınızda canlı yayın stüdyosu"
+      "tagline": "Tarayıcınızda çalışan canlı yayın stüdyosu."
     },
     "veer": {
-      "tagline": "Rap, trap ve pop için vokal odaklı ses eklentileri"
+      "tagline": "Rap, trap ve pop için vokal odaklı ses eklentileri."
     }
   },
   "legal": {
-    "englishOnly": "Bu belge yalnızca İngilizce olarak sunulmaktadır."
+    "englishOnly": "Bu belge yalnızca İngilizce olarak sunulmaktadır.",
+    "lastUpdated": "Son güncelleme",
+    "enBadge": "(İngilizce)"
   },
   "consent": {
     "title": "Çerez tercihleri",

@@ -1,4 +1,5 @@
 import express, { type Request, type Response } from 'express';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { Resend } from 'resend';
@@ -38,9 +39,75 @@ app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({ status: 'ok' });
 });
 
-// /tr/ landing page was removed; send old links to the homepage.
-app.get(/^\/tr(\/.*)?$/, (_req: Request, res: Response) => {
-  res.redirect(301, '/');
+// ── Pages in every language ──
+// English lives at the bare path (/products); the others under a prefix (/tr/products) so a link opens
+// in its language. The browser still translates in place from public/locales; the server only sets what
+// crawlers and link previews read first: <html lang/dir>, <title>, description, canonical and hreflang.
+const SITE = 'https://eyessoftware.com';
+const LANGS = ['en', 'tr', 'ar', 'de', 'fr'] as const;
+type Lang = (typeof LANGS)[number];
+const PAGES: Record<string, string> = {
+  '': 'index.html',
+  products: 'products.html',
+  terms: 'terms.html',
+  'refund-policy': 'refund-policy.html',
+  privacy: 'privacy.html',
+  cookies: 'cookies.html',
+};
+const cacheFiles = process.env.NODE_ENV === 'production';
+const fileCache = new Map<string, string>();
+
+function readPublic(file: string): string {
+  const hit = cacheFiles ? fileCache.get(file) : undefined;
+  if (hit !== undefined) return hit;
+  const text = fs.readFileSync(path.join(publicDir, file), 'utf8');
+  if (cacheFiles) fileCache.set(file, text);
+  return text;
+}
+
+function lookup(lang: Lang, key: string): string | null {
+  const data = JSON.parse(readPublic(`locales/${lang}.json`)) as Record<string, unknown>;
+  const value = key.split('.').reduce<unknown>((o, k) => (o && typeof o === 'object' ? (o as Record<string, unknown>)[k] : undefined), data);
+  return typeof value === 'string' ? value : null;
+}
+
+function pageUrl(lang: Lang, slug: string): string {
+  if (lang === 'en') return `${SITE}/${slug}`;
+  return `${SITE}/${lang}/${slug}`;
+}
+
+function renderPage(lang: Lang, slug: string): string {
+  let html = readPublic(PAGES[slug]);
+  html = html.replace('<html lang="en">', `<html lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}">`);
+  html = html.replace(
+    /<title data-i18n="([^"]+)"(?: data-i18n-suffix="([^"]*)")?>[^<]*<\/title>/,
+    (whole, key: string, suffix?: string) => {
+      const value = lookup(lang, key);
+      return value ? whole.replace(/>[^<]*</, `>${escapeHtml(value + (suffix ?? ''))}<`) : whole;
+    },
+  );
+  html = html.replace(/(<meta name="description" data-i18n-content="([^"]+)" content=")[^"]*"/, (whole, start: string, key: string) => {
+    const value = lookup(lang, key);
+    return value ? `${start}${escapeHtml(value)}"` : whole;
+  });
+  const links = [
+    `<link rel="canonical" href="${pageUrl(lang, slug)}" />`,
+    ...LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${pageUrl(l, slug)}" />`),
+    `<link rel="alternate" hreflang="x-default" href="${pageUrl('en', slug)}" />`,
+  ].join('\n  ');
+  html = html.replace(/\s*<link rel="canonical"[^>]*>/, '');
+  return html.replace('<meta name="theme-color"', `${links}\n  <meta name="theme-color"`);
+}
+
+app.get(/^\/(?:(tr|ar|de|fr)(\/|$))?(products|terms|refund-policy|privacy|cookies)?(?:\.html)?\/?$/, (req: Request, res: Response) => {
+  const lang = (req.params[0] as Lang | undefined) ?? 'en';
+  const slug = req.params[2] ?? '';
+  // /tr → /tr/ so every page has one address.
+  if (lang !== 'en' && !slug && req.params[1] !== '/') {
+    res.redirect(301, `/${lang}/`);
+    return;
+  }
+  res.type('html').send(renderPage(lang, slug));
 });
 
 app.use(express.static(publicDir, { extensions: ['html'] }));

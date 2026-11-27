@@ -1,66 +1,74 @@
 {
+  "meta": {
+    "home": "EyesSoftware — Sites web, applications mobiles et logiciels sur mesure",
+    "homeDescription": "Depuis Dubaï, EyesSoftware développe des sites web, des applications mobiles et des logiciels sur mesure pour les entreprises et les particuliers.",
+    "products": "Produits — EyesSoftware",
+    "productsDescription": "Produits développés par EyesSoftware : Short.ky, InfoTube, Snapia, billur.ai, Rejee et Veer."
+  },
+  "lang": {
+    "select": "Choisir la langue"
+  },
   "nav": {
     "home": "Accueil",
     "products": "Produits",
     "services": "Services",
-    "platforms": "Plateformes",
+    "platforms": "Technologies",
     "about": "À propos",
     "contact": "Contact"
   },
   "hero": {
     "badge": "Studio de développement logiciel",
-    "title": "Nous développons des logiciels qui fonctionnent",
-    "subtitle": "EyesSoftware conçoit et développe des logiciels web, mobiles et sur mesure pour les entreprises et les particuliers — de la première idée à un produit stable en production.",
-    "cta": "Démarrer votre projet",
-    "ctaSecondary": "Explorer les services"
+    "title": "Nous développons des sites web, des applications mobiles et des logiciels sur mesure",
+    "subtitle": "Nous planifions, concevons et mettons en ligne votre projet avec vous, et assurons la maintenance et les évolutions dès que vous en avez besoin.",
+    "cta": "Décrivez votre projet",
+    "ctaSecondary": "Voir nos services"
   },
   "services": {
-    "title": "Ce que nous développons",
-    "subtitle": "Développement logiciel de bout en bout : nous planifions, concevons, développons et maintenons des produits sur lesquels vous et vos clients pouvez compter.",
+    "title": "Que développons-nous ?",
+    "subtitle": "Nous définissons avec vous le périmètre du projet, menons la conception et le développement, puis mettons le produit en ligne.",
     "items": {
       "website": {
         "title": "Développement web",
-        "description": "Sites et applications web rapides et sécurisés, construits sur un code moderne et maintenable."
+        "description": "Nous développons des sites et applications web rapides, sécurisés et faciles à maintenir."
       },
       "mobile": {
         "title": "Applications mobiles",
-        "description": "Applications iOS et Android natives et multiplateformes, au design clair et aux performances fiables."
+        "description": "Nous développons des applications natives et multiplateformes pour iOS et Android."
       },
       "software": {
         "title": "Logiciel sur mesure",
-        "description": "Outils internes, intégrations et logiciels sur mesure construits autour de votre façon réelle de travailler."
+        "description": "Nous développons des panneaux d'administration, des outils internes et des intégrations adaptés à vos processus."
       },
       "uiux": {
-        "title": "Design UI/UX",
-        "description": "Des interfaces claires et faciles à utiliser, conçues avec les personnes qui les utiliseront."
+        "title": "Design d'interface et d'expérience utilisateur",
+        "description": "Nous concevons des interfaces simples où chacun trouve facilement ce qu’il cherche."
       }
     }
   },
   "process": {
-    "title": "Comment ça marche",
+    "title": "Comment travaillons-nous ?",
     "steps": {
       "brief": {
-        "title": "Envoyez votre brief",
-        "description": "Décrivez votre besoin via le formulaire de contact ou par e-mail."
+        "title": "Décrivez votre projet",
+        "description": "Remplissez le formulaire ou écrivez-nous. Quelques lignes sur ce que vous voulez réaliser suffisent."
       },
       "quote": {
-        "title": "Recevez le périmètre et le devis",
-        "description": "Nous vous répondons avec un périmètre écrit, un calendrier et un prix fixe."
+        "title": "Recevez votre devis",
+        "description": "Nous vous envoyons par écrit le périmètre, le calendrier de livraison et le devis."
       },
       "pay": {
-        "title": "Validez et payez en toute sécurité",
-        "description": "Après votre validation, nous envoyons une facture ; vous payez par carte via une page de paiement sécurisée."
+        "title": "Validez le devis",
+        "description": "Après votre validation, nous vous envoyons la facture et un lien de paiement par carte."
       },
       "deliver": {
         "title": "Développement et livraison",
-        "description": "Nous développons par étapes, partageons l'avancement et livrons le travail terminé."
+        "description": "Nous partageons l’avancement par étapes et livrons le projet terminé."
       }
-    },
-    "note": "Chaque projet fait l'objet d'un devis individuel."
+    }
   },
   "platforms": {
-    "title": "Stack technologique",
-    "subtitle": "Nous travaillons sur toutes les couches de la stack moderne — sécurisée, évolutive et durable.",
+    "title": "Technologies",
+    "subtitle": "De l'application mobile à la base de données et à l'infrastructure cloud, nous choisissons les technologies adaptées à votre projet.",
     "items": {
       "android": {
         "title": "Android",
@@ -84,23 +92,17 @@
       },
       "cloud": {
         "title": "Cloud",
-        "description": "Infrastructure et déploiement AWS, Azure et Google Cloud"
+        "description": "Mise en place d'infrastructure et déploiement sur AWS, Azure et Google Cloud"
       }
     }
   },
   "about": {
     "title": "À propos d'EyesSoftware",
-    "description": "Nous sommes un studio de développement logiciel basé à Dubaï. Nous travaillons avec les entreprises et les particuliers pour concevoir, développer et maintenir des logiciels qui résolvent de vrais problèmes — avec une communication claire, des délais honnêtes et un code facile à faire évoluer.",
-    "features": {
-      "quality": "Orienté qualité",
-      "goal": "Orienté résultats",
-      "client": "Centré client",
-      "fast": "Livraison rapide"
-    }
+    "description": "Nous sommes un studio de développement logiciel basé à Dubaï. Nous développons des logiciels pour les entreprises et les particuliers, et fixons dès le départ le périmètre et le calendrier du projet. Pendant le développement, nous partageons régulièrement l'avancement."
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Parlez-nous de votre projet, notre équipe vous répondra sous 24 heures.",
+    "subtitle": "Décrivez brièvement votre projet. Nous vous contacterons pour en discuter le périmètre et les prochaines étapes.",
     "info": {
       "email": "E-mail",
       "location": "Adresse"
@@ -108,42 +110,44 @@
     "form": {
       "name": "Nom complet",
       "email": "Adresse e-mail",
-      "message": "Brief projet",
+      "message": "Votre projet",
       "submit": "Envoyer le message",
       "namePlaceholder": "Jean Dupont",
       "emailPlaceholder": "jean@example.com",
-      "messagePlaceholder": "Décrivez votre vision, calendrier et objectifs...",
+      "messagePlaceholder": "Que souhaitez-vous faire développer ? Indiquez aussi la date de livraison visée, si vous en avez une.",
       "successMessage": "Message envoyé avec succès !",
       "errorRequired": "Tous les champs sont requis.",
       "errorEmail": "Veuillez saisir une adresse e-mail valide.",
       "sending": "Envoi…",
-      "errorSend": "Votre message n’a pas pu être envoyé. Écrivez-nous directement par e-mail."
+      "errorSend": "Votre message n’a pas pu être envoyé. Écrivez-nous directement par e-mail.",
+      "privacyNote": "Nous utilisons vos informations pour répondre à votre demande."
     }
   },
   "footer": {
     "description": "Studio de développement logiciel — Dubaï, EAU.",
     "copyright": "© 2026 Eyes Software FZCO. Tous droits réservés.",
-    "quickLinks": "Navigation",
+    "quickLinks": "Menu du site",
     "legalLinks": "Légal",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d'utilisation",
-    "refundPolicy": "Politique de remboursement",
-    "cookiePolicy": "Politique des cookies"
+    "refundPolicy": "Politique de remboursement et d'annulation",
+    "cookiePolicy": "Politique des cookies",
+    "allProducts": "Tous les produits"
   },
   "products": {
-    "title": "Quelques-uns des produits que nous avons créés",
-    "subtitle": "Des produits en ligne conçus, développés et exploités par notre propre équipe.",
+    "title": "Nos produits",
+    "subtitle": "Découvrez les produits développés par notre équipe et déjà en ligne.",
     "shortky": {
-      "tagline": "Liens courts, QR codes et pages bio"
+      "tagline": "Raccourcissement de liens, création de QR codes et pages de liens."
     },
     "infotube": {
-      "tagline": "Analytique YouTube propulsée par l’IA"
+      "tagline": "Analyse des chaînes YouTube assistée par IA."
     },
     "snapia": {
-      "tagline": "Albums photo QR pour vos célébrations"
+      "tagline": "Rassemblez les photos d’un événement dans un seul album grâce à un QR code."
     },
     "billur": {
-      "tagline": "Un seul chat IA pour posts, pubs, sites et apps fidèles à votre marque"
+      "tagline": "Créez avec l'IA des contenus pour les réseaux sociaux, des publicités, des sites et des applications fidèles à votre marque."
     },
     "rejee": {
       "tagline": "Studio de live streaming dans votre navigateur"
@@ -153,7 +157,9 @@
     }
   },
   "legal": {
-    "englishOnly": "Ce document est disponible uniquement en anglais."
+    "englishOnly": "Ce document est disponible uniquement en anglais.",
+    "lastUpdated": "Dernière mise à jour",
+    "enBadge": "(en anglais)"
   },
   "consent": {
     "title": "Préférences de cookies",

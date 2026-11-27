@@ -22,7 +22,11 @@
         return 'en';
       }
 
-      var saved = getSavedLang();
+      var match = location.pathname.match(/^\/(tr|ar|de|fr)(?=\/|$)/);
+      var saved = match ? match[1] : getSavedLang();
+      if (!match && saved !== 'en' && window.history && history.replaceState) {
+        history.replaceState(null, '', '/' + saved + (location.pathname === '/' ? '/' : location.pathname) + location.search + location.hash);
+      }
       var root = document.documentElement;
       root.lang = saved;
       root.dir = saved === 'ar' ? 'rtl' : 'ltr';
@@ -31,7 +35,7 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Refund &amp; Cancellation Policy — EyesSoftware</title>
+  <title data-i18n="footer.refundPolicy" data-i18n-suffix=" — EyesSoftware">Refund &amp; Cancellation Policy — EyesSoftware</title>
   <meta name="description" content="How cancellations and refunds work for projects with Eyes Software FZCO." />
   <link rel="canonical" href="https://eyessoftware.com/refund-policy" />
   <meta name="theme-color" content="#0A0A0A" />
@@ -54,17 +58,18 @@
       <a href="/" class="logo"><img src="/brand/eyes-logo.svg" alt="EyesSoftware" width="96" height="40" /></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/#services" data-i18n="nav.services">Services</a></li>
-        <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+        <li><a href="/#platforms" data-i18n="nav.platforms">Technologies</a></li>
         <li><a href="/#about" data-i18n="nav.about">About</a></li>
         <li><a href="/products" data-i18n="nav.products">Products</a></li>
         <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
-        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Start Your Project</a></li>
+        <li class="menu-cta"><a href="/#contact" class="btn" data-i18n="hero.cta">Tell us about your project</a></li>
       </ul>
       <div class="nav-actions">
         <div class="lang-switch">
-          <button class="lang-btn" id="langBtn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <button class="lang-btn" id="langBtn" aria-label="Select language" data-i18n-aria-label="lang.select" aria-haspopup="true" aria-expanded="false">
             <span id="langCurrentFlag" class="fi fis" aria-hidden="true"></span>
-            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));</script>
+            <span id="langCurrentCode" class="lang-code" aria-hidden="true"></span>
+            <script>document.getElementById('langCurrentFlag').classList.add('fi-' + (document.documentElement.dataset.flag || 'gb'));document.getElementById('langCurrentCode').textContent = (document.documentElement.dataset.lang || 'en').toUpperCase();</script>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown">
@@ -75,7 +80,7 @@
             <button class="lang-option" data-lang="fr" aria-label="Français"><span class="fi fi-fr fis" aria-hidden="true"></span></button>
           </div>
         </div>
-        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Start Your Project</a>
+        <a href="/#contact" class="btn nav-cta" data-i18n="hero.cta">Tell us about your project</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
           <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
           <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -89,7 +94,7 @@
     <div class="wrap reveal">
       <span class="chip" data-i18n="footer.legalLinks">Legal</span>
       <h1 class="hero-title" data-i18n="footer.refundPolicy">Refund &amp; Cancellation Policy</h1>
-      <p class="legal-meta">Last updated: 13 October 2026</p>
+      <p class="legal-meta"><span data-i18n="legal.lastUpdated">Last updated</span>: <time datetime="2026-10-13">13 October 2026</time></p>
       <p class="legal-note" data-i18n="legal.englishOnly">This document is available in English only.</p>
     </div>
   </section>
@@ -143,10 +148,10 @@
           <p data-i18n="footer.description">Software development studio — Dubai, UAE.</p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.quickLinks">Navigation</h4>
+          <h4 data-i18n="footer.quickLinks">Site menu</h4>
           <ul>
             <li><a href="/#services" data-i18n="nav.services">Services</a></li>
-            <li><a href="/#platforms" data-i18n="nav.platforms">Platforms</a></li>
+            <li><a href="/#platforms" data-i18n="nav.platforms">Technologies</a></li>
             <li><a href="/#about" data-i18n="nav.about">About</a></li>
             <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
@@ -160,15 +165,16 @@
             <li><a href="https://billur.ai" target="_blank" rel="noopener">billur.ai</a></li>
             <li><a href="https://rejee.live" target="_blank" rel="noopener">Rejee</a></li>
             <li><a href="https://veerplugin.com" target="_blank" rel="noopener">Veer</a></li>
+            <li><a href="/products" data-i18n="footer.allProducts">All products</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.legalLinks">Legal</h4>
           <ul>
-            <li><a href="/terms" data-i18n="footer.termsOfService">Terms of Service</a></li>
-            <li><a href="/refund-policy" data-i18n="footer.refundPolicy">Refund Policy</a></li>
-            <li><a href="/privacy" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
-            <li><a href="/cookies" data-i18n="footer.cookiePolicy">Cookie Policy</a></li>
+            <li><a href="/terms"><span data-i18n="footer.termsOfService">Terms of Service</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/refund-policy"><span data-i18n="footer.refundPolicy">Refund &amp; Cancellation Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/privacy"><span data-i18n="footer.privacyPolicy">Privacy Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
+            <li><a href="/cookies"><span data-i18n="footer.cookiePolicy">Cookie Policy</span> <span class="en-badge" data-i18n="legal.enBadge">(English)</span></a></li>
             <li><a href="/cookies" data-eyes-consent-open data-i18n="consent.footerLink">Cookie preferences</a></li>
           </ul>
         </div>
